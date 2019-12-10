@@ -305,220 +305,535 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void checkBoxResultBit5_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit5_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit6_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit6_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit7_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit7_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit8_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit8_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit9_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit9_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit10_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit10_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit11_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit11_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit12_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit12_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit13_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit13_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit14_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit14_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit15_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit15_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit16_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit16_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit17_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit17_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit18_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit18_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit19_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit19_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit20_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit20_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit21_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit21_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit22_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit22_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit23_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit23_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit24_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit24_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit25_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit25_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit26_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit26_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit27_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit27_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit28_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit28_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit29_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit29_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit30_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit30_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxResultBit31_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit31_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void checkBoxAlwaysOnTop_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxAlwaysOnTop_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void trackBarTransparency_Scroll(object sender, EventArgs e)
+		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonA1LsbSign_Click(object sender, EventArgs e)
+		private void ButtonA1LsbSign_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonA2LsbSign_Click(object sender, EventArgs e)
+		private void ButtonA2LsbSign_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonResultLsbSign_Click(object sender, EventArgs e)
+		private void ButtonResultLsbSign_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonAdditionA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonAdditionA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonSubtractionA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonSubtractionA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonMultiplicationA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonMultiplicationA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonDivisionA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonDivisionA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalAndA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalAndA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalOrA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalOrA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalXorA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalXorA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalXandA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalXandA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalNorA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalNorA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonLogicalXnorA1AndA2_Click(object sender, EventArgs e)
+		private void ButtonLogicalXnorA1AndA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonInvertA1_Click(object sender, EventArgs e)
+		private void ButtonInvertA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonInvertA2_Click(object sender, EventArgs e)
+		private void ButtonInvertA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonCopyResultToA1_Click(object sender, EventArgs e)
+		private void ButtonCopyResultToA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonCopyResultToA2_Click(object sender, EventArgs e)
+		private void ButtonCopyResultToA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonShiftLeftA1_Click(object sender, EventArgs e)
+		private void ButtonShiftLeftA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonShiftLeftA2_Click(object sender, EventArgs e)
+		private void ButtonShiftLeftA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonShiftRightA1_Click(object sender, EventArgs e)
+		private void ButtonShiftRightA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonShiftRightA2_Click(object sender, EventArgs e)
+		private void ButtonShiftRightA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonRotateLeftA1_Click(object sender, EventArgs e)
+		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonRotateLeftA2_Click(object sender, EventArgs e)
+		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonRotateRightA1_Click(object sender, EventArgs e)
+		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void buttonRotateRightA2_Click(object sender, EventArgs e)
+		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
 		{
+		}
+
+		private void labelA1Bit0_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit7_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit8_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit9_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit10_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit11_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit12_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit13_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit14_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit15_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit16_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit18_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit19_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit20_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit21_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit22_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit23_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit24_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit25_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit26_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit27_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit28_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit29_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit30_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA1Bit31_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit0_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit8_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit9_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit10_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit11_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit12_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit13_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit14_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit15_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit16_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit18_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit19_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit20_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit21_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit22_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit23_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit24_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit25_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit26_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit27_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit28_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit29_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit30_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelA2Bit31_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
