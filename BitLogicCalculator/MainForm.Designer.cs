@@ -384,7 +384,7 @@
 			this.checkBoxAlwaysOnTop.TabIndex = 84;
 			this.checkBoxAlwaysOnTop.Text = "Always on top";
 			this.checkBoxAlwaysOnTop.UseVisualStyleBackColor = false;
-			this.checkBoxAlwaysOnTop.CheckedChanged += new System.EventHandler(this.checkBoxAlwaysOnTop_CheckedChanged);
+			this.checkBoxAlwaysOnTop.CheckedChanged += new System.EventHandler(this.CheckBoxAlwaysOnTop_CheckedChanged);
 			// 
 			// trackBarTransparency
 			// 
@@ -396,7 +396,7 @@
 			this.trackBarTransparency.TabIndex = 86;
 			this.trackBarTransparency.TickFrequency = 10;
 			this.trackBarTransparency.Value = 100;
-			this.trackBarTransparency.Scroll += new System.EventHandler(this.trackBarTransparency_Scroll);
+			this.trackBarTransparency.Scroll += new System.EventHandler(this.TrackBarTransparency_Scroll);
 			// 
 			// labelTransparency
 			// 
@@ -449,7 +449,7 @@
 			this.buttonShiftLeftA2.TabIndex = 87;
 			this.buttonShiftLeftA2.Text = "SHL A2";
 			this.buttonShiftLeftA2.UseVisualStyleBackColor = true;
-			this.buttonShiftLeftA2.Click += new System.EventHandler(this.buttonShiftLeftA2_Click);
+			this.buttonShiftLeftA2.Click += new System.EventHandler(this.ButtonShiftLeftA2_Click);
 			// 
 			// contextMenuStripRoller
 			// 
@@ -506,7 +506,7 @@
 			this.buttonShiftRightA2.TabIndex = 88;
 			this.buttonShiftRightA2.Text = "SHR A2";
 			this.buttonShiftRightA2.UseVisualStyleBackColor = true;
-			this.buttonShiftRightA2.Click += new System.EventHandler(this.buttonShiftRightA2_Click);
+			this.buttonShiftRightA2.Click += new System.EventHandler(this.ButtonShiftRightA2_Click);
 			// 
 			// buttonRotateLeftA2
 			// 
@@ -517,7 +517,7 @@
 			this.buttonRotateLeftA2.TabIndex = 89;
 			this.buttonRotateLeftA2.Text = "ROL A2";
 			this.buttonRotateLeftA2.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftA2.Click += new System.EventHandler(this.buttonRotateLeftA2_Click);
+			this.buttonRotateLeftA2.Click += new System.EventHandler(this.ButtonRotateLeftA2_Click);
 			// 
 			// buttonRotateRightA2
 			// 
@@ -528,7 +528,7 @@
 			this.buttonRotateRightA2.TabIndex = 90;
 			this.buttonRotateRightA2.Text = "ROR A2";
 			this.buttonRotateRightA2.UseVisualStyleBackColor = true;
-			this.buttonRotateRightA2.Click += new System.EventHandler(this.buttonRotateRightA2_Click);
+			this.buttonRotateRightA2.Click += new System.EventHandler(this.ButtonRotateRightA2_Click);
 			// 
 			// buttonShiftLeftA1
 			// 
@@ -539,7 +539,7 @@
 			this.buttonShiftLeftA1.TabIndex = 83;
 			this.buttonShiftLeftA1.Text = "SHL A1";
 			this.buttonShiftLeftA1.UseVisualStyleBackColor = true;
-			this.buttonShiftLeftA1.Click += new System.EventHandler(this.buttonShiftLeftA1_Click);
+			this.buttonShiftLeftA1.Click += new System.EventHandler(this.ButtonShiftLeftA1_Click);
 			// 
 			// buttonShiftRightA1
 			// 
@@ -550,7 +550,7 @@
 			this.buttonShiftRightA1.TabIndex = 84;
 			this.buttonShiftRightA1.Text = "SHR A1";
 			this.buttonShiftRightA1.UseVisualStyleBackColor = true;
-			this.buttonShiftRightA1.Click += new System.EventHandler(this.buttonShiftRightA1_Click);
+			this.buttonShiftRightA1.Click += new System.EventHandler(this.ButtonShiftRightA1_Click);
 			// 
 			// buttonRotateLeftA1
 			// 
@@ -561,7 +561,7 @@
 			this.buttonRotateLeftA1.TabIndex = 85;
 			this.buttonRotateLeftA1.Text = "ROL A1";
 			this.buttonRotateLeftA1.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftA1.Click += new System.EventHandler(this.buttonRotateLeftA1_Click);
+			this.buttonRotateLeftA1.Click += new System.EventHandler(this.ButtonRotateLeftA1_Click);
 			// 
 			// buttonRotateRightA1
 			// 
@@ -572,7 +572,7 @@
 			this.buttonRotateRightA1.TabIndex = 86;
 			this.buttonRotateRightA1.Text = "ROR A1";
 			this.buttonRotateRightA1.UseVisualStyleBackColor = true;
-			this.buttonRotateRightA1.Click += new System.EventHandler(this.buttonRotateRightA1_Click);
+			this.buttonRotateRightA1.Click += new System.EventHandler(this.ButtonRotateRightA1_Click);
 			// 
 			// buttonAdditionA1AndA2
 			// 
@@ -582,7 +582,7 @@
 			this.buttonAdditionA1AndA2.TabIndex = 69;
 			this.buttonAdditionA1AndA2.Text = "A1 + A2";
 			this.buttonAdditionA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonAdditionA1AndA2.Click += new System.EventHandler(this.buttonAdditionA1AndA2_Click);
+			this.buttonAdditionA1AndA2.Click += new System.EventHandler(this.ButtonAdditionA1AndA2_Click);
 			// 
 			// buttonCopyResultToA2
 			// 
@@ -592,7 +592,7 @@
 			this.buttonCopyResultToA2.TabIndex = 82;
 			this.buttonCopyResultToA2.Text = "R > A2";
 			this.buttonCopyResultToA2.UseVisualStyleBackColor = true;
-			this.buttonCopyResultToA2.Click += new System.EventHandler(this.buttonCopyResultToA2_Click);
+			this.buttonCopyResultToA2.Click += new System.EventHandler(this.ButtonCopyResultToA2_Click);
 			// 
 			// buttonSubtractionA1AndA2
 			// 
@@ -602,7 +602,7 @@
 			this.buttonSubtractionA1AndA2.TabIndex = 70;
 			this.buttonSubtractionA1AndA2.Text = "A1 - A2";
 			this.buttonSubtractionA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonSubtractionA1AndA2.Click += new System.EventHandler(this.buttonSubtractionA1AndA2_Click);
+			this.buttonSubtractionA1AndA2.Click += new System.EventHandler(this.ButtonSubtractionA1AndA2_Click);
 			// 
 			// buttonCopyResultToA1
 			// 
@@ -612,7 +612,7 @@
 			this.buttonCopyResultToA1.TabIndex = 81;
 			this.buttonCopyResultToA1.Text = "R > A1";
 			this.buttonCopyResultToA1.UseVisualStyleBackColor = true;
-			this.buttonCopyResultToA1.Click += new System.EventHandler(this.buttonCopyResultToA1_Click);
+			this.buttonCopyResultToA1.Click += new System.EventHandler(this.ButtonCopyResultToA1_Click);
 			// 
 			// buttonMultiplicationA1AndA2
 			// 
@@ -622,7 +622,7 @@
 			this.buttonMultiplicationA1AndA2.TabIndex = 71;
 			this.buttonMultiplicationA1AndA2.Text = "A1 × A2";
 			this.buttonMultiplicationA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonMultiplicationA1AndA2.Click += new System.EventHandler(this.buttonMultiplicationA1AndA2_Click);
+			this.buttonMultiplicationA1AndA2.Click += new System.EventHandler(this.ButtonMultiplicationA1AndA2_Click);
 			// 
 			// buttonLogicalXnorA1AndA2
 			// 
@@ -632,7 +632,7 @@
 			this.buttonLogicalXnorA1AndA2.TabIndex = 80;
 			this.buttonLogicalXnorA1AndA2.Text = "A1 XNOR A2";
 			this.buttonLogicalXnorA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalXnorA1AndA2.Click += new System.EventHandler(this.buttonLogicalXnorA1AndA2_Click);
+			this.buttonLogicalXnorA1AndA2.Click += new System.EventHandler(this.ButtonLogicalXnorA1AndA2_Click);
 			// 
 			// buttonDivisionA1AndA2
 			// 
@@ -642,7 +642,7 @@
 			this.buttonDivisionA1AndA2.TabIndex = 72;
 			this.buttonDivisionA1AndA2.Text = "A1 / A2";
 			this.buttonDivisionA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonDivisionA1AndA2.Click += new System.EventHandler(this.buttonDivisionA1AndA2_Click);
+			this.buttonDivisionA1AndA2.Click += new System.EventHandler(this.ButtonDivisionA1AndA2_Click);
 			// 
 			// buttonLogicalNorA1AndA2
 			// 
@@ -652,7 +652,7 @@
 			this.buttonLogicalNorA1AndA2.TabIndex = 79;
 			this.buttonLogicalNorA1AndA2.Text = "A1 NOR A2";
 			this.buttonLogicalNorA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalNorA1AndA2.Click += new System.EventHandler(this.buttonLogicalNorA1AndA2_Click);
+			this.buttonLogicalNorA1AndA2.Click += new System.EventHandler(this.ButtonLogicalNorA1AndA2_Click);
 			// 
 			// buttonLogicalAndA1AndA2
 			// 
@@ -662,7 +662,7 @@
 			this.buttonLogicalAndA1AndA2.TabIndex = 73;
 			this.buttonLogicalAndA1AndA2.Text = "A1 AND A2";
 			this.buttonLogicalAndA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalAndA1AndA2.Click += new System.EventHandler(this.buttonLogicalAndA1AndA2_Click);
+			this.buttonLogicalAndA1AndA2.Click += new System.EventHandler(this.ButtonLogicalAndA1AndA2_Click);
 			// 
 			// buttonLogicalXandA1AndA2
 			// 
@@ -672,7 +672,7 @@
 			this.buttonLogicalXandA1AndA2.TabIndex = 78;
 			this.buttonLogicalXandA1AndA2.Text = "A1 XAND A2";
 			this.buttonLogicalXandA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalXandA1AndA2.Click += new System.EventHandler(this.buttonLogicalXandA1AndA2_Click);
+			this.buttonLogicalXandA1AndA2.Click += new System.EventHandler(this.ButtonLogicalXandA1AndA2_Click);
 			// 
 			// buttonLogicalOrA1AndA2
 			// 
@@ -682,7 +682,7 @@
 			this.buttonLogicalOrA1AndA2.TabIndex = 74;
 			this.buttonLogicalOrA1AndA2.Text = "A1 OR A2";
 			this.buttonLogicalOrA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalOrA1AndA2.Click += new System.EventHandler(this.buttonLogicalOrA1AndA2_Click);
+			this.buttonLogicalOrA1AndA2.Click += new System.EventHandler(this.ButtonLogicalOrA1AndA2_Click);
 			// 
 			// buttonInvertA2
 			// 
@@ -692,7 +692,7 @@
 			this.buttonInvertA2.TabIndex = 77;
 			this.buttonInvertA2.Text = "NOT A2";
 			this.buttonInvertA2.UseVisualStyleBackColor = true;
-			this.buttonInvertA2.Click += new System.EventHandler(this.buttonInvertA2_Click);
+			this.buttonInvertA2.Click += new System.EventHandler(this.ButtonInvertA2_Click);
 			// 
 			// buttonLogicalXorA1AndA2
 			// 
@@ -702,7 +702,7 @@
 			this.buttonLogicalXorA1AndA2.TabIndex = 75;
 			this.buttonLogicalXorA1AndA2.Text = "A1 XOR A2";
 			this.buttonLogicalXorA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalXorA1AndA2.Click += new System.EventHandler(this.buttonLogicalXorA1AndA2_Click);
+			this.buttonLogicalXorA1AndA2.Click += new System.EventHandler(this.ButtonLogicalXorA1AndA2_Click);
 			// 
 			// buttonInvertA1
 			// 
@@ -712,7 +712,7 @@
 			this.buttonInvertA1.TabIndex = 76;
 			this.buttonInvertA1.Text = "NOT A1";
 			this.buttonInvertA1.UseVisualStyleBackColor = true;
-			this.buttonInvertA1.Click += new System.EventHandler(this.buttonInvertA1_Click);
+			this.buttonInvertA1.Click += new System.EventHandler(this.ButtonInvertA1_Click);
 			// 
 			// groupBoxResult
 			// 
@@ -768,7 +768,7 @@
 			this.buttonResultLsbSign.TabIndex = 67;
 			this.buttonResultLsbSign.Text = "LSB: 0";
 			this.buttonResultLsbSign.UseVisualStyleBackColor = true;
-			this.buttonResultLsbSign.Click += new System.EventHandler(this.buttonResultLsbSign_Click);
+			this.buttonResultLsbSign.Click += new System.EventHandler(this.ButtonResultLsbSign_Click);
 			// 
 			// maskedTextBoxResultNetwork
 			// 
@@ -865,7 +865,7 @@
 			this.checkBoxResultBit31.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit31.TabIndex = 64;
 			this.checkBoxResultBit31.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit31.CheckedChanged += new System.EventHandler(this.checkBoxResultBit31_CheckedChanged);
+			this.checkBoxResultBit31.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit31_CheckedChanged);
 			// 
 			// checkBoxResultBit24
 			// 
@@ -876,7 +876,7 @@
 			this.checkBoxResultBit24.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit24.TabIndex = 50;
 			this.checkBoxResultBit24.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit24.CheckedChanged += new System.EventHandler(this.checkBoxResultBit24_CheckedChanged);
+			this.checkBoxResultBit24.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit24_CheckedChanged);
 			// 
 			// labelResultBit24
 			// 
@@ -897,7 +897,7 @@
 			this.checkBoxResultBit25.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit25.TabIndex = 52;
 			this.checkBoxResultBit25.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit25.CheckedChanged += new System.EventHandler(this.checkBoxResultBit25_CheckedChanged);
+			this.checkBoxResultBit25.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit25_CheckedChanged);
 			// 
 			// labelResultBit30
 			// 
@@ -928,7 +928,7 @@
 			this.checkBoxResultBit26.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit26.TabIndex = 54;
 			this.checkBoxResultBit26.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit26.CheckedChanged += new System.EventHandler(this.checkBoxResultBit26_CheckedChanged);
+			this.checkBoxResultBit26.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit26_CheckedChanged);
 			// 
 			// checkBoxResultBit30
 			// 
@@ -939,7 +939,7 @@
 			this.checkBoxResultBit30.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit30.TabIndex = 62;
 			this.checkBoxResultBit30.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit30.CheckedChanged += new System.EventHandler(this.checkBoxResultBit30_CheckedChanged);
+			this.checkBoxResultBit30.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit30_CheckedChanged);
 			// 
 			// labelResultBit26
 			// 
@@ -970,7 +970,7 @@
 			this.checkBoxResultBit27.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit27.TabIndex = 56;
 			this.checkBoxResultBit27.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit27.CheckedChanged += new System.EventHandler(this.checkBoxResultBit27_CheckedChanged);
+			this.checkBoxResultBit27.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit27_CheckedChanged);
 			// 
 			// checkBoxResultBit29
 			// 
@@ -981,7 +981,7 @@
 			this.checkBoxResultBit29.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit29.TabIndex = 60;
 			this.checkBoxResultBit29.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit29.CheckedChanged += new System.EventHandler(this.checkBoxResultBit29_CheckedChanged);
+			this.checkBoxResultBit29.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit29_CheckedChanged);
 			// 
 			// labelResultBit27
 			// 
@@ -1012,7 +1012,7 @@
 			this.checkBoxResultBit28.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit28.TabIndex = 58;
 			this.checkBoxResultBit28.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit28.CheckedChanged += new System.EventHandler(this.checkBoxResultBit28_CheckedChanged);
+			this.checkBoxResultBit28.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit28_CheckedChanged);
 			// 
 			// groupBoxResultByte3
 			// 
@@ -1048,7 +1048,7 @@
 			this.checkBoxResultBit23.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit23.TabIndex = 48;
 			this.checkBoxResultBit23.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit23.CheckedChanged += new System.EventHandler(this.checkBoxResultBit23_CheckedChanged);
+			this.checkBoxResultBit23.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit23_CheckedChanged);
 			// 
 			// checkBoxResultBit21
 			// 
@@ -1059,7 +1059,7 @@
 			this.checkBoxResultBit21.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit21.TabIndex = 44;
 			this.checkBoxResultBit21.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit21.CheckedChanged += new System.EventHandler(this.checkBoxResultBit21_CheckedChanged);
+			this.checkBoxResultBit21.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit21_CheckedChanged);
 			// 
 			// labelResultBit21
 			// 
@@ -1090,7 +1090,7 @@
 			this.checkBoxResultBit22.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit22.TabIndex = 46;
 			this.checkBoxResultBit22.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit22.CheckedChanged += new System.EventHandler(this.checkBoxResultBit22_CheckedChanged);
+			this.checkBoxResultBit22.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit22_CheckedChanged);
 			// 
 			// checkBoxResultBit20
 			// 
@@ -1101,7 +1101,7 @@
 			this.checkBoxResultBit20.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit20.TabIndex = 42;
 			this.checkBoxResultBit20.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit20.CheckedChanged += new System.EventHandler(this.checkBoxResultBit20_CheckedChanged);
+			this.checkBoxResultBit20.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit20_CheckedChanged);
 			// 
 			// labelResultBit22
 			// 
@@ -1132,7 +1132,7 @@
 			this.checkBoxResultBit16.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit16.TabIndex = 34;
 			this.checkBoxResultBit16.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit16.CheckedChanged += new System.EventHandler(this.checkBoxResultBit16_CheckedChanged);
+			this.checkBoxResultBit16.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit16_CheckedChanged);
 			// 
 			// checkBoxResultBit19
 			// 
@@ -1143,7 +1143,7 @@
 			this.checkBoxResultBit19.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit19.TabIndex = 40;
 			this.checkBoxResultBit19.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit19.CheckedChanged += new System.EventHandler(this.checkBoxResultBit19_CheckedChanged);
+			this.checkBoxResultBit19.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit19_CheckedChanged);
 			// 
 			// labelResultBit23
 			// 
@@ -1184,7 +1184,7 @@
 			this.checkBoxResultBit18.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit18.TabIndex = 38;
 			this.checkBoxResultBit18.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit18.CheckedChanged += new System.EventHandler(this.checkBoxResultBit18_CheckedChanged);
+			this.checkBoxResultBit18.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit18_CheckedChanged);
 			// 
 			// labelResultBit17
 			// 
@@ -1205,7 +1205,7 @@
 			this.checkBoxResultBit17.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit17.TabIndex = 36;
 			this.checkBoxResultBit17.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit17.CheckedChanged += new System.EventHandler(this.checkBoxResultBit17_CheckedChanged);
+			this.checkBoxResultBit17.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit17_CheckedChanged);
 			// 
 			// groupBoxResultByte2
 			// 
@@ -1241,7 +1241,7 @@
 			this.checkBoxResultBit15.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit15.TabIndex = 32;
 			this.checkBoxResultBit15.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit15.CheckedChanged += new System.EventHandler(this.checkBoxResultBit15_CheckedChanged);
+			this.checkBoxResultBit15.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit15_CheckedChanged);
 			// 
 			// checkBoxResultBit10
 			// 
@@ -1252,7 +1252,7 @@
 			this.checkBoxResultBit10.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit10.TabIndex = 22;
 			this.checkBoxResultBit10.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit10.CheckedChanged += new System.EventHandler(this.checkBoxResultBit10_CheckedChanged);
+			this.checkBoxResultBit10.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit10_CheckedChanged);
 			// 
 			// labelResultBit10
 			// 
@@ -1283,7 +1283,7 @@
 			this.checkBoxResultBit11.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit11.TabIndex = 24;
 			this.checkBoxResultBit11.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit11.CheckedChanged += new System.EventHandler(this.checkBoxResultBit11_CheckedChanged);
+			this.checkBoxResultBit11.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit11_CheckedChanged);
 			// 
 			// checkBoxResultBit9
 			// 
@@ -1294,7 +1294,7 @@
 			this.checkBoxResultBit9.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit9.TabIndex = 20;
 			this.checkBoxResultBit9.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit9.CheckedChanged += new System.EventHandler(this.checkBoxResultBit9_CheckedChanged);
+			this.checkBoxResultBit9.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit9_CheckedChanged);
 			// 
 			// labelResultBit11
 			// 
@@ -1335,7 +1335,7 @@
 			this.checkBoxResultBit12.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit12.TabIndex = 26;
 			this.checkBoxResultBit12.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit12.CheckedChanged += new System.EventHandler(this.checkBoxResultBit12_CheckedChanged);
+			this.checkBoxResultBit12.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit12_CheckedChanged);
 			// 
 			// checkBoxResultBit8
 			// 
@@ -1346,7 +1346,7 @@
 			this.checkBoxResultBit8.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit8.TabIndex = 18;
 			this.checkBoxResultBit8.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit8.CheckedChanged += new System.EventHandler(this.checkBoxResultBit8_CheckedChanged);
+			this.checkBoxResultBit8.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit8_CheckedChanged);
 			// 
 			// labelResultBit12
 			// 
@@ -1367,7 +1367,7 @@
 			this.checkBoxResultBit13.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit13.TabIndex = 28;
 			this.checkBoxResultBit13.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit13.CheckedChanged += new System.EventHandler(this.checkBoxResultBit13_CheckedChanged);
+			this.checkBoxResultBit13.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit13_CheckedChanged);
 			// 
 			// labelResultBit13
 			// 
@@ -1388,7 +1388,7 @@
 			this.checkBoxResultBit14.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit14.TabIndex = 30;
 			this.checkBoxResultBit14.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit14.CheckedChanged += new System.EventHandler(this.checkBoxResultBit14_CheckedChanged);
+			this.checkBoxResultBit14.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit14_CheckedChanged);
 			// 
 			// labelResultBit14
 			// 
@@ -1444,7 +1444,7 @@
 			this.checkBoxResultBit7.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit7.TabIndex = 16;
 			this.checkBoxResultBit7.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit7.CheckedChanged += new System.EventHandler(this.checkBoxResultBit7_CheckedChanged);
+			this.checkBoxResultBit7.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit7_CheckedChanged);
 			// 
 			// labelResultBit6
 			// 
@@ -1476,7 +1476,7 @@
 			this.checkBoxResultBit6.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit6.TabIndex = 14;
 			this.checkBoxResultBit6.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit6.CheckedChanged += new System.EventHandler(this.checkBoxResultBit6_CheckedChanged);
+			this.checkBoxResultBit6.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit6_CheckedChanged);
 			// 
 			// labelResultBit0
 			// 
@@ -1507,7 +1507,7 @@
 			this.checkBoxResultBit5.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit5.TabIndex = 12;
 			this.checkBoxResultBit5.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit5.CheckedChanged += new System.EventHandler(this.checkBoxResultBit5_CheckedChanged);
+			this.checkBoxResultBit5.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit5_CheckedChanged);
 			// 
 			// checkBoxResultBit1
 			// 
@@ -1647,7 +1647,7 @@
 			this.buttonA2LsbSign.TabIndex = 67;
 			this.buttonA2LsbSign.Text = "LSB: 0";
 			this.buttonA2LsbSign.UseVisualStyleBackColor = true;
-			this.buttonA2LsbSign.Click += new System.EventHandler(this.buttonA2LsbSign_Click);
+			this.buttonA2LsbSign.Click += new System.EventHandler(this.ButtonA2LsbSign_Click);
 			// 
 			// maskedTextBoxA2Network
 			// 
@@ -1734,6 +1734,7 @@
 			this.labelA2Bit31.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit31.TabIndex = 65;
 			this.labelA2Bit31.Text = "31";
+			this.labelA2Bit31.Click += new System.EventHandler(this.labelA2Bit31_Click);
 			// 
 			// checkBoxA2Bit31
 			// 
@@ -1766,6 +1767,7 @@
 			this.labelA2Bit24.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit24.TabIndex = 51;
 			this.labelA2Bit24.Text = "24";
+			this.labelA2Bit24.Click += new System.EventHandler(this.labelA2Bit24_Click);
 			// 
 			// checkBoxA2Bit25
 			// 
@@ -1787,6 +1789,7 @@
 			this.labelA2Bit30.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit30.TabIndex = 63;
 			this.labelA2Bit30.Text = "30";
+			this.labelA2Bit30.Click += new System.EventHandler(this.labelA2Bit30_Click);
 			// 
 			// labelA2Bit25
 			// 
@@ -1797,6 +1800,7 @@
 			this.labelA2Bit25.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit25.TabIndex = 53;
 			this.labelA2Bit25.Text = "25";
+			this.labelA2Bit25.Click += new System.EventHandler(this.labelA2Bit25_Click);
 			// 
 			// checkBoxA2Bit26
 			// 
@@ -1829,6 +1833,7 @@
 			this.labelA2Bit26.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit26.TabIndex = 55;
 			this.labelA2Bit26.Text = "26";
+			this.labelA2Bit26.Click += new System.EventHandler(this.labelA2Bit26_Click);
 			// 
 			// labelA2Bit29
 			// 
@@ -1839,6 +1844,7 @@
 			this.labelA2Bit29.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit29.TabIndex = 61;
 			this.labelA2Bit29.Text = "29";
+			this.labelA2Bit29.Click += new System.EventHandler(this.labelA2Bit29_Click);
 			// 
 			// checkBoxA2Bit27
 			// 
@@ -1871,6 +1877,7 @@
 			this.labelA2Bit27.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit27.TabIndex = 57;
 			this.labelA2Bit27.Text = "27";
+			this.labelA2Bit27.Click += new System.EventHandler(this.labelA2Bit27_Click);
 			// 
 			// labelA2Bit28
 			// 
@@ -1881,6 +1888,7 @@
 			this.labelA2Bit28.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit28.TabIndex = 59;
 			this.labelA2Bit28.Text = "28";
+			this.labelA2Bit28.Click += new System.EventHandler(this.labelA2Bit28_Click);
 			// 
 			// checkBoxA2Bit28
 			// 
@@ -1949,6 +1957,7 @@
 			this.labelA2Bit21.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit21.TabIndex = 45;
 			this.labelA2Bit21.Text = "21";
+			this.labelA2Bit21.Click += new System.EventHandler(this.labelA2Bit21_Click);
 			// 
 			// labelA2Bit20
 			// 
@@ -1959,6 +1968,7 @@
 			this.labelA2Bit20.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit20.TabIndex = 43;
 			this.labelA2Bit20.Text = "20";
+			this.labelA2Bit20.Click += new System.EventHandler(this.labelA2Bit20_Click);
 			// 
 			// checkBoxA2Bit22
 			// 
@@ -1991,6 +2001,7 @@
 			this.labelA2Bit22.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit22.TabIndex = 47;
 			this.labelA2Bit22.Text = "22";
+			this.labelA2Bit22.Click += new System.EventHandler(this.labelA2Bit22_Click);
 			// 
 			// labelA2Bit19
 			// 
@@ -2001,6 +2012,7 @@
 			this.labelA2Bit19.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit19.TabIndex = 41;
 			this.labelA2Bit19.Text = "19";
+			this.labelA2Bit19.Click += new System.EventHandler(this.labelA2Bit19_Click);
 			// 
 			// checkBoxA2Bit16
 			// 
@@ -2033,6 +2045,7 @@
 			this.labelA2Bit23.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit23.TabIndex = 49;
 			this.labelA2Bit23.Text = "23";
+			this.labelA2Bit23.Click += new System.EventHandler(this.labelA2Bit23_Click);
 			// 
 			// labelA2Bit18
 			// 
@@ -2043,6 +2056,7 @@
 			this.labelA2Bit18.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit18.TabIndex = 39;
 			this.labelA2Bit18.Text = "18";
+			this.labelA2Bit18.Click += new System.EventHandler(this.labelA2Bit18_Click);
 			// 
 			// labelA2Bit16
 			// 
@@ -2053,6 +2067,7 @@
 			this.labelA2Bit16.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit16.TabIndex = 35;
 			this.labelA2Bit16.Text = "16";
+			this.labelA2Bit16.Click += new System.EventHandler(this.labelA2Bit16_Click);
 			// 
 			// checkBoxA2Bit18
 			// 
@@ -2074,6 +2089,7 @@
 			this.labelA2Bit17.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit17.TabIndex = 37;
 			this.labelA2Bit17.Text = "17";
+			this.labelA2Bit17.Click += new System.EventHandler(this.labelA2Bit17_Click);
 			// 
 			// checkBoxA2Bit17
 			// 
@@ -2142,6 +2158,7 @@
 			this.labelA2Bit10.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit10.TabIndex = 23;
 			this.labelA2Bit10.Text = "10";
+			this.labelA2Bit10.Click += new System.EventHandler(this.labelA2Bit10_Click);
 			// 
 			// labelA2Bit9
 			// 
@@ -2152,6 +2169,7 @@
 			this.labelA2Bit9.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit9.TabIndex = 21;
 			this.labelA2Bit9.Text = "9";
+			this.labelA2Bit9.Click += new System.EventHandler(this.labelA2Bit9_Click);
 			// 
 			// checkBoxA2Bit11
 			// 
@@ -2184,6 +2202,7 @@
 			this.labelA2Bit11.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit11.TabIndex = 25;
 			this.labelA2Bit11.Text = "11";
+			this.labelA2Bit11.Click += new System.EventHandler(this.labelA2Bit11_Click);
 			// 
 			// labelA2Bit15
 			// 
@@ -2194,6 +2213,7 @@
 			this.labelA2Bit15.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit15.TabIndex = 33;
 			this.labelA2Bit15.Text = "15";
+			this.labelA2Bit15.Click += new System.EventHandler(this.labelA2Bit15_Click);
 			// 
 			// labelA2Bit8
 			// 
@@ -2204,6 +2224,7 @@
 			this.labelA2Bit8.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit8.TabIndex = 19;
 			this.labelA2Bit8.Text = "8";
+			this.labelA2Bit8.Click += new System.EventHandler(this.labelA2Bit8_Click);
 			// 
 			// checkBoxA2Bit12
 			// 
@@ -2236,6 +2257,7 @@
 			this.labelA2Bit12.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit12.TabIndex = 27;
 			this.labelA2Bit12.Text = "12";
+			this.labelA2Bit12.Click += new System.EventHandler(this.labelA2Bit12_Click);
 			// 
 			// checkBoxA2Bit13
 			// 
@@ -2257,6 +2279,7 @@
 			this.labelA2Bit13.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit13.TabIndex = 29;
 			this.labelA2Bit13.Text = "13";
+			this.labelA2Bit13.Click += new System.EventHandler(this.labelA2Bit13_Click);
 			// 
 			// checkBoxA2Bit14
 			// 
@@ -2278,6 +2301,7 @@
 			this.labelA2Bit14.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit14.TabIndex = 31;
 			this.labelA2Bit14.Text = "14";
+			this.labelA2Bit14.Click += new System.EventHandler(this.labelA2Bit14_Click);
 			// 
 			// groupBoxA2Byte1
 			// 
@@ -2334,6 +2358,7 @@
 			this.labelA2Bit6.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit6.TabIndex = 15;
 			this.labelA2Bit6.Text = "6";
+			this.labelA2Bit6.Click += new System.EventHandler(this.labelA2Bit6_Click);
 			// 
 			// checkBoxA2Bit0
 			// 
@@ -2366,6 +2391,7 @@
 			this.labelA2Bit0.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit0.TabIndex = 1;
 			this.labelA2Bit0.Text = "0";
+			this.labelA2Bit0.Click += new System.EventHandler(this.labelA2Bit0_Click);
 			// 
 			// labelA2Bit5
 			// 
@@ -2376,6 +2402,7 @@
 			this.labelA2Bit5.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit5.TabIndex = 13;
 			this.labelA2Bit5.Text = "5";
+			this.labelA2Bit5.Click += new System.EventHandler(this.labelA2Bit5_Click);
 			// 
 			// checkBoxA2Bit5
 			// 
@@ -2408,6 +2435,7 @@
 			this.labelA2Bit4.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit4.TabIndex = 11;
 			this.labelA2Bit4.Text = "4";
+			this.labelA2Bit4.Click += new System.EventHandler(this.labelA2Bit4_Click);
 			// 
 			// checkBoxA2Bit4
 			// 
@@ -2429,6 +2457,7 @@
 			this.labelA2Bit1.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit1.TabIndex = 3;
 			this.labelA2Bit1.Text = "1";
+			this.labelA2Bit1.Click += new System.EventHandler(this.labelA2Bit1_Click);
 			// 
 			// labelA2Bit3
 			// 
@@ -2439,6 +2468,7 @@
 			this.labelA2Bit3.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit3.TabIndex = 7;
 			this.labelA2Bit3.Text = "3";
+			this.labelA2Bit3.Click += new System.EventHandler(this.labelA2Bit3_Click);
 			// 
 			// checkBoxA2Bit3
 			// 
@@ -2471,6 +2501,7 @@
 			this.labelA2Bit2.Size = new System.Drawing.Size(13, 13);
 			this.labelA2Bit2.TabIndex = 5;
 			this.labelA2Bit2.Text = "2";
+			this.labelA2Bit2.Click += new System.EventHandler(this.labelA2Bit2_Click);
 			// 
 			// groupBoxAccumulator1
 			// 
@@ -2526,7 +2557,7 @@
 			this.buttonA1LsbSign.TabIndex = 8;
 			this.buttonA1LsbSign.Text = "LSB: 0";
 			this.buttonA1LsbSign.UseVisualStyleBackColor = true;
-			this.buttonA1LsbSign.Click += new System.EventHandler(this.buttonA1LsbSign_Click);
+			this.buttonA1LsbSign.Click += new System.EventHandler(this.ButtonA1LsbSign_Click);
 			// 
 			// maskedTextBoxA1Network
 			// 
@@ -2613,6 +2644,7 @@
 			this.labelA1Bit31.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit31.TabIndex = 0;
 			this.labelA1Bit31.Text = "31";
+			this.labelA1Bit31.Click += new System.EventHandler(this.labelA1Bit31_Click);
 			// 
 			// checkBoxA1Bit31
 			// 
@@ -2645,6 +2677,7 @@
 			this.labelA1Bit24.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit24.TabIndex = 6;
 			this.labelA1Bit24.Text = "24";
+			this.labelA1Bit24.Click += new System.EventHandler(this.labelA1Bit24_Click);
 			// 
 			// checkBoxA1Bit25
 			// 
@@ -2666,6 +2699,7 @@
 			this.labelA1Bit30.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit30.TabIndex = 1;
 			this.labelA1Bit30.Text = "30";
+			this.labelA1Bit30.Click += new System.EventHandler(this.labelA1Bit30_Click);
 			// 
 			// labelA1Bit25
 			// 
@@ -2676,6 +2710,7 @@
 			this.labelA1Bit25.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit25.TabIndex = 5;
 			this.labelA1Bit25.Text = "25";
+			this.labelA1Bit25.Click += new System.EventHandler(this.labelA1Bit25_Click);
 			// 
 			// checkBoxA1Bit26
 			// 
@@ -2708,6 +2743,7 @@
 			this.labelA1Bit26.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit26.TabIndex = 4;
 			this.labelA1Bit26.Text = "26";
+			this.labelA1Bit26.Click += new System.EventHandler(this.labelA1Bit26_Click);
 			// 
 			// labelA1Bit29
 			// 
@@ -2718,6 +2754,7 @@
 			this.labelA1Bit29.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit29.TabIndex = 2;
 			this.labelA1Bit29.Text = "29";
+			this.labelA1Bit29.Click += new System.EventHandler(this.labelA1Bit29_Click);
 			// 
 			// checkBoxA1Bit27
 			// 
@@ -2750,6 +2787,7 @@
 			this.labelA1Bit27.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit27.TabIndex = 3;
 			this.labelA1Bit27.Text = "27";
+			this.labelA1Bit27.Click += new System.EventHandler(this.labelA1Bit27_Click);
 			// 
 			// labelA1Bit28
 			// 
@@ -2760,6 +2798,7 @@
 			this.labelA1Bit28.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit28.TabIndex = 59;
 			this.labelA1Bit28.Text = "28";
+			this.labelA1Bit28.Click += new System.EventHandler(this.labelA1Bit28_Click);
 			// 
 			// checkBoxA1Bit28
 			// 
@@ -2828,6 +2867,7 @@
 			this.labelA1Bit21.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit21.TabIndex = 1;
 			this.labelA1Bit21.Text = "21";
+			this.labelA1Bit21.Click += new System.EventHandler(this.labelA1Bit21_Click);
 			// 
 			// labelA1Bit20
 			// 
@@ -2838,6 +2878,7 @@
 			this.labelA1Bit20.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit20.TabIndex = 2;
 			this.labelA1Bit20.Text = "20";
+			this.labelA1Bit20.Click += new System.EventHandler(this.labelA1Bit20_Click);
 			// 
 			// checkBoxA1Bit22
 			// 
@@ -2870,6 +2911,7 @@
 			this.labelA1Bit22.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit22.TabIndex = 0;
 			this.labelA1Bit22.Text = "22";
+			this.labelA1Bit22.Click += new System.EventHandler(this.labelA1Bit22_Click);
 			// 
 			// labelA1Bit19
 			// 
@@ -2880,6 +2922,7 @@
 			this.labelA1Bit19.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit19.TabIndex = 3;
 			this.labelA1Bit19.Text = "19";
+			this.labelA1Bit19.Click += new System.EventHandler(this.labelA1Bit19_Click);
 			// 
 			// checkBoxA1Bit16
 			// 
@@ -2912,6 +2955,7 @@
 			this.labelA1Bit23.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit23.TabIndex = 49;
 			this.labelA1Bit23.Text = "23";
+			this.labelA1Bit23.Click += new System.EventHandler(this.labelA1Bit23_Click);
 			// 
 			// labelA1Bit18
 			// 
@@ -2922,6 +2966,7 @@
 			this.labelA1Bit18.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit18.TabIndex = 4;
 			this.labelA1Bit18.Text = "18";
+			this.labelA1Bit18.Click += new System.EventHandler(this.labelA1Bit18_Click);
 			// 
 			// labelA1Bit16
 			// 
@@ -2932,6 +2977,7 @@
 			this.labelA1Bit16.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit16.TabIndex = 5;
 			this.labelA1Bit16.Text = "16";
+			this.labelA1Bit16.Click += new System.EventHandler(this.labelA1Bit16_Click);
 			// 
 			// checkBoxA1Bit18
 			// 
@@ -2953,6 +2999,7 @@
 			this.labelA1Bit17.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit17.TabIndex = 37;
 			this.labelA1Bit17.Text = "17";
+			this.labelA1Bit17.Click += new System.EventHandler(this.labelA1Bit17_Click);
 			// 
 			// checkBoxA1Bit17
 			// 
@@ -3021,6 +3068,7 @@
 			this.labelA1Bit10.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit10.TabIndex = 3;
 			this.labelA1Bit10.Text = "10";
+			this.labelA1Bit10.Click += new System.EventHandler(this.labelA1Bit10_Click);
 			// 
 			// labelA1Bit9
 			// 
@@ -3031,6 +3079,7 @@
 			this.labelA1Bit9.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit9.TabIndex = 4;
 			this.labelA1Bit9.Text = "9";
+			this.labelA1Bit9.Click += new System.EventHandler(this.labelA1Bit9_Click);
 			// 
 			// checkBoxA1Bit11
 			// 
@@ -3063,6 +3112,7 @@
 			this.labelA1Bit11.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit11.TabIndex = 2;
 			this.labelA1Bit11.Text = "11";
+			this.labelA1Bit11.Click += new System.EventHandler(this.labelA1Bit11_Click);
 			// 
 			// labelA1Bit15
 			// 
@@ -3073,6 +3123,7 @@
 			this.labelA1Bit15.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit15.TabIndex = 0;
 			this.labelA1Bit15.Text = "15";
+			this.labelA1Bit15.Click += new System.EventHandler(this.labelA1Bit15_Click);
 			// 
 			// labelA1Bit8
 			// 
@@ -3083,6 +3134,7 @@
 			this.labelA1Bit8.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit8.TabIndex = 5;
 			this.labelA1Bit8.Text = "8";
+			this.labelA1Bit8.Click += new System.EventHandler(this.labelA1Bit8_Click);
 			// 
 			// checkBoxA1Bit12
 			// 
@@ -3115,6 +3167,7 @@
 			this.labelA1Bit12.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit12.TabIndex = 1;
 			this.labelA1Bit12.Text = "12";
+			this.labelA1Bit12.Click += new System.EventHandler(this.labelA1Bit12_Click);
 			// 
 			// checkBoxA1Bit13
 			// 
@@ -3136,6 +3189,7 @@
 			this.labelA1Bit13.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit13.TabIndex = 29;
 			this.labelA1Bit13.Text = "13";
+			this.labelA1Bit13.Click += new System.EventHandler(this.labelA1Bit13_Click);
 			// 
 			// checkBoxA1Bit14
 			// 
@@ -3157,6 +3211,7 @@
 			this.labelA1Bit14.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit14.TabIndex = 31;
 			this.labelA1Bit14.Text = "14";
+			this.labelA1Bit14.Click += new System.EventHandler(this.labelA1Bit14_Click);
 			// 
 			// groupBoxA1Byte1
 			// 
@@ -3192,6 +3247,7 @@
 			this.labelA1Bit7.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit7.TabIndex = 0;
 			this.labelA1Bit7.Text = "7";
+			this.labelA1Bit7.Click += new System.EventHandler(this.labelA1Bit7_Click);
 			// 
 			// checkBoxA1Bit7
 			// 
@@ -3213,6 +3269,7 @@
 			this.labelA1Bit6.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit6.TabIndex = 1;
 			this.labelA1Bit6.Text = "6";
+			this.labelA1Bit6.Click += new System.EventHandler(this.labelA1Bit6_Click);
 			// 
 			// checkBoxA1Bit0
 			// 
@@ -3245,6 +3302,7 @@
 			this.labelA1Bit0.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit0.TabIndex = 6;
 			this.labelA1Bit0.Text = "0";
+			this.labelA1Bit0.Click += new System.EventHandler(this.labelA1Bit0_Click);
 			// 
 			// labelA1Bit5
 			// 
@@ -3255,6 +3313,7 @@
 			this.labelA1Bit5.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit5.TabIndex = 2;
 			this.labelA1Bit5.Text = "5";
+			this.labelA1Bit5.Click += new System.EventHandler(this.labelA1Bit5_Click);
 			// 
 			// checkBoxA1Bit5
 			// 
@@ -3287,6 +3346,7 @@
 			this.labelA1Bit4.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit4.TabIndex = 3;
 			this.labelA1Bit4.Text = "4";
+			this.labelA1Bit4.Click += new System.EventHandler(this.labelA1Bit4_Click);
 			// 
 			// checkBoxA1Bit4
 			// 
@@ -3308,6 +3368,7 @@
 			this.labelA1Bit1.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit1.TabIndex = 5;
 			this.labelA1Bit1.Text = "1";
+			this.labelA1Bit1.Click += new System.EventHandler(this.labelA1Bit1_Click);
 			// 
 			// labelA1Bit3
 			// 
@@ -3318,6 +3379,7 @@
 			this.labelA1Bit3.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit3.TabIndex = 4;
 			this.labelA1Bit3.Text = "3";
+			this.labelA1Bit3.Click += new System.EventHandler(this.labelA1Bit3_Click);
 			// 
 			// checkBoxA1Bit3
 			// 
@@ -3350,6 +3412,7 @@
 			this.labelA1Bit2.Size = new System.Drawing.Size(13, 13);
 			this.labelA1Bit2.TabIndex = 5;
 			this.labelA1Bit2.Text = "2";
+			this.labelA1Bit2.Click += new System.EventHandler(this.labelA1Bit2_Click);
 			// 
 			// MainForm
 			// 
