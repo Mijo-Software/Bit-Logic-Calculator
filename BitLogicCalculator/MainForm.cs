@@ -1,6 +1,7 @@
-﻿using System;
+﻿using BitLogicCalculator.Properties;
+
+using System;
 using System.Windows.Forms;
-using BitLogicCalculator.Properties;
 
 namespace BitLogicCalculator
 {
@@ -22,7 +23,6 @@ namespace BitLogicCalculator
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
-			comboBoxBitRepresentation.SelectedIndex = 0;
 			comboBoxMsbRepresentation.SelectedIndex = 0;
 			comboBoxDataSize.SelectedIndex = comboBoxDataSize.Items.Count - 1;
 			textBoxConversionInput.Text = Resources.number00;
@@ -41,10 +41,162 @@ namespace BitLogicCalculator
 
 		private void ComboBoxDataSize_SelectedIndexChanged(object sender, EventArgs e)
 		{
-		}
-
-		private void ComboBoxBitRepresentation_SelectedIndexChanged(object sender, EventArgs e)
-		{
+			switch (comboBoxDataSize.SelectedIndex)
+			{
+				case 0:
+					checkBoxA1Bit08.Checked = false;
+					checkBoxA1Bit09.Checked = false;
+					checkBoxA1Bit10.Checked = false;
+					checkBoxA1Bit11.Checked = false;
+					checkBoxA1Bit12.Checked = false;
+					checkBoxA1Bit13.Checked = false;
+					checkBoxA1Bit14.Checked = false;
+					checkBoxA1Bit15.Checked = false;
+					checkBoxA1Bit16.Checked = false;
+					checkBoxA1Bit17.Checked = false;
+					checkBoxA1Bit18.Checked = false;
+					checkBoxA1Bit19.Checked = false;
+					checkBoxA1Bit20.Checked = false;
+					checkBoxA1Bit21.Checked = false;
+					checkBoxA1Bit22.Checked = false;
+					checkBoxA1Bit23.Checked = false;
+					checkBoxA1Bit24.Checked = false;
+					checkBoxA1Bit25.Checked = false;
+					checkBoxA1Bit26.Checked = false;
+					checkBoxA1Bit27.Checked = false;
+					checkBoxA1Bit28.Checked = false;
+					checkBoxA1Bit29.Checked = false;
+					checkBoxA1Bit30.Checked = false;
+					checkBoxA1Bit31.Checked = false;
+					checkBoxA2Bit08.Checked = false;
+					checkBoxA2Bit09.Checked = false;
+					checkBoxA2Bit10.Checked = false;
+					checkBoxA2Bit11.Checked = false;
+					checkBoxA2Bit12.Checked = false;
+					checkBoxA2Bit13.Checked = false;
+					checkBoxA2Bit14.Checked = false;
+					checkBoxA2Bit15.Checked = false;
+					checkBoxA2Bit16.Checked = false;
+					checkBoxA2Bit17.Checked = false;
+					checkBoxA2Bit18.Checked = false;
+					checkBoxA2Bit19.Checked = false;
+					checkBoxA2Bit20.Checked = false;
+					checkBoxA2Bit21.Checked = false;
+					checkBoxA2Bit22.Checked = false;
+					checkBoxA2Bit23.Checked = false;
+					checkBoxA2Bit24.Checked = false;
+					checkBoxA2Bit25.Checked = false;
+					checkBoxA2Bit26.Checked = false;
+					checkBoxA2Bit27.Checked = false;
+					checkBoxA2Bit28.Checked = false;
+					checkBoxA2Bit29.Checked = false;
+					checkBoxA2Bit30.Checked = false;
+					checkBoxA2Bit31.Checked = false;
+					checkBoxResultBit08.Checked = false;
+					checkBoxResultBit09.Checked = false;
+					checkBoxResultBit10.Checked = false;
+					checkBoxResultBit11.Checked = false;
+					checkBoxResultBit12.Checked = false;
+					checkBoxResultBit13.Checked = false;
+					checkBoxResultBit14.Checked = false;
+					checkBoxResultBit15.Checked = false;
+					checkBoxResultBit16.Checked = false;
+					checkBoxResultBit17.Checked = false;
+					checkBoxResultBit18.Checked = false;
+					checkBoxResultBit19.Checked = false;
+					checkBoxResultBit20.Checked = false;
+					checkBoxResultBit21.Checked = false;
+					checkBoxResultBit22.Checked = false;
+					checkBoxResultBit23.Checked = false;
+					checkBoxResultBit24.Checked = false;
+					checkBoxResultBit25.Checked = false;
+					checkBoxResultBit26.Checked = false;
+					checkBoxResultBit27.Checked = false;
+					checkBoxResultBit28.Checked = false;
+					checkBoxResultBit29.Checked = false;
+					checkBoxResultBit30.Checked = false;
+					checkBoxResultBit31.Checked = false;
+					groupBoxA1Byte2.Enabled = false;
+					groupBoxA1Byte3.Enabled = false;
+					groupBoxA1Byte4.Enabled = false;
+					groupBoxA2Byte2.Enabled = false;
+					groupBoxA2Byte3.Enabled = false;
+					groupBoxA2Byte4.Enabled = false;
+					groupBoxResultByte2.Enabled = false;
+					groupBoxResultByte3.Enabled = false;
+					groupBoxResultByte4.Enabled = false;
+					break;
+				case 1:
+					checkBoxA1Bit16.Checked = false;
+					checkBoxA1Bit17.Checked = false;
+					checkBoxA1Bit18.Checked = false;
+					checkBoxA1Bit19.Checked = false;
+					checkBoxA1Bit20.Checked = false;
+					checkBoxA1Bit21.Checked = false;
+					checkBoxA1Bit22.Checked = false;
+					checkBoxA1Bit23.Checked = false;
+					checkBoxA1Bit24.Checked = false;
+					checkBoxA1Bit25.Checked = false;
+					checkBoxA1Bit26.Checked = false;
+					checkBoxA1Bit27.Checked = false;
+					checkBoxA1Bit28.Checked = false;
+					checkBoxA1Bit29.Checked = false;
+					checkBoxA1Bit30.Checked = false;
+					checkBoxA1Bit31.Checked = false;
+					checkBoxA2Bit16.Checked = false;
+					checkBoxA2Bit17.Checked = false;
+					checkBoxA2Bit18.Checked = false;
+					checkBoxA2Bit19.Checked = false;
+					checkBoxA2Bit20.Checked = false;
+					checkBoxA2Bit21.Checked = false;
+					checkBoxA2Bit22.Checked = false;
+					checkBoxA2Bit23.Checked = false;
+					checkBoxA2Bit24.Checked = false;
+					checkBoxA2Bit25.Checked = false;
+					checkBoxA2Bit26.Checked = false;
+					checkBoxA2Bit27.Checked = false;
+					checkBoxA2Bit28.Checked = false;
+					checkBoxA2Bit29.Checked = false;
+					checkBoxA2Bit30.Checked = false;
+					checkBoxA2Bit31.Checked = false;
+					checkBoxResultBit16.Checked = false;
+					checkBoxResultBit17.Checked = false;
+					checkBoxResultBit18.Checked = false;
+					checkBoxResultBit19.Checked = false;
+					checkBoxResultBit20.Checked = false;
+					checkBoxResultBit21.Checked = false;
+					checkBoxResultBit22.Checked = false;
+					checkBoxResultBit23.Checked = false;
+					checkBoxResultBit24.Checked = false;
+					checkBoxResultBit25.Checked = false;
+					checkBoxResultBit26.Checked = false;
+					checkBoxResultBit27.Checked = false;
+					checkBoxResultBit28.Checked = false;
+					checkBoxResultBit29.Checked = false;
+					checkBoxResultBit30.Checked = false;
+					checkBoxResultBit31.Checked = false;
+					groupBoxA1Byte2.Enabled = true;
+					groupBoxA1Byte3.Enabled = false;
+					groupBoxA1Byte4.Enabled = false;
+					groupBoxA2Byte2.Enabled = true;
+					groupBoxA2Byte3.Enabled = false;
+					groupBoxA2Byte4.Enabled = false;
+					groupBoxResultByte2.Enabled = true;
+					groupBoxResultByte3.Enabled = false;
+					groupBoxResultByte4.Enabled = false;
+					break;
+				default:
+					groupBoxA1Byte2.Enabled = true;
+					groupBoxA1Byte3.Enabled = true;
+					groupBoxA1Byte4.Enabled = true;
+					groupBoxA2Byte2.Enabled = true;
+					groupBoxA2Byte3.Enabled = true;
+					groupBoxA2Byte4.Enabled = true;
+					groupBoxResultByte2.Enabled = true;
+					groupBoxResultByte3.Enabled = true;
+					groupBoxResultByte4.Enabled = true;
+					break;
+			}
 		}
 
 		private void ComboBoxConversionInputUnit_SelectedIndexChanged(object sender, EventArgs e)
@@ -73,22 +225,30 @@ namespace BitLogicCalculator
 
 		#region buttons	
 
+		private void ButtonAbout_Click(object sender, EventArgs e)
+		{
+			using (AboutBox aboutBox = new AboutBox())
+			{
+				aboutBox.ShowDialog();
+			}
+		}
+
 		private void ButtonLsbSign_Click(object sender, EventArgs e)
 		{
 			isLsbSignSet = !isLsbSignSet;
 			if (!isLsbSignSet)
 			{
 				buttonLsbSign.Text = Resources.lsb0;
-				labelA1Bit0.Text = Resources.number00;
-				labelA1Bit1.Text = Resources.number01;
-				labelA1Bit2.Text = Resources.number02;
-				labelA1Bit3.Text = Resources.number03;
-				labelA1Bit4.Text = Resources.number04;
-				labelA1Bit5.Text = Resources.number05;
-				labelA1Bit6.Text = Resources.number06;
-				labelA1Bit7.Text = Resources.number07;
-				labelA1Bit8.Text = Resources.number08;
-				labelA1Bit9.Text = Resources.number09;
+				labelA1Bit00.Text = Resources.number00;
+				labelA1Bit01.Text = Resources.number01;
+				labelA1Bit02.Text = Resources.number02;
+				labelA1Bit03.Text = Resources.number03;
+				labelA1Bit04.Text = Resources.number04;
+				labelA1Bit05.Text = Resources.number05;
+				labelA1Bit06.Text = Resources.number06;
+				labelA1Bit07.Text = Resources.number07;
+				labelA1Bit08.Text = Resources.number08;
+				labelA1Bit09.Text = Resources.number09;
 				labelA1Bit10.Text = Resources.number10;
 				labelA1Bit11.Text = Resources.number11;
 				labelA1Bit12.Text = Resources.number12;
@@ -111,16 +271,16 @@ namespace BitLogicCalculator
 				labelA1Bit29.Text = Resources.number29;
 				labelA1Bit30.Text = Resources.number30;
 				labelA1Bit31.Text = Resources.number31;
-				labelA2Bit0.Text = Resources.number00;
-				labelA2Bit1.Text = Resources.number01;
-				labelA2Bit2.Text = Resources.number02;
-				labelA2Bit3.Text = Resources.number03;
-				labelA2Bit4.Text = Resources.number04;
-				labelA2Bit5.Text = Resources.number05;
-				labelA2Bit6.Text = Resources.number06;
-				labelA2Bit7.Text = Resources.number07;
-				labelA2Bit8.Text = Resources.number08;
-				labelA2Bit9.Text = Resources.number09;
+				labelA2Bit00.Text = Resources.number00;
+				labelA2Bit01.Text = Resources.number01;
+				labelA2Bit02.Text = Resources.number02;
+				labelA2Bit03.Text = Resources.number03;
+				labelA2Bit04.Text = Resources.number04;
+				labelA2Bit05.Text = Resources.number05;
+				labelA2Bit06.Text = Resources.number06;
+				labelA2Bit07.Text = Resources.number07;
+				labelA2Bit08.Text = Resources.number08;
+				labelA2Bit09.Text = Resources.number09;
 				labelA2Bit10.Text = Resources.number10;
 				labelA2Bit11.Text = Resources.number11;
 				labelA2Bit12.Text = Resources.number12;
@@ -143,16 +303,16 @@ namespace BitLogicCalculator
 				labelA2Bit29.Text = Resources.number29;
 				labelA2Bit30.Text = Resources.number30;
 				labelA2Bit31.Text = Resources.number31;
-				labelResultBit0.Text = Resources.number00;
-				labelResultBit1.Text = Resources.number01;
-				labelResultBit2.Text = Resources.number02;
-				labelResultBit3.Text = Resources.number03;
-				labelResultBit4.Text = Resources.number04;
-				labelResultBit5.Text = Resources.number05;
-				labelResultBit6.Text = Resources.number06;
-				labelResultBit7.Text = Resources.number07;
-				labelResultBit8.Text = Resources.number08;
-				labelResultBit9.Text = Resources.number09;
+				labelResultBit00.Text = Resources.number00;
+				labelResultBit01.Text = Resources.number01;
+				labelResultBit02.Text = Resources.number02;
+				labelResultBit03.Text = Resources.number03;
+				labelResultBit04.Text = Resources.number04;
+				labelResultBit05.Text = Resources.number05;
+				labelResultBit06.Text = Resources.number06;
+				labelResultBit07.Text = Resources.number07;
+				labelResultBit08.Text = Resources.number08;
+				labelResultBit09.Text = Resources.number09;
 				labelResultBit10.Text = Resources.number10;
 				labelResultBit11.Text = Resources.number11;
 				labelResultBit12.Text = Resources.number12;
@@ -179,16 +339,16 @@ namespace BitLogicCalculator
 			else
 			{
 				buttonLsbSign.Text = Resources.lsb1;
-				labelA1Bit0.Text = Resources.number01;
-				labelA1Bit1.Text = Resources.number02;
-				labelA1Bit2.Text = Resources.number03;
-				labelA1Bit3.Text = Resources.number04;
-				labelA1Bit4.Text = Resources.number05;
-				labelA1Bit5.Text = Resources.number06;
-				labelA1Bit6.Text = Resources.number07;
-				labelA1Bit7.Text = Resources.number08;
-				labelA1Bit8.Text = Resources.number09;
-				labelA1Bit9.Text = Resources.number10;
+				labelA1Bit00.Text = Resources.number01;
+				labelA1Bit01.Text = Resources.number02;
+				labelA1Bit02.Text = Resources.number03;
+				labelA1Bit03.Text = Resources.number04;
+				labelA1Bit04.Text = Resources.number05;
+				labelA1Bit05.Text = Resources.number06;
+				labelA1Bit06.Text = Resources.number07;
+				labelA1Bit07.Text = Resources.number08;
+				labelA1Bit08.Text = Resources.number09;
+				labelA1Bit09.Text = Resources.number10;
 				labelA1Bit10.Text = Resources.number11;
 				labelA1Bit11.Text = Resources.number12;
 				labelA1Bit12.Text = Resources.number13;
@@ -211,16 +371,16 @@ namespace BitLogicCalculator
 				labelA1Bit29.Text = Resources.number30;
 				labelA1Bit30.Text = Resources.number31;
 				labelA1Bit31.Text = Resources.number32;
-				labelA2Bit0.Text = Resources.number01;
-				labelA2Bit1.Text = Resources.number02;
-				labelA2Bit2.Text = Resources.number03;
-				labelA2Bit3.Text = Resources.number04;
-				labelA2Bit4.Text = Resources.number05;
-				labelA2Bit5.Text = Resources.number06;
-				labelA2Bit6.Text = Resources.number07;
-				labelA2Bit7.Text = Resources.number08;
-				labelA2Bit8.Text = Resources.number09;
-				labelA2Bit9.Text = Resources.number10;
+				labelA2Bit00.Text = Resources.number01;
+				labelA2Bit01.Text = Resources.number02;
+				labelA2Bit02.Text = Resources.number03;
+				labelA2Bit03.Text = Resources.number04;
+				labelA2Bit04.Text = Resources.number05;
+				labelA2Bit05.Text = Resources.number06;
+				labelA2Bit06.Text = Resources.number07;
+				labelA2Bit07.Text = Resources.number08;
+				labelA2Bit08.Text = Resources.number09;
+				labelA2Bit09.Text = Resources.number10;
 				labelA2Bit10.Text = Resources.number11;
 				labelA2Bit11.Text = Resources.number12;
 				labelA2Bit12.Text = Resources.number13;
@@ -243,16 +403,16 @@ namespace BitLogicCalculator
 				labelA2Bit29.Text = Resources.number30;
 				labelA2Bit30.Text = Resources.number31;
 				labelA2Bit31.Text = Resources.number32;
-				labelResultBit0.Text = Resources.number01;
-				labelResultBit1.Text = Resources.number02;
-				labelResultBit2.Text = Resources.number03;
-				labelResultBit3.Text = Resources.number04;
-				labelResultBit4.Text = Resources.number05;
-				labelResultBit5.Text = Resources.number06;
-				labelResultBit6.Text = Resources.number07;
-				labelResultBit7.Text = Resources.number08;
-				labelResultBit8.Text = Resources.number09;
-				labelResultBit9.Text = Resources.number10;
+				labelResultBit00.Text = Resources.number01;
+				labelResultBit01.Text = Resources.number02;
+				labelResultBit02.Text = Resources.number03;
+				labelResultBit03.Text = Resources.number04;
+				labelResultBit04.Text = Resources.number05;
+				labelResultBit05.Text = Resources.number06;
+				labelResultBit06.Text = Resources.number07;
+				labelResultBit07.Text = Resources.number08;
+				labelResultBit08.Text = Resources.number09;
+				labelResultBit09.Text = Resources.number10;
 				labelResultBit10.Text = Resources.number11;
 				labelResultBit11.Text = Resources.number12;
 				labelResultBit12.Text = Resources.number13;
@@ -446,43 +606,43 @@ namespace BitLogicCalculator
 
 		#region labels
 
-		private void LabelA1Bit0_Click(object sender, EventArgs e)
+		private void LabelA1Bit00_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit1_Click(object sender, EventArgs e)
+		private void LabelA1Bit01_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit2_Click(object sender, EventArgs e)
+		private void LabelA1Bit02_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit3_Click(object sender, EventArgs e)
+		private void LabelA1Bit03_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit4_Click(object sender, EventArgs e)
+		private void LabelA1Bit04_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit5_Click(object sender, EventArgs e)
+		private void LabelA1Bit05_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit6_Click(object sender, EventArgs e)
+		private void LabelA1Bit06_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit7_Click(object sender, EventArgs e)
+		private void LabelA1Bit07_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit8_Click(object sender, EventArgs e)
+		private void LabelA1Bit08_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA1Bit9_Click(object sender, EventArgs e)
+		private void LabelA1Bit09_Click(object sender, EventArgs e)
 		{
 		}
 
@@ -574,39 +734,39 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void LabelA2Bit0_Click(object sender, EventArgs e)
+		private void LabelA2Bit00_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit1_Click(object sender, EventArgs e)
+		private void LabelA2Bit01_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit2_Click(object sender, EventArgs e)
+		private void LabelA2Bit02_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit3_Click(object sender, EventArgs e)
+		private void LabelA2Bit03_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit4_Click(object sender, EventArgs e)
+		private void LabelA2Bit04_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit5_Click(object sender, EventArgs e)
+		private void LabelA2Bit05_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit6_Click(object sender, EventArgs e)
+		private void LabelA2Bit06_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit8_Click(object sender, EventArgs e)
+		private void LabelA2Bit08_Click(object sender, EventArgs e)
 		{
 		}
 
-		private void LabelA2Bit9_Click(object sender, EventArgs e)
+		private void LabelA2Bit09_Click(object sender, EventArgs e)
 		{
 		}
 
@@ -704,43 +864,43 @@ namespace BitLogicCalculator
 
 		#region CheckedChanged event handlers
 
-		private void CheckBoxA1Bit0_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit00_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit1_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit01_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit2_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit02_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit3_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit03_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit4_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit04_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit5_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit05_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit6_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit06_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit7_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit07_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit8_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit08_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA1Bit9_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA1Bit09_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
@@ -832,43 +992,43 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void CheckBoxA2Bit0_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit00_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit1_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit01_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit2_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit02_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit3_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit03_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit4_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit04_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit5_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit05_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit6_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit06_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit7_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit07_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit8_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit08_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxA2Bit9_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxA2Bit09_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
@@ -960,43 +1120,43 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void CheckBoxResultBit0_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit00_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit1_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit01_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit2_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit02_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit3_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit03_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit4_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit04_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit5_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit05_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit6_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit06_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit7_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit07_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit8_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit08_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void CheckBoxResultBit9_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxResultBit09_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
