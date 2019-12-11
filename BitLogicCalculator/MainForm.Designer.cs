@@ -33,12 +33,18 @@
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.comboBoxConversionOutputUnit = new System.Windows.Forms.ComboBox();
+			this.comboBoxConversionInputUnit = new System.Windows.Forms.ComboBox();
+			this.textBoxConversionOutput = new System.Windows.Forms.TextBox();
+			this.textBoxConversionInput = new System.Windows.Forms.TextBox();
 			this.groupBoxApplicationSettings = new System.Windows.Forms.GroupBox();
+			this.checkBoxFadeInOut = new System.Windows.Forms.CheckBox();
+			this.numericUpDownTransparency = new System.Windows.Forms.NumericUpDown();
 			this.labelBitRepresention = new System.Windows.Forms.Label();
-			this.comboBoxBitRepresentation = new System.Windows.Forms.ComboBox();
 			this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
 			this.labelTransparency = new System.Windows.Forms.Label();
-			this.trackBarTransparency = new System.Windows.Forms.TrackBar();
+			this.comboBoxBitRepresentation = new System.Windows.Forms.ComboBox();
 			this.groupBoxDataFormat = new System.Windows.Forms.GroupBox();
 			this.buttonLsbSign = new System.Windows.Forms.Button();
 			this.comboBoxDataSize = new System.Windows.Forms.ComboBox();
@@ -46,6 +52,7 @@
 			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
 			this.labelDataSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
+			this.buttonHalfswapA2 = new System.Windows.Forms.Button();
 			this.buttonHalfswapA1 = new System.Windows.Forms.Button();
 			this.buttonSubjunktionA2A1 = new System.Windows.Forms.Button();
 			this.buttonSubjunktionA1A2 = new System.Windows.Forms.Button();
@@ -319,13 +326,13 @@
 			this.checkBoxA1Bit3 = new System.Windows.Forms.CheckBox();
 			this.checkBoxA1Bit2 = new System.Windows.Forms.CheckBox();
 			this.labelA1Bit2 = new System.Windows.Forms.Label();
-			this.buttonHalfswapA2 = new System.Windows.Forms.Button();
 			this.statusStrip.SuspendLayout();
 			this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.toolStripContainer.ContentPanel.SuspendLayout();
 			this.toolStripContainer.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			this.groupBoxApplicationSettings.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownTransparency)).BeginInit();
 			this.groupBoxDataFormat.SuspendLayout();
 			this.groupBoxOperations.SuspendLayout();
 			this.contextMenuStripRoller.SuspendLayout();
@@ -373,6 +380,7 @@
 			// 
 			// toolStripContainer.ContentPanel
 			// 
+			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBox1);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxApplicationSettings);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxDataFormat);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxOperations);
@@ -387,48 +395,120 @@
 			this.toolStripContainer.TabIndex = 0;
 			this.toolStripContainer.Text = "toolStripContainer1";
 			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.comboBoxConversionOutputUnit);
+			this.groupBox1.Controls.Add(this.comboBoxConversionInputUnit);
+			this.groupBox1.Controls.Add(this.textBoxConversionOutput);
+			this.groupBox1.Controls.Add(this.textBoxConversionInput);
+			this.groupBox1.Location = new System.Drawing.Point(310, 381);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(165, 68);
+			this.groupBox1.TabIndex = 91;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Data conversion tool";
+			// 
+			// comboBoxConversionOutputUnit
+			// 
+			this.comboBoxConversionOutputUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxConversionOutputUnit.FormattingEnabled = true;
+			this.comboBoxConversionOutputUnit.Items.AddRange(new object[] {
+            "byte",
+            "kilobyte",
+            "megabyte",
+            "gigabyte",
+            "terabyte"});
+			this.comboBoxConversionOutputUnit.Location = new System.Drawing.Point(90, 41);
+			this.comboBoxConversionOutputUnit.Name = "comboBoxConversionOutputUnit";
+			this.comboBoxConversionOutputUnit.Size = new System.Drawing.Size(69, 21);
+			this.comboBoxConversionOutputUnit.TabIndex = 75;
+			this.comboBoxConversionOutputUnit.SelectedIndexChanged += new System.EventHandler(this.ComboBoxConversionOutputUnit_SelectedIndexChanged);
+			// 
+			// comboBoxConversionInputUnit
+			// 
+			this.comboBoxConversionInputUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxConversionInputUnit.FormattingEnabled = true;
+			this.comboBoxConversionInputUnit.Items.AddRange(new object[] {
+            "byte",
+            "kilobyte",
+            "megabyte",
+            "gigabyte",
+            "terabyte"});
+			this.comboBoxConversionInputUnit.Location = new System.Drawing.Point(90, 17);
+			this.comboBoxConversionInputUnit.Name = "comboBoxConversionInputUnit";
+			this.comboBoxConversionInputUnit.Size = new System.Drawing.Size(69, 21);
+			this.comboBoxConversionInputUnit.TabIndex = 74;
+			this.comboBoxConversionInputUnit.SelectedIndexChanged += new System.EventHandler(this.ComboBoxConversionInputUnit_SelectedIndexChanged);
+			// 
+			// textBoxConversionOutput
+			// 
+			this.textBoxConversionOutput.Location = new System.Drawing.Point(6, 41);
+			this.textBoxConversionOutput.Name = "textBoxConversionOutput";
+			this.textBoxConversionOutput.Size = new System.Drawing.Size(78, 20);
+			this.textBoxConversionOutput.TabIndex = 73;
+			this.textBoxConversionOutput.TextChanged += new System.EventHandler(this.TextBoxConversionOutput_TextChanged);
+			// 
+			// textBoxConversionInput
+			// 
+			this.textBoxConversionInput.Location = new System.Drawing.Point(6, 18);
+			this.textBoxConversionInput.Name = "textBoxConversionInput";
+			this.textBoxConversionInput.Size = new System.Drawing.Size(78, 20);
+			this.textBoxConversionInput.TabIndex = 72;
+			this.textBoxConversionInput.TextChanged += new System.EventHandler(this.TextBoxConversionInput_TextChanged);
+			// 
 			// groupBoxApplicationSettings
 			// 
+			this.groupBoxApplicationSettings.Controls.Add(this.checkBoxFadeInOut);
+			this.groupBoxApplicationSettings.Controls.Add(this.numericUpDownTransparency);
 			this.groupBoxApplicationSettings.Controls.Add(this.labelBitRepresention);
 			this.groupBoxApplicationSettings.Controls.Add(this.checkBoxAlwaysOnTop);
 			this.groupBoxApplicationSettings.Controls.Add(this.labelTransparency);
 			this.groupBoxApplicationSettings.Controls.Add(this.comboBoxBitRepresentation);
-			this.groupBoxApplicationSettings.Controls.Add(this.trackBarTransparency);
 			this.groupBoxApplicationSettings.Location = new System.Drawing.Point(12, 381);
 			this.groupBoxApplicationSettings.Name = "groupBoxApplicationSettings";
-			this.groupBoxApplicationSettings.Size = new System.Drawing.Size(347, 68);
+			this.groupBoxApplicationSettings.Size = new System.Drawing.Size(292, 68);
 			this.groupBoxApplicationSettings.TabIndex = 90;
 			this.groupBoxApplicationSettings.TabStop = false;
 			this.groupBoxApplicationSettings.Text = "Application settings";
+			// 
+			// checkBoxFadeInOut
+			// 
+			this.checkBoxFadeInOut.AutoSize = true;
+			this.checkBoxFadeInOut.Location = new System.Drawing.Point(9, 41);
+			this.checkBoxFadeInOut.Name = "checkBoxFadeInOut";
+			this.checkBoxFadeInOut.Size = new System.Drawing.Size(105, 17);
+			this.checkBoxFadeInOut.TabIndex = 91;
+			this.checkBoxFadeInOut.Text = "Fade in/fade out";
+			this.checkBoxFadeInOut.UseVisualStyleBackColor = true;
+			this.checkBoxFadeInOut.CheckedChanged += new System.EventHandler(this.CheckBoxFadeInOut_CheckedChanged);
+			// 
+			// numericUpDownTransparency
+			// 
+			this.numericUpDownTransparency.Location = new System.Drawing.Point(96, 19);
+			this.numericUpDownTransparency.Name = "numericUpDownTransparency";
+			this.numericUpDownTransparency.Size = new System.Drawing.Size(41, 20);
+			this.numericUpDownTransparency.TabIndex = 91;
+			this.numericUpDownTransparency.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.numericUpDownTransparency.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
 			// 
 			// labelBitRepresention
 			// 
 			this.labelBitRepresention.AutoSize = true;
 			this.labelBitRepresention.BackColor = System.Drawing.Color.Transparent;
-			this.labelBitRepresention.Location = new System.Drawing.Point(191, 39);
+			this.labelBitRepresention.Location = new System.Drawing.Point(145, 43);
 			this.labelBitRepresention.Name = "labelBitRepresention";
 			this.labelBitRepresention.Size = new System.Drawing.Size(51, 13);
 			this.labelBitRepresention.TabIndex = 10;
 			this.labelBitRepresention.Text = "Bit Repr.:";
 			// 
-			// comboBoxBitRepresentation
-			// 
-			this.comboBoxBitRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxBitRepresentation.FormattingEnabled = true;
-			this.comboBoxBitRepresentation.Items.AddRange(new object[] {
-            "checkbox",
-            "0/1-button",
-            "b/w-button"});
-			this.comboBoxBitRepresentation.Location = new System.Drawing.Point(0, 0);
-			this.comboBoxBitRepresentation.Name = "comboBoxBitRepresentation";
-			this.comboBoxBitRepresentation.Size = new System.Drawing.Size(85, 21);
-			this.comboBoxBitRepresentation.TabIndex = 9;
-			this.comboBoxBitRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBitRepresentation_SelectedIndexChanged);
-			// 
 			// checkBoxAlwaysOnTop
 			// 
 			this.checkBoxAlwaysOnTop.AutoSize = true;
-			this.checkBoxAlwaysOnTop.Location = new System.Drawing.Point(194, 16);
+			this.checkBoxAlwaysOnTop.Location = new System.Drawing.Point(148, 20);
 			this.checkBoxAlwaysOnTop.Name = "checkBoxAlwaysOnTop";
 			this.checkBoxAlwaysOnTop.Size = new System.Drawing.Size(92, 17);
 			this.checkBoxAlwaysOnTop.TabIndex = 2;
@@ -441,20 +521,23 @@
 			this.labelTransparency.AutoSize = true;
 			this.labelTransparency.Location = new System.Drawing.Point(6, 21);
 			this.labelTransparency.Name = "labelTransparency";
-			this.labelTransparency.Size = new System.Drawing.Size(72, 13);
+			this.labelTransparency.Size = new System.Drawing.Size(92, 13);
 			this.labelTransparency.TabIndex = 1;
-			this.labelTransparency.Text = "Transparency";
+			this.labelTransparency.Text = "Transparency (%):";
 			// 
-			// trackBarTransparency
+			// comboBoxBitRepresentation
 			// 
-			this.trackBarTransparency.Location = new System.Drawing.Point(84, 16);
-			this.trackBarTransparency.Maximum = 100;
-			this.trackBarTransparency.Name = "trackBarTransparency";
-			this.trackBarTransparency.Size = new System.Drawing.Size(104, 45);
-			this.trackBarTransparency.TabIndex = 0;
-			this.trackBarTransparency.TickFrequency = 10;
-			this.trackBarTransparency.Value = 100;
-			this.trackBarTransparency.Scroll += new System.EventHandler(this.TrackBarTransparency_Scroll);
+			this.comboBoxBitRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxBitRepresentation.FormattingEnabled = true;
+			this.comboBoxBitRepresentation.Items.AddRange(new object[] {
+            "checkbox",
+            "0/1-button",
+            "b/w-button"});
+			this.comboBoxBitRepresentation.Location = new System.Drawing.Point(201, 40);
+			this.comboBoxBitRepresentation.Name = "comboBoxBitRepresentation";
+			this.comboBoxBitRepresentation.Size = new System.Drawing.Size(85, 21);
+			this.comboBoxBitRepresentation.TabIndex = 9;
+			this.comboBoxBitRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBitRepresentation_SelectedIndexChanged);
 			// 
 			// groupBoxDataFormat
 			// 
@@ -579,6 +662,17 @@
 			this.groupBoxOperations.TabIndex = 83;
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
+			// 
+			// buttonHalfswapA2
+			// 
+			this.buttonHalfswapA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonHalfswapA2.Location = new System.Drawing.Point(174, 369);
+			this.buttonHalfswapA2.Name = "buttonHalfswapA2";
+			this.buttonHalfswapA2.Size = new System.Drawing.Size(78, 23);
+			this.buttonHalfswapA2.TabIndex = 110;
+			this.buttonHalfswapA2.Text = "HLFSWP A2";
+			this.buttonHalfswapA2.UseVisualStyleBackColor = true;
+			this.buttonHalfswapA2.Click += new System.EventHandler(this.ButtonHalfswapA2_Click);
 			// 
 			// buttonHalfswapA1
 			// 
@@ -3727,17 +3821,6 @@
 			this.labelA1Bit2.Text = "02";
 			this.labelA1Bit2.Click += new System.EventHandler(this.LabelA1Bit2_Click);
 			// 
-			// buttonHalfswapA2
-			// 
-			this.buttonHalfswapA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonHalfswapA2.Location = new System.Drawing.Point(174, 369);
-			this.buttonHalfswapA2.Name = "buttonHalfswapA2";
-			this.buttonHalfswapA2.Size = new System.Drawing.Size(78, 23);
-			this.buttonHalfswapA2.TabIndex = 110;
-			this.buttonHalfswapA2.Text = "HLFSWP A2";
-			this.buttonHalfswapA2.UseVisualStyleBackColor = true;
-			this.buttonHalfswapA2.Click += new System.EventHandler(this.ButtonHalfswapA2_Click);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3757,9 +3840,11 @@
 			this.toolStripContainer.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer.ResumeLayout(false);
 			this.toolStripContainer.PerformLayout();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.groupBoxApplicationSettings.ResumeLayout(false);
 			this.groupBoxApplicationSettings.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDownTransparency)).EndInit();
 			this.groupBoxDataFormat.ResumeLayout(false);
 			this.groupBoxDataFormat.PerformLayout();
 			this.groupBoxOperations.ResumeLayout(false);
@@ -4071,7 +4156,6 @@
 		private System.Windows.Forms.Button buttonShiftLeftWithOneA2;
 		private System.Windows.Forms.GroupBox groupBoxApplicationSettings;
 		private System.Windows.Forms.Label labelTransparency;
-		private System.Windows.Forms.TrackBar trackBarTransparency;
 		private System.Windows.Forms.Button buttonShiftRightWithOneA2;
 		private System.Windows.Forms.Button buttonShiftRightWithOneA1;
 		private System.Windows.Forms.CheckBox checkBoxAlwaysOnTop;
@@ -4091,6 +4175,13 @@
 		private System.Windows.Forms.Label labelA1Octal;
 		private System.Windows.Forms.Button buttonHalfswapA1;
 		private System.Windows.Forms.Button buttonHalfswapA2;
+		private System.Windows.Forms.CheckBox checkBoxFadeInOut;
+		private System.Windows.Forms.NumericUpDown numericUpDownTransparency;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.ComboBox comboBoxConversionOutputUnit;
+		private System.Windows.Forms.ComboBox comboBoxConversionInputUnit;
+		private System.Windows.Forms.TextBox textBoxConversionOutput;
+		private System.Windows.Forms.TextBox textBoxConversionInput;
 	}
 }
 
