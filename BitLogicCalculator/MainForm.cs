@@ -10,11 +10,21 @@ namespace BitLogicCalculator
 		private bool isA2LsbSignSet;
 		private bool isResultLsbSignSet;
 
+		#region Constructor
+
 		public MainForm() => InitializeComponent();
+
+		#endregion
+
+		#region Form* event handlers
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 		}
+
+		#endregion
+
+		#region SelectedIndexChanged event handlers
 
 		private void ComboBoxMsbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -23,6 +33,22 @@ namespace BitLogicCalculator
 		private void ComboBoxDataSize_SelectedIndexChanged(object sender, EventArgs e)
 		{
 		}
+
+		private void ComboBoxBitRepresentation_SelectedIndexChanged(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region SelectedIndexChanged event handlers
+
+		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region Click event handlers
 
 		private void ButtonA1LsbSign_Click(object sender, EventArgs e)
 		{
@@ -639,6 +665,34 @@ namespace BitLogicCalculator
 		{
 		}
 
+		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region CheckedChanged event handlers
+
 		private void CheckBoxA1Bit0_CheckedChanged(object sender, EventArgs e)
 		{
 		}
@@ -1027,32 +1081,6 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
-		{
-		}
+		#endregion
 	}
 }
