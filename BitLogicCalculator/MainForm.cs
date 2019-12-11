@@ -6,9 +6,11 @@ namespace BitLogicCalculator
 {
 	public partial class MainForm : Form
 	{
-		private bool isA1LsbSignSet;
-		private bool isA2LsbSignSet;
-		private bool isResultLsbSignSet;
+		#region Constants and variables
+
+		private bool isLsbSignSet;
+
+		#endregion
 
 		#region Constructor
 
@@ -20,6 +22,9 @@ namespace BitLogicCalculator
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
+			comboBoxBitRepresentation.SelectedIndex = 0;
+			comboBoxMsbRepresentation.SelectedIndex = 0;
+			comboBoxDataSize.SelectedIndex = comboBoxDataSize.Items.Count - 1;
 		}
 
 		#endregion
@@ -50,12 +55,14 @@ namespace BitLogicCalculator
 
 		#region Click event handlers
 
-		private void ButtonA1LsbSign_Click(object sender, EventArgs e)
+		#region buttons	
+
+		private void ButtonLsbSign_Click(object sender, EventArgs e)
 		{
-			isA1LsbSignSet = !isA1LsbSignSet;
-			if (!isA1LsbSignSet)
+			isLsbSignSet = !isLsbSignSet;
+			if (!isLsbSignSet)
 			{
-				buttonA1LsbSign.Text = Resources.lsb0;
+				buttonLsbSign.Text = Resources.lsb0;
 				labelA1Bit0.Text = Resources.number00;
 				labelA1Bit1.Text = Resources.number01;
 				labelA1Bit2.Text = Resources.number02;
@@ -88,51 +95,6 @@ namespace BitLogicCalculator
 				labelA1Bit29.Text = Resources.number29;
 				labelA1Bit30.Text = Resources.number30;
 				labelA1Bit31.Text = Resources.number31;
-			}
-			else
-			{
-				buttonA1LsbSign.Text = Resources.lsb1;
-				labelA1Bit0.Text = Resources.number01;
-				labelA1Bit1.Text = Resources.number02;
-				labelA1Bit2.Text = Resources.number03;
-				labelA1Bit3.Text = Resources.number04;
-				labelA1Bit4.Text = Resources.number05;
-				labelA1Bit5.Text = Resources.number06;
-				labelA1Bit6.Text = Resources.number07;
-				labelA1Bit7.Text = Resources.number08;
-				labelA1Bit8.Text = Resources.number09;
-				labelA1Bit9.Text = Resources.number10;
-				labelA1Bit10.Text = Resources.number11;
-				labelA1Bit11.Text = Resources.number12;
-				labelA1Bit12.Text = Resources.number13;
-				labelA1Bit13.Text = Resources.number14;
-				labelA1Bit14.Text = Resources.number15;
-				labelA1Bit15.Text = Resources.number16;
-				labelA1Bit16.Text = Resources.number17;
-				labelA1Bit17.Text = Resources.number18;
-				labelA1Bit18.Text = Resources.number19;
-				labelA1Bit19.Text = Resources.number20;
-				labelA1Bit20.Text = Resources.number21;
-				labelA1Bit21.Text = Resources.number22;
-				labelA1Bit22.Text = Resources.number23;
-				labelA1Bit23.Text = Resources.number24;
-				labelA1Bit24.Text = Resources.number25;
-				labelA1Bit25.Text = Resources.number26;
-				labelA1Bit26.Text = Resources.number27;
-				labelA1Bit27.Text = Resources.number28;
-				labelA1Bit28.Text = Resources.number29;
-				labelA1Bit29.Text = Resources.number30;
-				labelA1Bit30.Text = Resources.number31;
-				labelA1Bit31.Text = Resources.number32;
-			}
-		}
-
-		private void ButtonA2LsbSign_Click(object sender, EventArgs e)
-		{
-			isA2LsbSignSet = !isA2LsbSignSet;
-			if (!isA2LsbSignSet)
-			{
-				buttonA2LsbSign.Text = Resources.lsb0;
 				labelA2Bit0.Text = Resources.number00;
 				labelA2Bit1.Text = Resources.number01;
 				labelA2Bit2.Text = Resources.number02;
@@ -165,51 +127,6 @@ namespace BitLogicCalculator
 				labelA2Bit29.Text = Resources.number29;
 				labelA2Bit30.Text = Resources.number30;
 				labelA2Bit31.Text = Resources.number31;
-			}
-			else
-			{
-				buttonA2LsbSign.Text = Resources.lsb1;
-				labelA2Bit0.Text = Resources.number01;
-				labelA2Bit1.Text = Resources.number02;
-				labelA2Bit2.Text = Resources.number03;
-				labelA2Bit3.Text = Resources.number04;
-				labelA2Bit4.Text = Resources.number05;
-				labelA2Bit5.Text = Resources.number06;
-				labelA2Bit6.Text = Resources.number07;
-				labelA2Bit7.Text = Resources.number08;
-				labelA2Bit8.Text = Resources.number09;
-				labelA2Bit9.Text = Resources.number10;
-				labelA2Bit10.Text = Resources.number11;
-				labelA2Bit11.Text = Resources.number12;
-				labelA2Bit12.Text = Resources.number13;
-				labelA2Bit13.Text = Resources.number14;
-				labelA2Bit14.Text = Resources.number15;
-				labelA2Bit15.Text = Resources.number16;
-				labelA2Bit16.Text = Resources.number17;
-				labelA2Bit17.Text = Resources.number18;
-				labelA2Bit18.Text = Resources.number19;
-				labelA2Bit19.Text = Resources.number20;
-				labelA2Bit20.Text = Resources.number21;
-				labelA2Bit21.Text = Resources.number22;
-				labelA2Bit22.Text = Resources.number23;
-				labelA2Bit23.Text = Resources.number24;
-				labelA2Bit24.Text = Resources.number25;
-				labelA2Bit25.Text = Resources.number26;
-				labelA2Bit26.Text = Resources.number27;
-				labelA2Bit27.Text = Resources.number28;
-				labelA2Bit28.Text = Resources.number29;
-				labelA2Bit29.Text = Resources.number30;
-				labelA2Bit30.Text = Resources.number31;
-				labelA2Bit31.Text = Resources.number32;
-			}
-		}
-
-		private void ButtonResultLsbSign_Click(object sender, EventArgs e)
-		{
-			isResultLsbSignSet = !isResultLsbSignSet;
-			if (!isA2LsbSignSet)
-			{
-				buttonA2LsbSign.Text = Resources.lsb0;
 				labelResultBit0.Text = Resources.number00;
 				labelResultBit1.Text = Resources.number01;
 				labelResultBit2.Text = Resources.number02;
@@ -245,7 +162,71 @@ namespace BitLogicCalculator
 			}
 			else
 			{
-				buttonResultLsbSign.Text = Resources.lsb1;
+				buttonLsbSign.Text = Resources.lsb1;
+				labelA1Bit0.Text = Resources.number01;
+				labelA1Bit1.Text = Resources.number02;
+				labelA1Bit2.Text = Resources.number03;
+				labelA1Bit3.Text = Resources.number04;
+				labelA1Bit4.Text = Resources.number05;
+				labelA1Bit5.Text = Resources.number06;
+				labelA1Bit6.Text = Resources.number07;
+				labelA1Bit7.Text = Resources.number08;
+				labelA1Bit8.Text = Resources.number09;
+				labelA1Bit9.Text = Resources.number10;
+				labelA1Bit10.Text = Resources.number11;
+				labelA1Bit11.Text = Resources.number12;
+				labelA1Bit12.Text = Resources.number13;
+				labelA1Bit13.Text = Resources.number14;
+				labelA1Bit14.Text = Resources.number15;
+				labelA1Bit15.Text = Resources.number16;
+				labelA1Bit16.Text = Resources.number17;
+				labelA1Bit17.Text = Resources.number18;
+				labelA1Bit18.Text = Resources.number19;
+				labelA1Bit19.Text = Resources.number20;
+				labelA1Bit20.Text = Resources.number21;
+				labelA1Bit21.Text = Resources.number22;
+				labelA1Bit22.Text = Resources.number23;
+				labelA1Bit23.Text = Resources.number24;
+				labelA1Bit24.Text = Resources.number25;
+				labelA1Bit25.Text = Resources.number26;
+				labelA1Bit26.Text = Resources.number27;
+				labelA1Bit27.Text = Resources.number28;
+				labelA1Bit28.Text = Resources.number29;
+				labelA1Bit29.Text = Resources.number30;
+				labelA1Bit30.Text = Resources.number31;
+				labelA1Bit31.Text = Resources.number32;
+				labelA2Bit0.Text = Resources.number01;
+				labelA2Bit1.Text = Resources.number02;
+				labelA2Bit2.Text = Resources.number03;
+				labelA2Bit3.Text = Resources.number04;
+				labelA2Bit4.Text = Resources.number05;
+				labelA2Bit5.Text = Resources.number06;
+				labelA2Bit6.Text = Resources.number07;
+				labelA2Bit7.Text = Resources.number08;
+				labelA2Bit8.Text = Resources.number09;
+				labelA2Bit9.Text = Resources.number10;
+				labelA2Bit10.Text = Resources.number11;
+				labelA2Bit11.Text = Resources.number12;
+				labelA2Bit12.Text = Resources.number13;
+				labelA2Bit13.Text = Resources.number14;
+				labelA2Bit14.Text = Resources.number15;
+				labelA2Bit15.Text = Resources.number16;
+				labelA2Bit16.Text = Resources.number17;
+				labelA2Bit17.Text = Resources.number18;
+				labelA2Bit18.Text = Resources.number19;
+				labelA2Bit19.Text = Resources.number20;
+				labelA2Bit20.Text = Resources.number21;
+				labelA2Bit21.Text = Resources.number22;
+				labelA2Bit22.Text = Resources.number23;
+				labelA2Bit23.Text = Resources.number24;
+				labelA2Bit24.Text = Resources.number25;
+				labelA2Bit25.Text = Resources.number26;
+				labelA2Bit26.Text = Resources.number27;
+				labelA2Bit27.Text = Resources.number28;
+				labelA2Bit28.Text = Resources.number29;
+				labelA2Bit29.Text = Resources.number30;
+				labelA2Bit30.Text = Resources.number31;
+				labelA2Bit31.Text = Resources.number32;
 				labelResultBit0.Text = Resources.number01;
 				labelResultBit1.Text = Resources.number02;
 				labelResultBit2.Text = Resources.number03;
@@ -412,6 +393,42 @@ namespace BitLogicCalculator
 		private void ButtonSwapA1A2_Click(object sender, EventArgs e)
 		{
 		}
+
+		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonHalfswapA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonHalfswapA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		#endregion
+
+		#region labels
 
 		private void LabelA1Bit0_Click(object sender, EventArgs e)
 		{
@@ -665,29 +682,7 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
-		{
-		}
+		#endregion
 
 		#endregion
 
