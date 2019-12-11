@@ -33,16 +33,22 @@
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.groupBoxApplicationSettings = new System.Windows.Forms.GroupBox();
 			this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
 			this.labelTransparency = new System.Windows.Forms.Label();
 			this.trackBarTransparency = new System.Windows.Forms.TrackBar();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.comboBoxDatawordSize = new System.Windows.Forms.ComboBox();
+			this.groupBoxDataFormat = new System.Windows.Forms.GroupBox();
+			this.comboBoxDataSize = new System.Windows.Forms.ComboBox();
 			this.labelMsbRepresentation = new System.Windows.Forms.Label();
 			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
-			this.labelDatawordSize = new System.Windows.Forms.Label();
+			this.labelDataSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
+			this.buttonSubjunktionA2A1 = new System.Windows.Forms.Button();
+			this.buttonSubjunktionA1A2 = new System.Windows.Forms.Button();
+			this.buttonInhibitionA2A1 = new System.Windows.Forms.Button();
+			this.buttonInhibitionA1A2 = new System.Windows.Forms.Button();
+			this.buttonRandomizeA2 = new System.Windows.Forms.Button();
+			this.buttonRandomizeA1 = new System.Windows.Forms.Button();
 			this.buttonShiftRightWithOneA2 = new System.Windows.Forms.Button();
 			this.contextMenuStripRoller = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStripComboBoxRoller = new System.Windows.Forms.ToolStripComboBox();
@@ -310,9 +316,9 @@
 			this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.toolStripContainer.ContentPanel.SuspendLayout();
 			this.toolStripContainer.SuspendLayout();
-			this.groupBox3.SuspendLayout();
+			this.groupBoxApplicationSettings.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.groupBoxDataFormat.SuspendLayout();
 			this.groupBoxOperations.SuspendLayout();
 			this.contextMenuStripRoller.SuspendLayout();
 			this.groupBoxResult.SuspendLayout();
@@ -359,8 +365,8 @@
 			// 
 			// toolStripContainer.ContentPanel
 			// 
-			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBox3);
-			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBox1);
+			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxApplicationSettings);
+			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxDataFormat);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxOperations);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxResult);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxAccumulator2);
@@ -373,17 +379,17 @@
 			this.toolStripContainer.TabIndex = 0;
 			this.toolStripContainer.Text = "toolStripContainer1";
 			// 
-			// groupBox3
+			// groupBoxApplicationSettings
 			// 
-			this.groupBox3.Controls.Add(this.checkBoxAlwaysOnTop);
-			this.groupBox3.Controls.Add(this.labelTransparency);
-			this.groupBox3.Controls.Add(this.trackBarTransparency);
-			this.groupBox3.Location = new System.Drawing.Point(12, 381);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Size = new System.Drawing.Size(292, 68);
-			this.groupBox3.TabIndex = 90;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Application settings";
+			this.groupBoxApplicationSettings.Controls.Add(this.checkBoxAlwaysOnTop);
+			this.groupBoxApplicationSettings.Controls.Add(this.labelTransparency);
+			this.groupBoxApplicationSettings.Controls.Add(this.trackBarTransparency);
+			this.groupBoxApplicationSettings.Location = new System.Drawing.Point(12, 381);
+			this.groupBoxApplicationSettings.Name = "groupBoxApplicationSettings";
+			this.groupBoxApplicationSettings.Size = new System.Drawing.Size(292, 68);
+			this.groupBoxApplicationSettings.TabIndex = 90;
+			this.groupBoxApplicationSettings.TabStop = false;
+			this.groupBoxApplicationSettings.Text = "Application settings";
 			// 
 			// checkBoxAlwaysOnTop
 			// 
@@ -416,33 +422,33 @@
 			this.trackBarTransparency.Value = 100;
 			this.trackBarTransparency.Scroll += new System.EventHandler(this.TrackBarTransparency_Scroll);
 			// 
-			// groupBox1
+			// groupBoxDataFormat
 			// 
-			this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-			this.groupBox1.Controls.Add(this.comboBoxDatawordSize);
-			this.groupBox1.Controls.Add(this.labelMsbRepresentation);
-			this.groupBox1.Controls.Add(this.comboBoxMsbRepresentation);
-			this.groupBox1.Controls.Add(this.labelDatawordSize);
-			this.groupBox1.Location = new System.Drawing.Point(721, 381);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(243, 68);
-			this.groupBox1.TabIndex = 88;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Data format";
+			this.groupBoxDataFormat.BackColor = System.Drawing.Color.Transparent;
+			this.groupBoxDataFormat.Controls.Add(this.comboBoxDataSize);
+			this.groupBoxDataFormat.Controls.Add(this.labelMsbRepresentation);
+			this.groupBoxDataFormat.Controls.Add(this.comboBoxMsbRepresentation);
+			this.groupBoxDataFormat.Controls.Add(this.labelDataSize);
+			this.groupBoxDataFormat.Location = new System.Drawing.Point(541, 381);
+			this.groupBoxDataFormat.Name = "groupBoxDataFormat";
+			this.groupBoxDataFormat.Size = new System.Drawing.Size(168, 68);
+			this.groupBoxDataFormat.TabIndex = 88;
+			this.groupBoxDataFormat.TabStop = false;
+			this.groupBoxDataFormat.Text = "Data format";
 			// 
-			// comboBoxDatawordSize
+			// comboBoxDataSize
 			// 
-			this.comboBoxDatawordSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxDatawordSize.FormattingEnabled = true;
-			this.comboBoxDatawordSize.Items.AddRange(new object[] {
+			this.comboBoxDataSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxDataSize.FormattingEnabled = true;
+			this.comboBoxDataSize.Items.AddRange(new object[] {
             "8 bit",
             "16 bit",
             "32 bit"});
-			this.comboBoxDatawordSize.Location = new System.Drawing.Point(89, 13);
-			this.comboBoxDatawordSize.Name = "comboBoxDatawordSize";
-			this.comboBoxDatawordSize.Size = new System.Drawing.Size(68, 21);
-			this.comboBoxDatawordSize.TabIndex = 9;
-			this.comboBoxDatawordSize.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDatawordSize_SelectedIndexChanged);
+			this.comboBoxDataSize.Location = new System.Drawing.Point(74, 13);
+			this.comboBoxDataSize.Name = "comboBoxDataSize";
+			this.comboBoxDataSize.Size = new System.Drawing.Size(85, 21);
+			this.comboBoxDataSize.TabIndex = 9;
+			this.comboBoxDataSize.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDataSize_SelectedIndexChanged);
 			// 
 			// labelMsbRepresentation
 			// 
@@ -461,25 +467,31 @@
 			this.comboBoxMsbRepresentation.Items.AddRange(new object[] {
             "unsigned",
             "signed"});
-			this.comboBoxMsbRepresentation.Location = new System.Drawing.Point(89, 37);
+			this.comboBoxMsbRepresentation.Location = new System.Drawing.Point(74, 37);
 			this.comboBoxMsbRepresentation.Name = "comboBoxMsbRepresentation";
-			this.comboBoxMsbRepresentation.Size = new System.Drawing.Size(68, 21);
+			this.comboBoxMsbRepresentation.Size = new System.Drawing.Size(85, 21);
 			this.comboBoxMsbRepresentation.TabIndex = 7;
 			this.comboBoxMsbRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMsbRepresentation_SelectedIndexChanged);
 			// 
-			// labelDatawordSize
+			// labelDataSize
 			// 
-			this.labelDatawordSize.AutoSize = true;
-			this.labelDatawordSize.BackColor = System.Drawing.Color.Transparent;
-			this.labelDatawordSize.Location = new System.Drawing.Point(6, 16);
-			this.labelDatawordSize.Name = "labelDatawordSize";
-			this.labelDatawordSize.Size = new System.Drawing.Size(77, 13);
-			this.labelDatawordSize.TabIndex = 6;
-			this.labelDatawordSize.Text = "Dataword size:";
+			this.labelDataSize.AutoSize = true;
+			this.labelDataSize.BackColor = System.Drawing.Color.Transparent;
+			this.labelDataSize.Location = new System.Drawing.Point(6, 16);
+			this.labelDataSize.Name = "labelDataSize";
+			this.labelDataSize.Size = new System.Drawing.Size(54, 13);
+			this.labelDataSize.TabIndex = 6;
+			this.labelDataSize.Text = "Data size:";
 			// 
 			// groupBoxOperations
 			// 
 			this.groupBoxOperations.BackColor = System.Drawing.Color.Transparent;
+			this.groupBoxOperations.Controls.Add(this.buttonSubjunktionA2A1);
+			this.groupBoxOperations.Controls.Add(this.buttonSubjunktionA1A2);
+			this.groupBoxOperations.Controls.Add(this.buttonInhibitionA2A1);
+			this.groupBoxOperations.Controls.Add(this.buttonInhibitionA1A2);
+			this.groupBoxOperations.Controls.Add(this.buttonRandomizeA2);
+			this.groupBoxOperations.Controls.Add(this.buttonRandomizeA1);
 			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithOneA2);
 			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithOneA1);
 			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftWithOneA2);
@@ -515,10 +527,76 @@
 			this.groupBoxOperations.Controls.Add(this.buttonInvertA1);
 			this.groupBoxOperations.Location = new System.Drawing.Point(721, 12);
 			this.groupBoxOperations.Name = "groupBoxOperations";
-			this.groupBoxOperations.Size = new System.Drawing.Size(243, 363);
+			this.groupBoxOperations.Size = new System.Drawing.Size(243, 437);
 			this.groupBoxOperations.TabIndex = 83;
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
+			// 
+			// buttonSubjunktionA2A1
+			// 
+			this.buttonSubjunktionA2A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonSubjunktionA2A1.Location = new System.Drawing.Point(6, 398);
+			this.buttonSubjunktionA2A1.Name = "buttonSubjunktionA2A1";
+			this.buttonSubjunktionA2A1.Size = new System.Drawing.Size(82, 23);
+			this.buttonSubjunktionA2A1.TabIndex = 108;
+			this.buttonSubjunktionA2A1.Text = "A2 Subj A1";
+			this.buttonSubjunktionA2A1.UseVisualStyleBackColor = true;
+			this.buttonSubjunktionA2A1.Click += new System.EventHandler(this.ButtonSubjunktionA2A1_Click);
+			// 
+			// buttonSubjunktionA1A2
+			// 
+			this.buttonSubjunktionA1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonSubjunktionA1A2.Location = new System.Drawing.Point(6, 369);
+			this.buttonSubjunktionA1A2.Name = "buttonSubjunktionA1A2";
+			this.buttonSubjunktionA1A2.Size = new System.Drawing.Size(82, 23);
+			this.buttonSubjunktionA1A2.TabIndex = 107;
+			this.buttonSubjunktionA1A2.Text = "A1 Subj A2";
+			this.buttonSubjunktionA1A2.UseVisualStyleBackColor = true;
+			this.buttonSubjunktionA1A2.Click += new System.EventHandler(this.ButtonSubjunktionA1A2_Click);
+			// 
+			// buttonInhibitionA2A1
+			// 
+			this.buttonInhibitionA2A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonInhibitionA2A1.Location = new System.Drawing.Point(6, 340);
+			this.buttonInhibitionA2A1.Name = "buttonInhibitionA2A1";
+			this.buttonInhibitionA2A1.Size = new System.Drawing.Size(82, 23);
+			this.buttonInhibitionA2A1.TabIndex = 106;
+			this.buttonInhibitionA2A1.Text = "A2 Inhib A1";
+			this.buttonInhibitionA2A1.UseVisualStyleBackColor = true;
+			this.buttonInhibitionA2A1.Click += new System.EventHandler(this.ButtonInhibitionA2A1_Click);
+			// 
+			// buttonInhibitionA1A2
+			// 
+			this.buttonInhibitionA1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonInhibitionA1A2.Location = new System.Drawing.Point(6, 311);
+			this.buttonInhibitionA1A2.Name = "buttonInhibitionA1A2";
+			this.buttonInhibitionA1A2.Size = new System.Drawing.Size(82, 23);
+			this.buttonInhibitionA1A2.TabIndex = 105;
+			this.buttonInhibitionA1A2.Text = "A1 Inhib A2";
+			this.buttonInhibitionA1A2.UseVisualStyleBackColor = true;
+			this.buttonInhibitionA1A2.Click += new System.EventHandler(this.ButtonInhibitionA1A2_Click);
+			// 
+			// buttonRandomizeA2
+			// 
+			this.buttonRandomizeA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRandomizeA2.Location = new System.Drawing.Point(165, 340);
+			this.buttonRandomizeA2.Name = "buttonRandomizeA2";
+			this.buttonRandomizeA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonRandomizeA2.TabIndex = 104;
+			this.buttonRandomizeA2.Text = "RND A2";
+			this.buttonRandomizeA2.UseVisualStyleBackColor = true;
+			this.buttonRandomizeA2.Click += new System.EventHandler(this.ButtonRandomizeA2_Click);
+			// 
+			// buttonRandomizeA1
+			// 
+			this.buttonRandomizeA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRandomizeA1.Location = new System.Drawing.Point(94, 340);
+			this.buttonRandomizeA1.Name = "buttonRandomizeA1";
+			this.buttonRandomizeA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonRandomizeA1.TabIndex = 102;
+			this.buttonRandomizeA1.Text = "RND A1";
+			this.buttonRandomizeA1.UseVisualStyleBackColor = true;
+			this.buttonRandomizeA1.Click += new System.EventHandler(this.ButtonRandomizeA1_Click);
 			// 
 			// buttonShiftRightWithOneA2
 			// 
@@ -617,7 +695,7 @@
 			// buttonSwapA1A2
 			// 
 			this.buttonSwapA1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonSwapA1A2.Location = new System.Drawing.Point(6, 311);
+			this.buttonSwapA1A2.Location = new System.Drawing.Point(123, 369);
 			this.buttonSwapA1A2.Name = "buttonSwapA1A2";
 			this.buttonSwapA1A2.Size = new System.Drawing.Size(82, 23);
 			this.buttonSwapA1A2.TabIndex = 97;
@@ -3578,7 +3656,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Bit Logic Calculator (BLC)";
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.statusStrip.ResumeLayout(false);
@@ -3588,11 +3666,11 @@
 			this.toolStripContainer.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer.ResumeLayout(false);
 			this.toolStripContainer.PerformLayout();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
+			this.groupBoxApplicationSettings.ResumeLayout(false);
+			this.groupBoxApplicationSettings.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.groupBoxDataFormat.ResumeLayout(false);
+			this.groupBoxDataFormat.PerformLayout();
 			this.groupBoxOperations.ResumeLayout(false);
 			this.contextMenuStripRoller.ResumeLayout(false);
 			this.groupBoxResult.ResumeLayout(false);
@@ -3887,11 +3965,11 @@
 		private System.Windows.Forms.Button buttonCopyResultToA2;
 		private System.Windows.Forms.Button buttonCopyResultToA1;
 		private System.Windows.Forms.ComboBox comboBoxMsbRepresentation;
-		private System.Windows.Forms.Label labelDatawordSize;
+		private System.Windows.Forms.Label labelDataSize;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStripRoller;
 		private System.Windows.Forms.ToolStripComboBox toolStripComboBoxRoller;
-		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.ComboBox comboBoxDatawordSize;
+		private System.Windows.Forms.GroupBox groupBoxDataFormat;
+		private System.Windows.Forms.ComboBox comboBoxDataSize;
 		private System.Windows.Forms.Label labelMsbRepresentation;
 		private System.Windows.Forms.Button buttonSwapA1A2;
 		private System.Windows.Forms.Button buttonFillA2;
@@ -3902,12 +3980,18 @@
 		private System.Windows.Forms.Button buttonRevertA1;
 		private System.Windows.Forms.Button buttonShiftLeftWithOneA1;
 		private System.Windows.Forms.Button buttonShiftLeftWithOneA2;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox groupBoxApplicationSettings;
 		private System.Windows.Forms.Label labelTransparency;
 		private System.Windows.Forms.TrackBar trackBarTransparency;
 		private System.Windows.Forms.Button buttonShiftRightWithOneA2;
 		private System.Windows.Forms.Button buttonShiftRightWithOneA1;
 		private System.Windows.Forms.CheckBox checkBoxAlwaysOnTop;
+		private System.Windows.Forms.Button buttonRandomizeA1;
+		private System.Windows.Forms.Button buttonRandomizeA2;
+		private System.Windows.Forms.Button buttonSubjunktionA2A1;
+		private System.Windows.Forms.Button buttonSubjunktionA1A2;
+		private System.Windows.Forms.Button buttonInhibitionA2A1;
+		private System.Windows.Forms.Button buttonInhibitionA1A2;
 	}
 }
 

@@ -20,7 +20,7 @@ namespace BitLogicCalculator
 		{
 		}
 
-		private void ComboBoxDatawordSize_SelectedIndexChanged(object sender, EventArgs e)
+		private void ComboBoxDataSize_SelectedIndexChanged(object sender, EventArgs e)
 		{
 		}
 
@@ -1028,6 +1028,30 @@ namespace BitLogicCalculator
 		}
 
 		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
 		{
 		}
 	}
