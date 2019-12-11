@@ -312,6 +312,8 @@
 			this.checkBoxA1Bit3 = new System.Windows.Forms.CheckBox();
 			this.checkBoxA1Bit2 = new System.Windows.Forms.CheckBox();
 			this.labelA1Bit2 = new System.Windows.Forms.Label();
+			this.labelBitRepresention = new System.Windows.Forms.Label();
+			this.comboBoxBitRepresentation = new System.Windows.Forms.ComboBox();
 			this.statusStrip.SuspendLayout();
 			this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.toolStripContainer.ContentPanel.SuspendLayout();
@@ -381,12 +383,14 @@
 			// 
 			// groupBoxApplicationSettings
 			// 
+			this.groupBoxApplicationSettings.Controls.Add(this.labelBitRepresention);
+			this.groupBoxApplicationSettings.Controls.Add(this.comboBoxBitRepresentation);
 			this.groupBoxApplicationSettings.Controls.Add(this.checkBoxAlwaysOnTop);
 			this.groupBoxApplicationSettings.Controls.Add(this.labelTransparency);
 			this.groupBoxApplicationSettings.Controls.Add(this.trackBarTransparency);
 			this.groupBoxApplicationSettings.Location = new System.Drawing.Point(12, 381);
 			this.groupBoxApplicationSettings.Name = "groupBoxApplicationSettings";
-			this.groupBoxApplicationSettings.Size = new System.Drawing.Size(292, 68);
+			this.groupBoxApplicationSettings.Size = new System.Drawing.Size(347, 68);
 			this.groupBoxApplicationSettings.TabIndex = 90;
 			this.groupBoxApplicationSettings.TabStop = false;
 			this.groupBoxApplicationSettings.Text = "Application settings";
@@ -3647,6 +3651,30 @@
 			this.labelA1Bit2.Text = "02";
 			this.labelA1Bit2.Click += new System.EventHandler(this.LabelA1Bit2_Click);
 			// 
+			// labelBitRepresention
+			// 
+			this.labelBitRepresention.AutoSize = true;
+			this.labelBitRepresention.BackColor = System.Drawing.Color.Transparent;
+			this.labelBitRepresention.Location = new System.Drawing.Point(191, 39);
+			this.labelBitRepresention.Name = "labelBitRepresention";
+			this.labelBitRepresention.Size = new System.Drawing.Size(51, 13);
+			this.labelBitRepresention.TabIndex = 10;
+			this.labelBitRepresention.Text = "Bit Repr.:";
+			// 
+			// comboBoxBitRepresentation
+			// 
+			this.comboBoxBitRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxBitRepresentation.FormattingEnabled = true;
+			this.comboBoxBitRepresentation.Items.AddRange(new object[] {
+            "checkbox",
+            "0/1-button",
+            "b/w-button"});
+			this.comboBoxBitRepresentation.Location = new System.Drawing.Point(243, 36);
+			this.comboBoxBitRepresentation.Name = "comboBoxBitRepresentation";
+			this.comboBoxBitRepresentation.Size = new System.Drawing.Size(85, 21);
+			this.comboBoxBitRepresentation.TabIndex = 9;
+			this.comboBoxBitRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxBitRepresentation_SelectedIndexChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3992,6 +4020,8 @@
 		private System.Windows.Forms.Button buttonSubjunktionA1A2;
 		private System.Windows.Forms.Button buttonInhibitionA2A1;
 		private System.Windows.Forms.Button buttonInhibitionA1A2;
+		private System.Windows.Forms.Label labelBitRepresention;
+		private System.Windows.Forms.ComboBox comboBoxBitRepresentation;
 	}
 }
 
