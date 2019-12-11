@@ -25,6 +25,10 @@ namespace BitLogicCalculator
 			comboBoxBitRepresentation.SelectedIndex = 0;
 			comboBoxMsbRepresentation.SelectedIndex = 0;
 			comboBoxDataSize.SelectedIndex = comboBoxDataSize.Items.Count - 1;
+			textBoxConversionInput.Text = Resources.number00;
+			textBoxConversionOutput.Text = Resources.number00;
+			comboBoxConversionInputUnit.SelectedIndex = 0;
+			comboBoxConversionOutputUnit.SelectedIndex = 1;
 		}
 
 		#endregion
@@ -43,11 +47,23 @@ namespace BitLogicCalculator
 		{
 		}
 
+		private void ComboBoxConversionInputUnit_SelectedIndexChanged(object sender, EventArgs e)
+		{
+		}
+
+		private void ComboBoxConversionOutputUnit_SelectedIndexChanged(object sender, EventArgs e)
+		{
+		}
+
 		#endregion
 
-		#region SelectedIndexChanged event handlers
+		#region TextChanged event handlers
 
-		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
+		private void TextBoxConversionInput_TextChanged(object sender, EventArgs e)
+		{
+		}
+
+		private void TextBoxConversionOutput_TextChanged(object sender, EventArgs e)
 		{
 		}
 
@@ -1073,6 +1089,10 @@ namespace BitLogicCalculator
 		}
 
 		private void CheckBoxAlwaysOnTop_CheckedChanged(object sender, EventArgs e)
+		{
+		}
+
+		private void CheckBoxFadeInOut_CheckedChanged(object sender, EventArgs e)
 		{
 		}
 
