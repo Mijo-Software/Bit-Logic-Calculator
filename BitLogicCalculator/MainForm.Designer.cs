@@ -33,19 +33,35 @@
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
 			this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-			this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
 			this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
-			this.trackBarTransparency = new System.Windows.Forms.TrackBar();
 			this.labelTransparency = new System.Windows.Forms.Label();
+			this.trackBarTransparency = new System.Windows.Forms.TrackBar();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.comboBoxDatawordSize = new System.Windows.Forms.ComboBox();
+			this.labelMsbRepresentation = new System.Windows.Forms.Label();
+			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
+			this.labelDatawordSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
-			this.buttonShiftLeftA2 = new System.Windows.Forms.Button();
+			this.buttonShiftRightWithOneA2 = new System.Windows.Forms.Button();
 			this.contextMenuStripRoller = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStripComboBoxRoller = new System.Windows.Forms.ToolStripComboBox();
-			this.buttonShiftRightA2 = new System.Windows.Forms.Button();
+			this.buttonShiftRightWithOneA1 = new System.Windows.Forms.Button();
+			this.buttonShiftLeftWithOneA2 = new System.Windows.Forms.Button();
+			this.buttonShiftLeftWithOneA1 = new System.Windows.Forms.Button();
+			this.buttonSwapA1A2 = new System.Windows.Forms.Button();
+			this.buttonFillA2 = new System.Windows.Forms.Button();
+			this.buttonFillA1 = new System.Windows.Forms.Button();
+			this.buttonClearA2 = new System.Windows.Forms.Button();
+			this.buttonClearA1 = new System.Windows.Forms.Button();
+			this.buttonRevertA2 = new System.Windows.Forms.Button();
+			this.buttonRevertA1 = new System.Windows.Forms.Button();
+			this.buttonShiftLeftWithZeroA2 = new System.Windows.Forms.Button();
+			this.buttonShiftRightWithZeroA2 = new System.Windows.Forms.Button();
 			this.buttonRotateLeftA2 = new System.Windows.Forms.Button();
 			this.buttonRotateRightA2 = new System.Windows.Forms.Button();
-			this.buttonShiftLeftA1 = new System.Windows.Forms.Button();
-			this.buttonShiftRightA1 = new System.Windows.Forms.Button();
+			this.buttonShiftLeftWithZeroA1 = new System.Windows.Forms.Button();
+			this.buttonShiftRightWithZeroA1 = new System.Windows.Forms.Button();
 			this.buttonRotateLeftA1 = new System.Windows.Forms.Button();
 			this.buttonRotateRightA1 = new System.Windows.Forms.Button();
 			this.buttonAdditionA1AndA2 = new System.Windows.Forms.Button();
@@ -63,8 +79,6 @@
 			this.buttonLogicalXorA1AndA2 = new System.Windows.Forms.Button();
 			this.buttonInvertA1 = new System.Windows.Forms.Button();
 			this.groupBoxResult = new System.Windows.Forms.GroupBox();
-			this.comboBoxResultMsbRepresentation = new System.Windows.Forms.ComboBox();
-			this.labelResultMsbRepresentation = new System.Windows.Forms.Label();
 			this.buttonResultLsbSign = new System.Windows.Forms.Button();
 			this.maskedTextBoxResultNetwork = new System.Windows.Forms.MaskedTextBox();
 			this.labelResultNetwork = new System.Windows.Forms.Label();
@@ -141,8 +155,6 @@
 			this.checkBoxResultBit2 = new System.Windows.Forms.CheckBox();
 			this.labelResultBit2 = new System.Windows.Forms.Label();
 			this.groupBoxAccumulator2 = new System.Windows.Forms.GroupBox();
-			this.comboBoxA2MsbRepresentation = new System.Windows.Forms.ComboBox();
-			this.labelA2MsbRepresentation = new System.Windows.Forms.Label();
 			this.buttonA2LsbSign = new System.Windows.Forms.Button();
 			this.maskedTextBoxA2Network = new System.Windows.Forms.MaskedTextBox();
 			this.labelA2Network = new System.Windows.Forms.Label();
@@ -219,8 +231,6 @@
 			this.checkBoxA2Bit2 = new System.Windows.Forms.CheckBox();
 			this.labelA2Bit2 = new System.Windows.Forms.Label();
 			this.groupBoxAccumulator1 = new System.Windows.Forms.GroupBox();
-			this.comboBoxA1MsbRepresentation = new System.Windows.Forms.ComboBox();
-			this.labelA1MsbRepresentation = new System.Windows.Forms.Label();
 			this.buttonA1LsbSign = new System.Windows.Forms.Button();
 			this.maskedTextBoxA1Network = new System.Windows.Forms.MaskedTextBox();
 			this.labelA1Network = new System.Windows.Forms.Label();
@@ -300,8 +310,9 @@
 			this.toolStripContainer.BottomToolStripPanel.SuspendLayout();
 			this.toolStripContainer.ContentPanel.SuspendLayout();
 			this.toolStripContainer.SuspendLayout();
-			this.groupBoxSettings.SuspendLayout();
+			this.groupBox3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).BeginInit();
+			this.groupBox1.SuspendLayout();
 			this.groupBoxOperations.SuspendLayout();
 			this.contextMenuStripRoller.SuspendLayout();
 			this.groupBoxResult.SuspendLayout();
@@ -328,7 +339,7 @@
             this.toolStripStatusLabel});
 			this.statusStrip.Location = new System.Drawing.Point(0, 0);
 			this.statusStrip.Name = "statusStrip";
-			this.statusStrip.Size = new System.Drawing.Size(948, 22);
+			this.statusStrip.Size = new System.Drawing.Size(976, 22);
 			this.statusStrip.SizingGrip = false;
 			this.statusStrip.TabIndex = 0;
 			this.statusStrip.Text = "statusStrip";
@@ -348,75 +359,144 @@
 			// 
 			// toolStripContainer.ContentPanel
 			// 
-			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxSettings);
+			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBox3);
+			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBox1);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxOperations);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxResult);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxAccumulator2);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxAccumulator1);
-			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(948, 386);
+			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(976, 455);
 			this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
 			this.toolStripContainer.Name = "toolStripContainer";
-			this.toolStripContainer.Size = new System.Drawing.Size(948, 408);
+			this.toolStripContainer.Size = new System.Drawing.Size(976, 477);
 			this.toolStripContainer.TabIndex = 0;
 			this.toolStripContainer.Text = "toolStripContainer1";
 			// 
-			// groupBoxSettings
+			// groupBox3
 			// 
-			this.groupBoxSettings.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxSettings.Controls.Add(this.checkBoxAlwaysOnTop);
-			this.groupBoxSettings.Controls.Add(this.trackBarTransparency);
-			this.groupBoxSettings.Controls.Add(this.labelTransparency);
-			this.groupBoxSettings.Location = new System.Drawing.Point(721, 304);
-			this.groupBoxSettings.Name = "groupBoxSettings";
-			this.groupBoxSettings.Size = new System.Drawing.Size(215, 79);
-			this.groupBoxSettings.TabIndex = 87;
-			this.groupBoxSettings.TabStop = false;
-			this.groupBoxSettings.Text = "Application settings";
+			this.groupBox3.Controls.Add(this.checkBoxAlwaysOnTop);
+			this.groupBox3.Controls.Add(this.labelTransparency);
+			this.groupBox3.Controls.Add(this.trackBarTransparency);
+			this.groupBox3.Location = new System.Drawing.Point(12, 381);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(292, 68);
+			this.groupBox3.TabIndex = 90;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Application settings";
 			// 
 			// checkBoxAlwaysOnTop
 			// 
 			this.checkBoxAlwaysOnTop.AutoSize = true;
-			this.checkBoxAlwaysOnTop.BackColor = System.Drawing.Color.Transparent;
-			this.checkBoxAlwaysOnTop.Location = new System.Drawing.Point(9, 54);
+			this.checkBoxAlwaysOnTop.Location = new System.Drawing.Point(194, 16);
 			this.checkBoxAlwaysOnTop.Name = "checkBoxAlwaysOnTop";
 			this.checkBoxAlwaysOnTop.Size = new System.Drawing.Size(92, 17);
-			this.checkBoxAlwaysOnTop.TabIndex = 84;
+			this.checkBoxAlwaysOnTop.TabIndex = 2;
 			this.checkBoxAlwaysOnTop.Text = "Always on top";
-			this.checkBoxAlwaysOnTop.UseVisualStyleBackColor = false;
+			this.checkBoxAlwaysOnTop.UseVisualStyleBackColor = true;
 			this.checkBoxAlwaysOnTop.CheckedChanged += new System.EventHandler(this.CheckBoxAlwaysOnTop_CheckedChanged);
-			// 
-			// trackBarTransparency
-			// 
-			this.trackBarTransparency.LargeChange = 10;
-			this.trackBarTransparency.Location = new System.Drawing.Point(87, 16);
-			this.trackBarTransparency.Maximum = 100;
-			this.trackBarTransparency.Name = "trackBarTransparency";
-			this.trackBarTransparency.Size = new System.Drawing.Size(122, 45);
-			this.trackBarTransparency.TabIndex = 86;
-			this.trackBarTransparency.TickFrequency = 10;
-			this.trackBarTransparency.Value = 100;
-			this.trackBarTransparency.Scroll += new System.EventHandler(this.TrackBarTransparency_Scroll);
 			// 
 			// labelTransparency
 			// 
 			this.labelTransparency.AutoSize = true;
-			this.labelTransparency.BackColor = System.Drawing.Color.Transparent;
-			this.labelTransparency.Location = new System.Drawing.Point(6, 27);
+			this.labelTransparency.Location = new System.Drawing.Point(6, 21);
 			this.labelTransparency.Name = "labelTransparency";
-			this.labelTransparency.Size = new System.Drawing.Size(75, 13);
-			this.labelTransparency.TabIndex = 85;
-			this.labelTransparency.Text = "Transparency:";
+			this.labelTransparency.Size = new System.Drawing.Size(72, 13);
+			this.labelTransparency.TabIndex = 1;
+			this.labelTransparency.Text = "Transparency";
+			// 
+			// trackBarTransparency
+			// 
+			this.trackBarTransparency.Location = new System.Drawing.Point(84, 16);
+			this.trackBarTransparency.Maximum = 100;
+			this.trackBarTransparency.Name = "trackBarTransparency";
+			this.trackBarTransparency.Size = new System.Drawing.Size(104, 45);
+			this.trackBarTransparency.TabIndex = 0;
+			this.trackBarTransparency.TickFrequency = 10;
+			this.trackBarTransparency.Value = 100;
+			this.trackBarTransparency.Scroll += new System.EventHandler(this.TrackBarTransparency_Scroll);
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+			this.groupBox1.Controls.Add(this.comboBoxDatawordSize);
+			this.groupBox1.Controls.Add(this.labelMsbRepresentation);
+			this.groupBox1.Controls.Add(this.comboBoxMsbRepresentation);
+			this.groupBox1.Controls.Add(this.labelDatawordSize);
+			this.groupBox1.Location = new System.Drawing.Point(721, 381);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(243, 68);
+			this.groupBox1.TabIndex = 88;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Data format";
+			// 
+			// comboBoxDatawordSize
+			// 
+			this.comboBoxDatawordSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxDatawordSize.FormattingEnabled = true;
+			this.comboBoxDatawordSize.Items.AddRange(new object[] {
+            "8 bit",
+            "16 bit",
+            "32 bit"});
+			this.comboBoxDatawordSize.Location = new System.Drawing.Point(89, 13);
+			this.comboBoxDatawordSize.Name = "comboBoxDatawordSize";
+			this.comboBoxDatawordSize.Size = new System.Drawing.Size(68, 21);
+			this.comboBoxDatawordSize.TabIndex = 9;
+			this.comboBoxDatawordSize.SelectedIndexChanged += new System.EventHandler(this.ComboBoxDatawordSize_SelectedIndexChanged);
+			// 
+			// labelMsbRepresentation
+			// 
+			this.labelMsbRepresentation.AutoSize = true;
+			this.labelMsbRepresentation.BackColor = System.Drawing.Color.Transparent;
+			this.labelMsbRepresentation.Location = new System.Drawing.Point(6, 40);
+			this.labelMsbRepresentation.Name = "labelMsbRepresentation";
+			this.labelMsbRepresentation.Size = new System.Drawing.Size(62, 13);
+			this.labelMsbRepresentation.TabIndex = 8;
+			this.labelMsbRepresentation.Text = "MSB Repr.:";
+			// 
+			// comboBoxMsbRepresentation
+			// 
+			this.comboBoxMsbRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboBoxMsbRepresentation.FormattingEnabled = true;
+			this.comboBoxMsbRepresentation.Items.AddRange(new object[] {
+            "unsigned",
+            "signed"});
+			this.comboBoxMsbRepresentation.Location = new System.Drawing.Point(89, 37);
+			this.comboBoxMsbRepresentation.Name = "comboBoxMsbRepresentation";
+			this.comboBoxMsbRepresentation.Size = new System.Drawing.Size(68, 21);
+			this.comboBoxMsbRepresentation.TabIndex = 7;
+			this.comboBoxMsbRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMsbRepresentation_SelectedIndexChanged);
+			// 
+			// labelDatawordSize
+			// 
+			this.labelDatawordSize.AutoSize = true;
+			this.labelDatawordSize.BackColor = System.Drawing.Color.Transparent;
+			this.labelDatawordSize.Location = new System.Drawing.Point(6, 16);
+			this.labelDatawordSize.Name = "labelDatawordSize";
+			this.labelDatawordSize.Size = new System.Drawing.Size(77, 13);
+			this.labelDatawordSize.TabIndex = 6;
+			this.labelDatawordSize.Text = "Dataword size:";
 			// 
 			// groupBoxOperations
 			// 
 			this.groupBoxOperations.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftA2);
-			this.groupBoxOperations.Controls.Add(this.buttonShiftRightA2);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithOneA2);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithOneA1);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftWithOneA2);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftWithOneA1);
+			this.groupBoxOperations.Controls.Add(this.buttonSwapA1A2);
+			this.groupBoxOperations.Controls.Add(this.buttonFillA2);
+			this.groupBoxOperations.Controls.Add(this.buttonFillA1);
+			this.groupBoxOperations.Controls.Add(this.buttonClearA2);
+			this.groupBoxOperations.Controls.Add(this.buttonClearA1);
+			this.groupBoxOperations.Controls.Add(this.buttonRevertA2);
+			this.groupBoxOperations.Controls.Add(this.buttonRevertA1);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftWithZeroA2);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithZeroA2);
 			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftA2);
 			this.groupBoxOperations.Controls.Add(this.buttonRotateRightA2);
-			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftA1);
-			this.groupBoxOperations.Controls.Add(this.buttonShiftRightA1);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftLeftWithZeroA1);
+			this.groupBoxOperations.Controls.Add(this.buttonShiftRightWithZeroA1);
 			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftA1);
 			this.groupBoxOperations.Controls.Add(this.buttonRotateRightA1);
 			this.groupBoxOperations.Controls.Add(this.buttonAdditionA1AndA2);
@@ -435,21 +515,22 @@
 			this.groupBoxOperations.Controls.Add(this.buttonInvertA1);
 			this.groupBoxOperations.Location = new System.Drawing.Point(721, 12);
 			this.groupBoxOperations.Name = "groupBoxOperations";
-			this.groupBoxOperations.Size = new System.Drawing.Size(215, 286);
+			this.groupBoxOperations.Size = new System.Drawing.Size(243, 363);
 			this.groupBoxOperations.TabIndex = 83;
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
 			// 
-			// buttonShiftLeftA2
+			// buttonShiftRightWithOneA2
 			// 
-			this.buttonShiftLeftA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftA2.Location = new System.Drawing.Point(153, 21);
-			this.buttonShiftLeftA2.Name = "buttonShiftLeftA2";
-			this.buttonShiftLeftA2.Size = new System.Drawing.Size(56, 23);
-			this.buttonShiftLeftA2.TabIndex = 87;
-			this.buttonShiftLeftA2.Text = "SHL A2";
-			this.buttonShiftLeftA2.UseVisualStyleBackColor = true;
-			this.buttonShiftLeftA2.Click += new System.EventHandler(this.ButtonShiftLeftA2_Click);
+			this.buttonShiftRightWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftRightWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftRightWithOneA2.Location = new System.Drawing.Point(165, 108);
+			this.buttonShiftRightWithOneA2.Name = "buttonShiftRightWithOneA2";
+			this.buttonShiftRightWithOneA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftRightWithOneA2.TabIndex = 101;
+			this.buttonShiftRightWithOneA2.Text = "SHR1 A2";
+			this.buttonShiftRightWithOneA2.UseVisualStyleBackColor = true;
+			this.buttonShiftRightWithOneA2.Click += new System.EventHandler(this.ButtonShiftRightWithOneA2_Click);
 			// 
 			// contextMenuStripRoller
 			// 
@@ -497,23 +578,150 @@
 			this.toolStripComboBoxRoller.Name = "toolStripComboBoxRoller";
 			this.toolStripComboBoxRoller.Size = new System.Drawing.Size(121, 23);
 			// 
-			// buttonShiftRightA2
+			// buttonShiftRightWithOneA1
 			// 
-			this.buttonShiftRightA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightA2.Location = new System.Drawing.Point(153, 50);
-			this.buttonShiftRightA2.Name = "buttonShiftRightA2";
-			this.buttonShiftRightA2.Size = new System.Drawing.Size(56, 23);
-			this.buttonShiftRightA2.TabIndex = 88;
-			this.buttonShiftRightA2.Text = "SHR A2";
-			this.buttonShiftRightA2.UseVisualStyleBackColor = true;
-			this.buttonShiftRightA2.Click += new System.EventHandler(this.ButtonShiftRightA2_Click);
+			this.buttonShiftRightWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftRightWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftRightWithOneA1.Location = new System.Drawing.Point(94, 108);
+			this.buttonShiftRightWithOneA1.Name = "buttonShiftRightWithOneA1";
+			this.buttonShiftRightWithOneA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftRightWithOneA1.TabIndex = 100;
+			this.buttonShiftRightWithOneA1.Text = "SHR1 A1";
+			this.buttonShiftRightWithOneA1.UseVisualStyleBackColor = true;
+			this.buttonShiftRightWithOneA1.Click += new System.EventHandler(this.ButtonShiftRightWithOneA1_Click);
+			// 
+			// buttonShiftLeftWithOneA2
+			// 
+			this.buttonShiftLeftWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftLeftWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftLeftWithOneA2.Location = new System.Drawing.Point(165, 50);
+			this.buttonShiftLeftWithOneA2.Name = "buttonShiftLeftWithOneA2";
+			this.buttonShiftLeftWithOneA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftLeftWithOneA2.TabIndex = 99;
+			this.buttonShiftLeftWithOneA2.Text = "SHL1 A2";
+			this.buttonShiftLeftWithOneA2.UseVisualStyleBackColor = true;
+			this.buttonShiftLeftWithOneA2.Click += new System.EventHandler(this.ButtonShiftLeftWithOneA2_Click);
+			// 
+			// buttonShiftLeftWithOneA1
+			// 
+			this.buttonShiftLeftWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftLeftWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftLeftWithOneA1.Location = new System.Drawing.Point(94, 50);
+			this.buttonShiftLeftWithOneA1.Name = "buttonShiftLeftWithOneA1";
+			this.buttonShiftLeftWithOneA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftLeftWithOneA1.TabIndex = 98;
+			this.buttonShiftLeftWithOneA1.Text = "SHL1 A1";
+			this.buttonShiftLeftWithOneA1.UseVisualStyleBackColor = true;
+			this.buttonShiftLeftWithOneA1.Click += new System.EventHandler(this.ButtonShiftLeftWithOneA1_Click);
+			// 
+			// buttonSwapA1A2
+			// 
+			this.buttonSwapA1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonSwapA1A2.Location = new System.Drawing.Point(6, 311);
+			this.buttonSwapA1A2.Name = "buttonSwapA1A2";
+			this.buttonSwapA1A2.Size = new System.Drawing.Size(82, 23);
+			this.buttonSwapA1A2.TabIndex = 97;
+			this.buttonSwapA1A2.Text = "A1 <> A2";
+			this.buttonSwapA1A2.UseVisualStyleBackColor = true;
+			this.buttonSwapA1A2.Click += new System.EventHandler(this.ButtonSwapA1A2_Click);
+			// 
+			// buttonFillA2
+			// 
+			this.buttonFillA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonFillA2.Location = new System.Drawing.Point(165, 282);
+			this.buttonFillA2.Name = "buttonFillA2";
+			this.buttonFillA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonFillA2.TabIndex = 96;
+			this.buttonFillA2.Text = "A2 = 1";
+			this.buttonFillA2.UseVisualStyleBackColor = true;
+			this.buttonFillA2.Click += new System.EventHandler(this.ButtonFillA2_Click);
+			// 
+			// buttonFillA1
+			// 
+			this.buttonFillA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonFillA1.Location = new System.Drawing.Point(94, 282);
+			this.buttonFillA1.Name = "buttonFillA1";
+			this.buttonFillA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonFillA1.TabIndex = 95;
+			this.buttonFillA1.Text = "A1 = 1";
+			this.buttonFillA1.UseVisualStyleBackColor = true;
+			this.buttonFillA1.Click += new System.EventHandler(this.ButtonFillA1_Click);
+			// 
+			// buttonClearA2
+			// 
+			this.buttonClearA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonClearA2.Location = new System.Drawing.Point(165, 253);
+			this.buttonClearA2.Name = "buttonClearA2";
+			this.buttonClearA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonClearA2.TabIndex = 94;
+			this.buttonClearA2.Text = "A2 = 0";
+			this.buttonClearA2.UseVisualStyleBackColor = true;
+			this.buttonClearA2.Click += new System.EventHandler(this.ButtonClearA2_Click);
+			// 
+			// buttonClearA1
+			// 
+			this.buttonClearA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonClearA1.Location = new System.Drawing.Point(94, 253);
+			this.buttonClearA1.Name = "buttonClearA1";
+			this.buttonClearA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonClearA1.TabIndex = 93;
+			this.buttonClearA1.Text = "A1 = 0";
+			this.buttonClearA1.UseVisualStyleBackColor = true;
+			this.buttonClearA1.Click += new System.EventHandler(this.ButtonClearA1_Click);
+			// 
+			// buttonRevertA2
+			// 
+			this.buttonRevertA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRevertA2.Location = new System.Drawing.Point(165, 224);
+			this.buttonRevertA2.Name = "buttonRevertA2";
+			this.buttonRevertA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonRevertA2.TabIndex = 92;
+			this.buttonRevertA2.Text = "A2 > A2\'";
+			this.buttonRevertA2.UseVisualStyleBackColor = true;
+			this.buttonRevertA2.Click += new System.EventHandler(this.ButtonRevertA2_Click);
+			// 
+			// buttonRevertA1
+			// 
+			this.buttonRevertA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRevertA1.Location = new System.Drawing.Point(94, 224);
+			this.buttonRevertA1.Name = "buttonRevertA1";
+			this.buttonRevertA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonRevertA1.TabIndex = 91;
+			this.buttonRevertA1.Text = "A1 > A1\'";
+			this.buttonRevertA1.UseVisualStyleBackColor = true;
+			this.buttonRevertA1.Click += new System.EventHandler(this.ButtonRevertA1_Click);
+			// 
+			// buttonShiftLeftWithZeroA2
+			// 
+			this.buttonShiftLeftWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftLeftWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftLeftWithZeroA2.Location = new System.Drawing.Point(165, 21);
+			this.buttonShiftLeftWithZeroA2.Name = "buttonShiftLeftWithZeroA2";
+			this.buttonShiftLeftWithZeroA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftLeftWithZeroA2.TabIndex = 87;
+			this.buttonShiftLeftWithZeroA2.Text = "SHL0 A2";
+			this.buttonShiftLeftWithZeroA2.UseVisualStyleBackColor = true;
+			this.buttonShiftLeftWithZeroA2.Click += new System.EventHandler(this.ButtonShiftLeftWithZeroA2_Click);
+			// 
+			// buttonShiftRightWithZeroA2
+			// 
+			this.buttonShiftRightWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftRightWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftRightWithZeroA2.Location = new System.Drawing.Point(165, 79);
+			this.buttonShiftRightWithZeroA2.Name = "buttonShiftRightWithZeroA2";
+			this.buttonShiftRightWithZeroA2.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftRightWithZeroA2.TabIndex = 88;
+			this.buttonShiftRightWithZeroA2.Text = "SHR0 A2";
+			this.buttonShiftRightWithZeroA2.UseVisualStyleBackColor = true;
+			this.buttonShiftRightWithZeroA2.Click += new System.EventHandler(this.ButtonShiftRightWithZeroA2_Click);
 			// 
 			// buttonRotateLeftA2
 			// 
+			this.buttonRotateLeftA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateLeftA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateLeftA2.Location = new System.Drawing.Point(153, 79);
+			this.buttonRotateLeftA2.Location = new System.Drawing.Point(165, 137);
 			this.buttonRotateLeftA2.Name = "buttonRotateLeftA2";
-			this.buttonRotateLeftA2.Size = new System.Drawing.Size(56, 23);
+			this.buttonRotateLeftA2.Size = new System.Drawing.Size(65, 23);
 			this.buttonRotateLeftA2.TabIndex = 89;
 			this.buttonRotateLeftA2.Text = "ROL A2";
 			this.buttonRotateLeftA2.UseVisualStyleBackColor = true;
@@ -521,43 +729,47 @@
 			// 
 			// buttonRotateRightA2
 			// 
+			this.buttonRotateRightA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateRightA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateRightA2.Location = new System.Drawing.Point(153, 108);
+			this.buttonRotateRightA2.Location = new System.Drawing.Point(165, 166);
 			this.buttonRotateRightA2.Name = "buttonRotateRightA2";
-			this.buttonRotateRightA2.Size = new System.Drawing.Size(56, 23);
+			this.buttonRotateRightA2.Size = new System.Drawing.Size(65, 23);
 			this.buttonRotateRightA2.TabIndex = 90;
 			this.buttonRotateRightA2.Text = "ROR A2";
 			this.buttonRotateRightA2.UseVisualStyleBackColor = true;
 			this.buttonRotateRightA2.Click += new System.EventHandler(this.ButtonRotateRightA2_Click);
 			// 
-			// buttonShiftLeftA1
+			// buttonShiftLeftWithZeroA1
 			// 
-			this.buttonShiftLeftA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftA1.Location = new System.Drawing.Point(94, 21);
-			this.buttonShiftLeftA1.Name = "buttonShiftLeftA1";
-			this.buttonShiftLeftA1.Size = new System.Drawing.Size(56, 23);
-			this.buttonShiftLeftA1.TabIndex = 83;
-			this.buttonShiftLeftA1.Text = "SHL A1";
-			this.buttonShiftLeftA1.UseVisualStyleBackColor = true;
-			this.buttonShiftLeftA1.Click += new System.EventHandler(this.ButtonShiftLeftA1_Click);
+			this.buttonShiftLeftWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftLeftWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftLeftWithZeroA1.Location = new System.Drawing.Point(94, 21);
+			this.buttonShiftLeftWithZeroA1.Name = "buttonShiftLeftWithZeroA1";
+			this.buttonShiftLeftWithZeroA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftLeftWithZeroA1.TabIndex = 83;
+			this.buttonShiftLeftWithZeroA1.Text = "SHL0 A1";
+			this.buttonShiftLeftWithZeroA1.UseVisualStyleBackColor = true;
+			this.buttonShiftLeftWithZeroA1.Click += new System.EventHandler(this.ButtonShiftLeftWithZeroA1_Click);
 			// 
-			// buttonShiftRightA1
+			// buttonShiftRightWithZeroA1
 			// 
-			this.buttonShiftRightA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightA1.Location = new System.Drawing.Point(94, 50);
-			this.buttonShiftRightA1.Name = "buttonShiftRightA1";
-			this.buttonShiftRightA1.Size = new System.Drawing.Size(56, 23);
-			this.buttonShiftRightA1.TabIndex = 84;
-			this.buttonShiftRightA1.Text = "SHR A1";
-			this.buttonShiftRightA1.UseVisualStyleBackColor = true;
-			this.buttonShiftRightA1.Click += new System.EventHandler(this.ButtonShiftRightA1_Click);
+			this.buttonShiftRightWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonShiftRightWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
+			this.buttonShiftRightWithZeroA1.Location = new System.Drawing.Point(94, 79);
+			this.buttonShiftRightWithZeroA1.Name = "buttonShiftRightWithZeroA1";
+			this.buttonShiftRightWithZeroA1.Size = new System.Drawing.Size(65, 23);
+			this.buttonShiftRightWithZeroA1.TabIndex = 84;
+			this.buttonShiftRightWithZeroA1.Text = "SHR0 A1";
+			this.buttonShiftRightWithZeroA1.UseVisualStyleBackColor = true;
+			this.buttonShiftRightWithZeroA1.Click += new System.EventHandler(this.ButtonShiftRightWithZeroA1_Click);
 			// 
 			// buttonRotateLeftA1
 			// 
+			this.buttonRotateLeftA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateLeftA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateLeftA1.Location = new System.Drawing.Point(94, 79);
+			this.buttonRotateLeftA1.Location = new System.Drawing.Point(94, 137);
 			this.buttonRotateLeftA1.Name = "buttonRotateLeftA1";
-			this.buttonRotateLeftA1.Size = new System.Drawing.Size(56, 23);
+			this.buttonRotateLeftA1.Size = new System.Drawing.Size(65, 23);
 			this.buttonRotateLeftA1.TabIndex = 85;
 			this.buttonRotateLeftA1.Text = "ROL A1";
 			this.buttonRotateLeftA1.UseVisualStyleBackColor = true;
@@ -565,10 +777,11 @@
 			// 
 			// buttonRotateRightA1
 			// 
+			this.buttonRotateRightA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateRightA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateRightA1.Location = new System.Drawing.Point(94, 108);
+			this.buttonRotateRightA1.Location = new System.Drawing.Point(94, 166);
 			this.buttonRotateRightA1.Name = "buttonRotateRightA1";
-			this.buttonRotateRightA1.Size = new System.Drawing.Size(56, 23);
+			this.buttonRotateRightA1.Size = new System.Drawing.Size(65, 23);
 			this.buttonRotateRightA1.TabIndex = 86;
 			this.buttonRotateRightA1.Text = "ROR A1";
 			this.buttonRotateRightA1.UseVisualStyleBackColor = true;
@@ -576,6 +789,7 @@
 			// 
 			// buttonAdditionA1AndA2
 			// 
+			this.buttonAdditionA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonAdditionA1AndA2.Location = new System.Drawing.Point(6, 21);
 			this.buttonAdditionA1AndA2.Name = "buttonAdditionA1AndA2";
 			this.buttonAdditionA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -586,9 +800,10 @@
 			// 
 			// buttonCopyResultToA2
 			// 
-			this.buttonCopyResultToA2.Location = new System.Drawing.Point(111, 253);
+			this.buttonCopyResultToA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonCopyResultToA2.Location = new System.Drawing.Point(165, 311);
 			this.buttonCopyResultToA2.Name = "buttonCopyResultToA2";
-			this.buttonCopyResultToA2.Size = new System.Drawing.Size(82, 23);
+			this.buttonCopyResultToA2.Size = new System.Drawing.Size(65, 23);
 			this.buttonCopyResultToA2.TabIndex = 82;
 			this.buttonCopyResultToA2.Text = "R > A2";
 			this.buttonCopyResultToA2.UseVisualStyleBackColor = true;
@@ -596,6 +811,7 @@
 			// 
 			// buttonSubtractionA1AndA2
 			// 
+			this.buttonSubtractionA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonSubtractionA1AndA2.Location = new System.Drawing.Point(6, 50);
 			this.buttonSubtractionA1AndA2.Name = "buttonSubtractionA1AndA2";
 			this.buttonSubtractionA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -606,9 +822,10 @@
 			// 
 			// buttonCopyResultToA1
 			// 
-			this.buttonCopyResultToA1.Location = new System.Drawing.Point(111, 224);
+			this.buttonCopyResultToA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonCopyResultToA1.Location = new System.Drawing.Point(94, 311);
 			this.buttonCopyResultToA1.Name = "buttonCopyResultToA1";
-			this.buttonCopyResultToA1.Size = new System.Drawing.Size(82, 23);
+			this.buttonCopyResultToA1.Size = new System.Drawing.Size(65, 23);
 			this.buttonCopyResultToA1.TabIndex = 81;
 			this.buttonCopyResultToA1.Text = "R > A1";
 			this.buttonCopyResultToA1.UseVisualStyleBackColor = true;
@@ -616,6 +833,7 @@
 			// 
 			// buttonMultiplicationA1AndA2
 			// 
+			this.buttonMultiplicationA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonMultiplicationA1AndA2.Location = new System.Drawing.Point(6, 79);
 			this.buttonMultiplicationA1AndA2.Name = "buttonMultiplicationA1AndA2";
 			this.buttonMultiplicationA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -626,7 +844,8 @@
 			// 
 			// buttonLogicalXnorA1AndA2
 			// 
-			this.buttonLogicalXnorA1AndA2.Location = new System.Drawing.Point(111, 195);
+			this.buttonLogicalXnorA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonLogicalXnorA1AndA2.Location = new System.Drawing.Point(6, 282);
 			this.buttonLogicalXnorA1AndA2.Name = "buttonLogicalXnorA1AndA2";
 			this.buttonLogicalXnorA1AndA2.Size = new System.Drawing.Size(82, 23);
 			this.buttonLogicalXnorA1AndA2.TabIndex = 80;
@@ -636,6 +855,7 @@
 			// 
 			// buttonDivisionA1AndA2
 			// 
+			this.buttonDivisionA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonDivisionA1AndA2.Location = new System.Drawing.Point(6, 108);
 			this.buttonDivisionA1AndA2.Name = "buttonDivisionA1AndA2";
 			this.buttonDivisionA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -646,7 +866,8 @@
 			// 
 			// buttonLogicalNorA1AndA2
 			// 
-			this.buttonLogicalNorA1AndA2.Location = new System.Drawing.Point(111, 166);
+			this.buttonLogicalNorA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonLogicalNorA1AndA2.Location = new System.Drawing.Point(6, 253);
 			this.buttonLogicalNorA1AndA2.Name = "buttonLogicalNorA1AndA2";
 			this.buttonLogicalNorA1AndA2.Size = new System.Drawing.Size(82, 23);
 			this.buttonLogicalNorA1AndA2.TabIndex = 79;
@@ -656,6 +877,7 @@
 			// 
 			// buttonLogicalAndA1AndA2
 			// 
+			this.buttonLogicalAndA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonLogicalAndA1AndA2.Location = new System.Drawing.Point(6, 137);
 			this.buttonLogicalAndA1AndA2.Name = "buttonLogicalAndA1AndA2";
 			this.buttonLogicalAndA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -666,7 +888,8 @@
 			// 
 			// buttonLogicalXandA1AndA2
 			// 
-			this.buttonLogicalXandA1AndA2.Location = new System.Drawing.Point(111, 137);
+			this.buttonLogicalXandA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonLogicalXandA1AndA2.Location = new System.Drawing.Point(6, 224);
 			this.buttonLogicalXandA1AndA2.Name = "buttonLogicalXandA1AndA2";
 			this.buttonLogicalXandA1AndA2.Size = new System.Drawing.Size(82, 23);
 			this.buttonLogicalXandA1AndA2.TabIndex = 78;
@@ -676,6 +899,7 @@
 			// 
 			// buttonLogicalOrA1AndA2
 			// 
+			this.buttonLogicalOrA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonLogicalOrA1AndA2.Location = new System.Drawing.Point(6, 166);
 			this.buttonLogicalOrA1AndA2.Name = "buttonLogicalOrA1AndA2";
 			this.buttonLogicalOrA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -686,9 +910,10 @@
 			// 
 			// buttonInvertA2
 			// 
-			this.buttonInvertA2.Location = new System.Drawing.Point(6, 253);
+			this.buttonInvertA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonInvertA2.Location = new System.Drawing.Point(165, 195);
 			this.buttonInvertA2.Name = "buttonInvertA2";
-			this.buttonInvertA2.Size = new System.Drawing.Size(82, 23);
+			this.buttonInvertA2.Size = new System.Drawing.Size(65, 23);
 			this.buttonInvertA2.TabIndex = 77;
 			this.buttonInvertA2.Text = "NOT A2";
 			this.buttonInvertA2.UseVisualStyleBackColor = true;
@@ -696,6 +921,7 @@
 			// 
 			// buttonLogicalXorA1AndA2
 			// 
+			this.buttonLogicalXorA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonLogicalXorA1AndA2.Location = new System.Drawing.Point(6, 195);
 			this.buttonLogicalXorA1AndA2.Name = "buttonLogicalXorA1AndA2";
 			this.buttonLogicalXorA1AndA2.Size = new System.Drawing.Size(82, 23);
@@ -706,9 +932,10 @@
 			// 
 			// buttonInvertA1
 			// 
-			this.buttonInvertA1.Location = new System.Drawing.Point(6, 224);
+			this.buttonInvertA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonInvertA1.Location = new System.Drawing.Point(94, 195);
 			this.buttonInvertA1.Name = "buttonInvertA1";
-			this.buttonInvertA1.Size = new System.Drawing.Size(82, 23);
+			this.buttonInvertA1.Size = new System.Drawing.Size(65, 23);
 			this.buttonInvertA1.TabIndex = 76;
 			this.buttonInvertA1.Text = "NOT A1";
 			this.buttonInvertA1.UseVisualStyleBackColor = true;
@@ -717,8 +944,6 @@
 			// groupBoxResult
 			// 
 			this.groupBoxResult.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxResult.Controls.Add(this.comboBoxResultMsbRepresentation);
-			this.groupBoxResult.Controls.Add(this.labelResultMsbRepresentation);
 			this.groupBoxResult.Controls.Add(this.buttonResultLsbSign);
 			this.groupBoxResult.Controls.Add(this.maskedTextBoxResultNetwork);
 			this.groupBoxResult.Controls.Add(this.labelResultNetwork);
@@ -737,31 +962,9 @@
 			this.groupBoxResult.TabStop = false;
 			this.groupBoxResult.Text = "Result (R)";
 			// 
-			// comboBoxResultMsbRepresentation
-			// 
-			this.comboBoxResultMsbRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxResultMsbRepresentation.FormattingEnabled = true;
-			this.comboBoxResultMsbRepresentation.Items.AddRange(new object[] {
-            "unsigned",
-            "signed"});
-			this.comboBoxResultMsbRepresentation.Location = new System.Drawing.Point(573, 23);
-			this.comboBoxResultMsbRepresentation.Name = "comboBoxResultMsbRepresentation";
-			this.comboBoxResultMsbRepresentation.Size = new System.Drawing.Size(68, 21);
-			this.comboBoxResultMsbRepresentation.TabIndex = 73;
-			this.comboBoxResultMsbRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxResultMsbRepresentation_SelectedIndexChanged);
-			// 
-			// labelResultMsbRepresentation
-			// 
-			this.labelResultMsbRepresentation.AutoSize = true;
-			this.labelResultMsbRepresentation.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultMsbRepresentation.Location = new System.Drawing.Point(510, 27);
-			this.labelResultMsbRepresentation.Name = "labelResultMsbRepresentation";
-			this.labelResultMsbRepresentation.Size = new System.Drawing.Size(62, 13);
-			this.labelResultMsbRepresentation.TabIndex = 72;
-			this.labelResultMsbRepresentation.Text = "MSB Repr.:";
-			// 
 			// buttonResultLsbSign
 			// 
+			this.buttonResultLsbSign.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonResultLsbSign.Location = new System.Drawing.Point(647, 22);
 			this.buttonResultLsbSign.Name = "buttonResultLsbSign";
 			this.buttonResultLsbSign.Size = new System.Drawing.Size(51, 23);
@@ -1268,11 +1471,11 @@
 			// 
 			this.labelResultBit9.AutoSize = true;
 			this.labelResultBit9.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit9.Location = new System.Drawing.Point(134, 16);
+			this.labelResultBit9.Location = new System.Drawing.Point(129, 16);
 			this.labelResultBit9.Name = "labelResultBit9";
-			this.labelResultBit9.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit9.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit9.TabIndex = 21;
-			this.labelResultBit9.Text = "9";
+			this.labelResultBit9.Text = "09";
 			// 
 			// checkBoxResultBit11
 			// 
@@ -1320,11 +1523,11 @@
 			// 
 			this.labelResultBit8.AutoSize = true;
 			this.labelResultBit8.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit8.Location = new System.Drawing.Point(153, 16);
+			this.labelResultBit8.Location = new System.Drawing.Point(149, 16);
 			this.labelResultBit8.Name = "labelResultBit8";
-			this.labelResultBit8.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit8.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit8.TabIndex = 19;
-			this.labelResultBit8.Text = "8";
+			this.labelResultBit8.Text = "08";
 			// 
 			// checkBoxResultBit12
 			// 
@@ -1429,11 +1632,11 @@
 			// 
 			this.labelResultBit7.AutoSize = true;
 			this.labelResultBit7.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit7.Location = new System.Drawing.Point(6, 16);
+			this.labelResultBit7.Location = new System.Drawing.Point(1, 16);
 			this.labelResultBit7.Name = "labelResultBit7";
-			this.labelResultBit7.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit7.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit7.TabIndex = 17;
-			this.labelResultBit7.Text = "7";
+			this.labelResultBit7.Text = "07";
 			// 
 			// checkBoxResultBit7
 			// 
@@ -1450,11 +1653,11 @@
 			// 
 			this.labelResultBit6.AutoSize = true;
 			this.labelResultBit6.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit6.Location = new System.Drawing.Point(25, 16);
+			this.labelResultBit6.Location = new System.Drawing.Point(20, 16);
 			this.labelResultBit6.Name = "labelResultBit6";
-			this.labelResultBit6.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit6.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit6.TabIndex = 15;
-			this.labelResultBit6.Text = "6";
+			this.labelResultBit6.Text = "06";
 			// 
 			// checkBoxResultBit0
 			// 
@@ -1482,21 +1685,21 @@
 			// 
 			this.labelResultBit0.AutoSize = true;
 			this.labelResultBit0.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit0.Location = new System.Drawing.Point(151, 16);
+			this.labelResultBit0.Location = new System.Drawing.Point(146, 16);
 			this.labelResultBit0.Name = "labelResultBit0";
-			this.labelResultBit0.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit0.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit0.TabIndex = 1;
-			this.labelResultBit0.Text = "0";
+			this.labelResultBit0.Text = "00";
 			// 
 			// labelResultBit5
 			// 
 			this.labelResultBit5.AutoSize = true;
 			this.labelResultBit5.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit5.Location = new System.Drawing.Point(44, 16);
+			this.labelResultBit5.Location = new System.Drawing.Point(39, 16);
 			this.labelResultBit5.Name = "labelResultBit5";
-			this.labelResultBit5.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit5.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit5.TabIndex = 13;
-			this.labelResultBit5.Text = "5";
+			this.labelResultBit5.Text = "05";
 			// 
 			// checkBoxResultBit5
 			// 
@@ -1524,11 +1727,11 @@
 			// 
 			this.labelResultBit4.AutoSize = true;
 			this.labelResultBit4.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit4.Location = new System.Drawing.Point(63, 16);
+			this.labelResultBit4.Location = new System.Drawing.Point(58, 16);
 			this.labelResultBit4.Name = "labelResultBit4";
-			this.labelResultBit4.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit4.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit4.TabIndex = 11;
-			this.labelResultBit4.Text = "4";
+			this.labelResultBit4.Text = "04";
 			// 
 			// checkBoxResultBit4
 			// 
@@ -1545,21 +1748,21 @@
 			// 
 			this.labelResultBit1.AutoSize = true;
 			this.labelResultBit1.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit1.Location = new System.Drawing.Point(132, 16);
+			this.labelResultBit1.Location = new System.Drawing.Point(127, 16);
 			this.labelResultBit1.Name = "labelResultBit1";
-			this.labelResultBit1.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit1.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit1.TabIndex = 3;
-			this.labelResultBit1.Text = "1";
+			this.labelResultBit1.Text = "01";
 			// 
 			// labelResultBit3
 			// 
 			this.labelResultBit3.AutoSize = true;
 			this.labelResultBit3.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit3.Location = new System.Drawing.Point(94, 16);
+			this.labelResultBit3.Location = new System.Drawing.Point(89, 16);
 			this.labelResultBit3.Name = "labelResultBit3";
-			this.labelResultBit3.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit3.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit3.TabIndex = 7;
-			this.labelResultBit3.Text = "3";
+			this.labelResultBit3.Text = "03";
 			// 
 			// checkBoxResultBit3
 			// 
@@ -1587,17 +1790,15 @@
 			// 
 			this.labelResultBit2.AutoSize = true;
 			this.labelResultBit2.BackColor = System.Drawing.Color.Transparent;
-			this.labelResultBit2.Location = new System.Drawing.Point(113, 16);
+			this.labelResultBit2.Location = new System.Drawing.Point(108, 16);
 			this.labelResultBit2.Name = "labelResultBit2";
-			this.labelResultBit2.Size = new System.Drawing.Size(13, 13);
+			this.labelResultBit2.Size = new System.Drawing.Size(19, 13);
 			this.labelResultBit2.TabIndex = 5;
-			this.labelResultBit2.Text = "2";
+			this.labelResultBit2.Text = "02";
 			// 
 			// groupBoxAccumulator2
 			// 
 			this.groupBoxAccumulator2.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxAccumulator2.Controls.Add(this.comboBoxA2MsbRepresentation);
-			this.groupBoxAccumulator2.Controls.Add(this.labelA2MsbRepresentation);
 			this.groupBoxAccumulator2.Controls.Add(this.buttonA2LsbSign);
 			this.groupBoxAccumulator2.Controls.Add(this.maskedTextBoxA2Network);
 			this.groupBoxAccumulator2.Controls.Add(this.labelA2Network);
@@ -1616,31 +1817,9 @@
 			this.groupBoxAccumulator2.TabStop = false;
 			this.groupBoxAccumulator2.Text = "Accumulator 2 (A2)";
 			// 
-			// comboBoxA2MsbRepresentation
-			// 
-			this.comboBoxA2MsbRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxA2MsbRepresentation.FormattingEnabled = true;
-			this.comboBoxA2MsbRepresentation.Items.AddRange(new object[] {
-            "unsigned",
-            "signed"});
-			this.comboBoxA2MsbRepresentation.Location = new System.Drawing.Point(571, 23);
-			this.comboBoxA2MsbRepresentation.Name = "comboBoxA2MsbRepresentation";
-			this.comboBoxA2MsbRepresentation.Size = new System.Drawing.Size(68, 21);
-			this.comboBoxA2MsbRepresentation.TabIndex = 73;
-			this.comboBoxA2MsbRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxA2MsbRepresentation_SelectedIndexChanged);
-			// 
-			// labelA2MsbRepresentation
-			// 
-			this.labelA2MsbRepresentation.AutoSize = true;
-			this.labelA2MsbRepresentation.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2MsbRepresentation.Location = new System.Drawing.Point(508, 27);
-			this.labelA2MsbRepresentation.Name = "labelA2MsbRepresentation";
-			this.labelA2MsbRepresentation.Size = new System.Drawing.Size(62, 13);
-			this.labelA2MsbRepresentation.TabIndex = 72;
-			this.labelA2MsbRepresentation.Text = "MSB Repr.:";
-			// 
 			// buttonA2LsbSign
 			// 
+			this.buttonA2LsbSign.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonA2LsbSign.Location = new System.Drawing.Point(646, 22);
 			this.buttonA2LsbSign.Name = "buttonA2LsbSign";
 			this.buttonA2LsbSign.Size = new System.Drawing.Size(52, 23);
@@ -1734,7 +1913,7 @@
 			this.labelA2Bit31.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit31.TabIndex = 65;
 			this.labelA2Bit31.Text = "31";
-			this.labelA2Bit31.Click += new System.EventHandler(this.labelA2Bit31_Click);
+			this.labelA2Bit31.Click += new System.EventHandler(this.LabelA2Bit31_Click);
 			// 
 			// checkBoxA2Bit31
 			// 
@@ -1767,7 +1946,7 @@
 			this.labelA2Bit24.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit24.TabIndex = 51;
 			this.labelA2Bit24.Text = "24";
-			this.labelA2Bit24.Click += new System.EventHandler(this.labelA2Bit24_Click);
+			this.labelA2Bit24.Click += new System.EventHandler(this.LabelA2Bit24_Click);
 			// 
 			// checkBoxA2Bit25
 			// 
@@ -1789,7 +1968,7 @@
 			this.labelA2Bit30.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit30.TabIndex = 63;
 			this.labelA2Bit30.Text = "30";
-			this.labelA2Bit30.Click += new System.EventHandler(this.labelA2Bit30_Click);
+			this.labelA2Bit30.Click += new System.EventHandler(this.LabelA2Bit30_Click);
 			// 
 			// labelA2Bit25
 			// 
@@ -1800,7 +1979,7 @@
 			this.labelA2Bit25.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit25.TabIndex = 53;
 			this.labelA2Bit25.Text = "25";
-			this.labelA2Bit25.Click += new System.EventHandler(this.labelA2Bit25_Click);
+			this.labelA2Bit25.Click += new System.EventHandler(this.LabelA2Bit25_Click);
 			// 
 			// checkBoxA2Bit26
 			// 
@@ -1833,7 +2012,7 @@
 			this.labelA2Bit26.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit26.TabIndex = 55;
 			this.labelA2Bit26.Text = "26";
-			this.labelA2Bit26.Click += new System.EventHandler(this.labelA2Bit26_Click);
+			this.labelA2Bit26.Click += new System.EventHandler(this.LabelA2Bit26_Click);
 			// 
 			// labelA2Bit29
 			// 
@@ -1844,7 +2023,7 @@
 			this.labelA2Bit29.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit29.TabIndex = 61;
 			this.labelA2Bit29.Text = "29";
-			this.labelA2Bit29.Click += new System.EventHandler(this.labelA2Bit29_Click);
+			this.labelA2Bit29.Click += new System.EventHandler(this.LabelA2Bit29_Click);
 			// 
 			// checkBoxA2Bit27
 			// 
@@ -1877,7 +2056,7 @@
 			this.labelA2Bit27.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit27.TabIndex = 57;
 			this.labelA2Bit27.Text = "27";
-			this.labelA2Bit27.Click += new System.EventHandler(this.labelA2Bit27_Click);
+			this.labelA2Bit27.Click += new System.EventHandler(this.LabelA2Bit27_Click);
 			// 
 			// labelA2Bit28
 			// 
@@ -1888,7 +2067,7 @@
 			this.labelA2Bit28.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit28.TabIndex = 59;
 			this.labelA2Bit28.Text = "28";
-			this.labelA2Bit28.Click += new System.EventHandler(this.labelA2Bit28_Click);
+			this.labelA2Bit28.Click += new System.EventHandler(this.LabelA2Bit28_Click);
 			// 
 			// checkBoxA2Bit28
 			// 
@@ -1957,7 +2136,7 @@
 			this.labelA2Bit21.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit21.TabIndex = 45;
 			this.labelA2Bit21.Text = "21";
-			this.labelA2Bit21.Click += new System.EventHandler(this.labelA2Bit21_Click);
+			this.labelA2Bit21.Click += new System.EventHandler(this.LabelA2Bit21_Click);
 			// 
 			// labelA2Bit20
 			// 
@@ -1968,7 +2147,7 @@
 			this.labelA2Bit20.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit20.TabIndex = 43;
 			this.labelA2Bit20.Text = "20";
-			this.labelA2Bit20.Click += new System.EventHandler(this.labelA2Bit20_Click);
+			this.labelA2Bit20.Click += new System.EventHandler(this.LabelA2Bit20_Click);
 			// 
 			// checkBoxA2Bit22
 			// 
@@ -2001,7 +2180,7 @@
 			this.labelA2Bit22.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit22.TabIndex = 47;
 			this.labelA2Bit22.Text = "22";
-			this.labelA2Bit22.Click += new System.EventHandler(this.labelA2Bit22_Click);
+			this.labelA2Bit22.Click += new System.EventHandler(this.LabelA2Bit22_Click);
 			// 
 			// labelA2Bit19
 			// 
@@ -2012,7 +2191,7 @@
 			this.labelA2Bit19.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit19.TabIndex = 41;
 			this.labelA2Bit19.Text = "19";
-			this.labelA2Bit19.Click += new System.EventHandler(this.labelA2Bit19_Click);
+			this.labelA2Bit19.Click += new System.EventHandler(this.LabelA2Bit19_Click);
 			// 
 			// checkBoxA2Bit16
 			// 
@@ -2045,7 +2224,7 @@
 			this.labelA2Bit23.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit23.TabIndex = 49;
 			this.labelA2Bit23.Text = "23";
-			this.labelA2Bit23.Click += new System.EventHandler(this.labelA2Bit23_Click);
+			this.labelA2Bit23.Click += new System.EventHandler(this.LabelA2Bit23_Click);
 			// 
 			// labelA2Bit18
 			// 
@@ -2056,7 +2235,7 @@
 			this.labelA2Bit18.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit18.TabIndex = 39;
 			this.labelA2Bit18.Text = "18";
-			this.labelA2Bit18.Click += new System.EventHandler(this.labelA2Bit18_Click);
+			this.labelA2Bit18.Click += new System.EventHandler(this.LabelA2Bit18_Click);
 			// 
 			// labelA2Bit16
 			// 
@@ -2067,7 +2246,7 @@
 			this.labelA2Bit16.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit16.TabIndex = 35;
 			this.labelA2Bit16.Text = "16";
-			this.labelA2Bit16.Click += new System.EventHandler(this.labelA2Bit16_Click);
+			this.labelA2Bit16.Click += new System.EventHandler(this.LabelA2Bit16_Click);
 			// 
 			// checkBoxA2Bit18
 			// 
@@ -2089,7 +2268,7 @@
 			this.labelA2Bit17.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit17.TabIndex = 37;
 			this.labelA2Bit17.Text = "17";
-			this.labelA2Bit17.Click += new System.EventHandler(this.labelA2Bit17_Click);
+			this.labelA2Bit17.Click += new System.EventHandler(this.LabelA2Bit17_Click);
 			// 
 			// checkBoxA2Bit17
 			// 
@@ -2158,18 +2337,18 @@
 			this.labelA2Bit10.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit10.TabIndex = 23;
 			this.labelA2Bit10.Text = "10";
-			this.labelA2Bit10.Click += new System.EventHandler(this.labelA2Bit10_Click);
+			this.labelA2Bit10.Click += new System.EventHandler(this.LabelA2Bit10_Click);
 			// 
 			// labelA2Bit9
 			// 
 			this.labelA2Bit9.AutoSize = true;
 			this.labelA2Bit9.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit9.Location = new System.Drawing.Point(134, 16);
+			this.labelA2Bit9.Location = new System.Drawing.Point(129, 16);
 			this.labelA2Bit9.Name = "labelA2Bit9";
-			this.labelA2Bit9.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit9.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit9.TabIndex = 21;
-			this.labelA2Bit9.Text = "9";
-			this.labelA2Bit9.Click += new System.EventHandler(this.labelA2Bit9_Click);
+			this.labelA2Bit9.Text = "09";
+			this.labelA2Bit9.Click += new System.EventHandler(this.LabelA2Bit9_Click);
 			// 
 			// checkBoxA2Bit11
 			// 
@@ -2202,7 +2381,7 @@
 			this.labelA2Bit11.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit11.TabIndex = 25;
 			this.labelA2Bit11.Text = "11";
-			this.labelA2Bit11.Click += new System.EventHandler(this.labelA2Bit11_Click);
+			this.labelA2Bit11.Click += new System.EventHandler(this.LabelA2Bit11_Click);
 			// 
 			// labelA2Bit15
 			// 
@@ -2213,18 +2392,18 @@
 			this.labelA2Bit15.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit15.TabIndex = 33;
 			this.labelA2Bit15.Text = "15";
-			this.labelA2Bit15.Click += new System.EventHandler(this.labelA2Bit15_Click);
+			this.labelA2Bit15.Click += new System.EventHandler(this.LabelA2Bit15_Click);
 			// 
 			// labelA2Bit8
 			// 
 			this.labelA2Bit8.AutoSize = true;
 			this.labelA2Bit8.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit8.Location = new System.Drawing.Point(153, 16);
+			this.labelA2Bit8.Location = new System.Drawing.Point(148, 16);
 			this.labelA2Bit8.Name = "labelA2Bit8";
-			this.labelA2Bit8.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit8.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit8.TabIndex = 19;
-			this.labelA2Bit8.Text = "8";
-			this.labelA2Bit8.Click += new System.EventHandler(this.labelA2Bit8_Click);
+			this.labelA2Bit8.Text = "08";
+			this.labelA2Bit8.Click += new System.EventHandler(this.LabelA2Bit8_Click);
 			// 
 			// checkBoxA2Bit12
 			// 
@@ -2257,7 +2436,7 @@
 			this.labelA2Bit12.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit12.TabIndex = 27;
 			this.labelA2Bit12.Text = "12";
-			this.labelA2Bit12.Click += new System.EventHandler(this.labelA2Bit12_Click);
+			this.labelA2Bit12.Click += new System.EventHandler(this.LabelA2Bit12_Click);
 			// 
 			// checkBoxA2Bit13
 			// 
@@ -2279,7 +2458,7 @@
 			this.labelA2Bit13.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit13.TabIndex = 29;
 			this.labelA2Bit13.Text = "13";
-			this.labelA2Bit13.Click += new System.EventHandler(this.labelA2Bit13_Click);
+			this.labelA2Bit13.Click += new System.EventHandler(this.LabelA2Bit13_Click);
 			// 
 			// checkBoxA2Bit14
 			// 
@@ -2301,7 +2480,7 @@
 			this.labelA2Bit14.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit14.TabIndex = 31;
 			this.labelA2Bit14.Text = "14";
-			this.labelA2Bit14.Click += new System.EventHandler(this.labelA2Bit14_Click);
+			this.labelA2Bit14.Click += new System.EventHandler(this.LabelA2Bit14_Click);
 			// 
 			// groupBoxA2Byte1
 			// 
@@ -2332,11 +2511,11 @@
 			// 
 			this.labelA2Bit7.AutoSize = true;
 			this.labelA2Bit7.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit7.Location = new System.Drawing.Point(6, 16);
+			this.labelA2Bit7.Location = new System.Drawing.Point(1, 16);
 			this.labelA2Bit7.Name = "labelA2Bit7";
-			this.labelA2Bit7.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit7.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit7.TabIndex = 17;
-			this.labelA2Bit7.Text = "7";
+			this.labelA2Bit7.Text = "07";
 			// 
 			// checkBoxA2Bit7
 			// 
@@ -2353,12 +2532,12 @@
 			// 
 			this.labelA2Bit6.AutoSize = true;
 			this.labelA2Bit6.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit6.Location = new System.Drawing.Point(25, 16);
+			this.labelA2Bit6.Location = new System.Drawing.Point(20, 16);
 			this.labelA2Bit6.Name = "labelA2Bit6";
-			this.labelA2Bit6.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit6.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit6.TabIndex = 15;
-			this.labelA2Bit6.Text = "6";
-			this.labelA2Bit6.Click += new System.EventHandler(this.labelA2Bit6_Click);
+			this.labelA2Bit6.Text = "06";
+			this.labelA2Bit6.Click += new System.EventHandler(this.LabelA2Bit6_Click);
 			// 
 			// checkBoxA2Bit0
 			// 
@@ -2386,23 +2565,23 @@
 			// 
 			this.labelA2Bit0.AutoSize = true;
 			this.labelA2Bit0.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit0.Location = new System.Drawing.Point(151, 16);
+			this.labelA2Bit0.Location = new System.Drawing.Point(146, 16);
 			this.labelA2Bit0.Name = "labelA2Bit0";
-			this.labelA2Bit0.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit0.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit0.TabIndex = 1;
-			this.labelA2Bit0.Text = "0";
-			this.labelA2Bit0.Click += new System.EventHandler(this.labelA2Bit0_Click);
+			this.labelA2Bit0.Text = "00";
+			this.labelA2Bit0.Click += new System.EventHandler(this.LabelA2Bit0_Click);
 			// 
 			// labelA2Bit5
 			// 
 			this.labelA2Bit5.AutoSize = true;
 			this.labelA2Bit5.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit5.Location = new System.Drawing.Point(44, 16);
+			this.labelA2Bit5.Location = new System.Drawing.Point(39, 16);
 			this.labelA2Bit5.Name = "labelA2Bit5";
-			this.labelA2Bit5.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit5.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit5.TabIndex = 13;
-			this.labelA2Bit5.Text = "5";
-			this.labelA2Bit5.Click += new System.EventHandler(this.labelA2Bit5_Click);
+			this.labelA2Bit5.Text = "05";
+			this.labelA2Bit5.Click += new System.EventHandler(this.LabelA2Bit5_Click);
 			// 
 			// checkBoxA2Bit5
 			// 
@@ -2430,12 +2609,12 @@
 			// 
 			this.labelA2Bit4.AutoSize = true;
 			this.labelA2Bit4.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit4.Location = new System.Drawing.Point(63, 16);
+			this.labelA2Bit4.Location = new System.Drawing.Point(58, 16);
 			this.labelA2Bit4.Name = "labelA2Bit4";
-			this.labelA2Bit4.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit4.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit4.TabIndex = 11;
-			this.labelA2Bit4.Text = "4";
-			this.labelA2Bit4.Click += new System.EventHandler(this.labelA2Bit4_Click);
+			this.labelA2Bit4.Text = "04";
+			this.labelA2Bit4.Click += new System.EventHandler(this.LabelA2Bit4_Click);
 			// 
 			// checkBoxA2Bit4
 			// 
@@ -2452,23 +2631,23 @@
 			// 
 			this.labelA2Bit1.AutoSize = true;
 			this.labelA2Bit1.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit1.Location = new System.Drawing.Point(132, 16);
+			this.labelA2Bit1.Location = new System.Drawing.Point(127, 16);
 			this.labelA2Bit1.Name = "labelA2Bit1";
-			this.labelA2Bit1.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit1.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit1.TabIndex = 3;
-			this.labelA2Bit1.Text = "1";
-			this.labelA2Bit1.Click += new System.EventHandler(this.labelA2Bit1_Click);
+			this.labelA2Bit1.Text = "01";
+			this.labelA2Bit1.Click += new System.EventHandler(this.LabelA2Bit1_Click);
 			// 
 			// labelA2Bit3
 			// 
 			this.labelA2Bit3.AutoSize = true;
 			this.labelA2Bit3.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit3.Location = new System.Drawing.Point(94, 16);
+			this.labelA2Bit3.Location = new System.Drawing.Point(89, 16);
 			this.labelA2Bit3.Name = "labelA2Bit3";
-			this.labelA2Bit3.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit3.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit3.TabIndex = 7;
-			this.labelA2Bit3.Text = "3";
-			this.labelA2Bit3.Click += new System.EventHandler(this.labelA2Bit3_Click);
+			this.labelA2Bit3.Text = "03";
+			this.labelA2Bit3.Click += new System.EventHandler(this.LabelA2Bit3_Click);
 			// 
 			// checkBoxA2Bit3
 			// 
@@ -2496,18 +2675,16 @@
 			// 
 			this.labelA2Bit2.AutoSize = true;
 			this.labelA2Bit2.BackColor = System.Drawing.Color.Transparent;
-			this.labelA2Bit2.Location = new System.Drawing.Point(113, 16);
+			this.labelA2Bit2.Location = new System.Drawing.Point(108, 16);
 			this.labelA2Bit2.Name = "labelA2Bit2";
-			this.labelA2Bit2.Size = new System.Drawing.Size(13, 13);
+			this.labelA2Bit2.Size = new System.Drawing.Size(19, 13);
 			this.labelA2Bit2.TabIndex = 5;
-			this.labelA2Bit2.Text = "2";
-			this.labelA2Bit2.Click += new System.EventHandler(this.labelA2Bit2_Click);
+			this.labelA2Bit2.Text = "02";
+			this.labelA2Bit2.Click += new System.EventHandler(this.LabelA2Bit2_Click);
 			// 
 			// groupBoxAccumulator1
 			// 
 			this.groupBoxAccumulator1.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxAccumulator1.Controls.Add(this.comboBoxA1MsbRepresentation);
-			this.groupBoxAccumulator1.Controls.Add(this.labelA1MsbRepresentation);
 			this.groupBoxAccumulator1.Controls.Add(this.buttonA1LsbSign);
 			this.groupBoxAccumulator1.Controls.Add(this.maskedTextBoxA1Network);
 			this.groupBoxAccumulator1.Controls.Add(this.labelA1Network);
@@ -2526,31 +2703,9 @@
 			this.groupBoxAccumulator1.TabStop = false;
 			this.groupBoxAccumulator1.Text = "Accumulator 1 (A1)";
 			// 
-			// comboBoxA1MsbRepresentation
-			// 
-			this.comboBoxA1MsbRepresentation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboBoxA1MsbRepresentation.FormattingEnabled = true;
-			this.comboBoxA1MsbRepresentation.Items.AddRange(new object[] {
-            "unsigned",
-            "signed"});
-			this.comboBoxA1MsbRepresentation.Location = new System.Drawing.Point(571, 23);
-			this.comboBoxA1MsbRepresentation.Name = "comboBoxA1MsbRepresentation";
-			this.comboBoxA1MsbRepresentation.Size = new System.Drawing.Size(68, 21);
-			this.comboBoxA1MsbRepresentation.TabIndex = 7;
-			this.comboBoxA1MsbRepresentation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxA1MsbRepresentation_SelectedIndexChanged);
-			// 
-			// labelA1MsbRepresentation
-			// 
-			this.labelA1MsbRepresentation.AutoSize = true;
-			this.labelA1MsbRepresentation.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1MsbRepresentation.Location = new System.Drawing.Point(508, 27);
-			this.labelA1MsbRepresentation.Name = "labelA1MsbRepresentation";
-			this.labelA1MsbRepresentation.Size = new System.Drawing.Size(62, 13);
-			this.labelA1MsbRepresentation.TabIndex = 6;
-			this.labelA1MsbRepresentation.Text = "MSB Repr.:";
-			// 
 			// buttonA1LsbSign
 			// 
+			this.buttonA1LsbSign.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonA1LsbSign.Location = new System.Drawing.Point(646, 22);
 			this.buttonA1LsbSign.Name = "buttonA1LsbSign";
 			this.buttonA1LsbSign.Size = new System.Drawing.Size(52, 23);
@@ -2644,7 +2799,7 @@
 			this.labelA1Bit31.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit31.TabIndex = 0;
 			this.labelA1Bit31.Text = "31";
-			this.labelA1Bit31.Click += new System.EventHandler(this.labelA1Bit31_Click);
+			this.labelA1Bit31.Click += new System.EventHandler(this.LabelA1Bit31_Click);
 			// 
 			// checkBoxA1Bit31
 			// 
@@ -2677,7 +2832,7 @@
 			this.labelA1Bit24.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit24.TabIndex = 6;
 			this.labelA1Bit24.Text = "24";
-			this.labelA1Bit24.Click += new System.EventHandler(this.labelA1Bit24_Click);
+			this.labelA1Bit24.Click += new System.EventHandler(this.LabelA1Bit24_Click);
 			// 
 			// checkBoxA1Bit25
 			// 
@@ -2699,7 +2854,7 @@
 			this.labelA1Bit30.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit30.TabIndex = 1;
 			this.labelA1Bit30.Text = "30";
-			this.labelA1Bit30.Click += new System.EventHandler(this.labelA1Bit30_Click);
+			this.labelA1Bit30.Click += new System.EventHandler(this.LabelA1Bit30_Click);
 			// 
 			// labelA1Bit25
 			// 
@@ -2710,7 +2865,7 @@
 			this.labelA1Bit25.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit25.TabIndex = 5;
 			this.labelA1Bit25.Text = "25";
-			this.labelA1Bit25.Click += new System.EventHandler(this.labelA1Bit25_Click);
+			this.labelA1Bit25.Click += new System.EventHandler(this.LabelA1Bit25_Click);
 			// 
 			// checkBoxA1Bit26
 			// 
@@ -2743,7 +2898,7 @@
 			this.labelA1Bit26.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit26.TabIndex = 4;
 			this.labelA1Bit26.Text = "26";
-			this.labelA1Bit26.Click += new System.EventHandler(this.labelA1Bit26_Click);
+			this.labelA1Bit26.Click += new System.EventHandler(this.LabelA1Bit26_Click);
 			// 
 			// labelA1Bit29
 			// 
@@ -2754,7 +2909,7 @@
 			this.labelA1Bit29.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit29.TabIndex = 2;
 			this.labelA1Bit29.Text = "29";
-			this.labelA1Bit29.Click += new System.EventHandler(this.labelA1Bit29_Click);
+			this.labelA1Bit29.Click += new System.EventHandler(this.LabelA1Bit29_Click);
 			// 
 			// checkBoxA1Bit27
 			// 
@@ -2787,7 +2942,7 @@
 			this.labelA1Bit27.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit27.TabIndex = 3;
 			this.labelA1Bit27.Text = "27";
-			this.labelA1Bit27.Click += new System.EventHandler(this.labelA1Bit27_Click);
+			this.labelA1Bit27.Click += new System.EventHandler(this.LabelA1Bit27_Click);
 			// 
 			// labelA1Bit28
 			// 
@@ -2798,7 +2953,7 @@
 			this.labelA1Bit28.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit28.TabIndex = 59;
 			this.labelA1Bit28.Text = "28";
-			this.labelA1Bit28.Click += new System.EventHandler(this.labelA1Bit28_Click);
+			this.labelA1Bit28.Click += new System.EventHandler(this.LabelA1Bit28_Click);
 			// 
 			// checkBoxA1Bit28
 			// 
@@ -2867,7 +3022,7 @@
 			this.labelA1Bit21.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit21.TabIndex = 1;
 			this.labelA1Bit21.Text = "21";
-			this.labelA1Bit21.Click += new System.EventHandler(this.labelA1Bit21_Click);
+			this.labelA1Bit21.Click += new System.EventHandler(this.LabelA1Bit21_Click);
 			// 
 			// labelA1Bit20
 			// 
@@ -2878,7 +3033,7 @@
 			this.labelA1Bit20.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit20.TabIndex = 2;
 			this.labelA1Bit20.Text = "20";
-			this.labelA1Bit20.Click += new System.EventHandler(this.labelA1Bit20_Click);
+			this.labelA1Bit20.Click += new System.EventHandler(this.LabelA1Bit20_Click);
 			// 
 			// checkBoxA1Bit22
 			// 
@@ -2911,7 +3066,7 @@
 			this.labelA1Bit22.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit22.TabIndex = 0;
 			this.labelA1Bit22.Text = "22";
-			this.labelA1Bit22.Click += new System.EventHandler(this.labelA1Bit22_Click);
+			this.labelA1Bit22.Click += new System.EventHandler(this.LabelA1Bit22_Click);
 			// 
 			// labelA1Bit19
 			// 
@@ -2922,7 +3077,7 @@
 			this.labelA1Bit19.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit19.TabIndex = 3;
 			this.labelA1Bit19.Text = "19";
-			this.labelA1Bit19.Click += new System.EventHandler(this.labelA1Bit19_Click);
+			this.labelA1Bit19.Click += new System.EventHandler(this.LabelA1Bit19_Click);
 			// 
 			// checkBoxA1Bit16
 			// 
@@ -2955,7 +3110,7 @@
 			this.labelA1Bit23.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit23.TabIndex = 49;
 			this.labelA1Bit23.Text = "23";
-			this.labelA1Bit23.Click += new System.EventHandler(this.labelA1Bit23_Click);
+			this.labelA1Bit23.Click += new System.EventHandler(this.LabelA1Bit23_Click);
 			// 
 			// labelA1Bit18
 			// 
@@ -2966,7 +3121,7 @@
 			this.labelA1Bit18.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit18.TabIndex = 4;
 			this.labelA1Bit18.Text = "18";
-			this.labelA1Bit18.Click += new System.EventHandler(this.labelA1Bit18_Click);
+			this.labelA1Bit18.Click += new System.EventHandler(this.LabelA1Bit18_Click);
 			// 
 			// labelA1Bit16
 			// 
@@ -2977,7 +3132,7 @@
 			this.labelA1Bit16.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit16.TabIndex = 5;
 			this.labelA1Bit16.Text = "16";
-			this.labelA1Bit16.Click += new System.EventHandler(this.labelA1Bit16_Click);
+			this.labelA1Bit16.Click += new System.EventHandler(this.LabelA1Bit16_Click);
 			// 
 			// checkBoxA1Bit18
 			// 
@@ -2999,7 +3154,7 @@
 			this.labelA1Bit17.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit17.TabIndex = 37;
 			this.labelA1Bit17.Text = "17";
-			this.labelA1Bit17.Click += new System.EventHandler(this.labelA1Bit17_Click);
+			this.labelA1Bit17.Click += new System.EventHandler(this.LabelA1Bit17_Click);
 			// 
 			// checkBoxA1Bit17
 			// 
@@ -3068,18 +3223,18 @@
 			this.labelA1Bit10.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit10.TabIndex = 3;
 			this.labelA1Bit10.Text = "10";
-			this.labelA1Bit10.Click += new System.EventHandler(this.labelA1Bit10_Click);
+			this.labelA1Bit10.Click += new System.EventHandler(this.LabelA1Bit10_Click);
 			// 
 			// labelA1Bit9
 			// 
 			this.labelA1Bit9.AutoSize = true;
 			this.labelA1Bit9.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit9.Location = new System.Drawing.Point(134, 16);
+			this.labelA1Bit9.Location = new System.Drawing.Point(129, 16);
 			this.labelA1Bit9.Name = "labelA1Bit9";
-			this.labelA1Bit9.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit9.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit9.TabIndex = 4;
-			this.labelA1Bit9.Text = "9";
-			this.labelA1Bit9.Click += new System.EventHandler(this.labelA1Bit9_Click);
+			this.labelA1Bit9.Text = "09";
+			this.labelA1Bit9.Click += new System.EventHandler(this.LabelA1Bit9_Click);
 			// 
 			// checkBoxA1Bit11
 			// 
@@ -3112,7 +3267,7 @@
 			this.labelA1Bit11.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit11.TabIndex = 2;
 			this.labelA1Bit11.Text = "11";
-			this.labelA1Bit11.Click += new System.EventHandler(this.labelA1Bit11_Click);
+			this.labelA1Bit11.Click += new System.EventHandler(this.LabelA1Bit11_Click);
 			// 
 			// labelA1Bit15
 			// 
@@ -3123,18 +3278,18 @@
 			this.labelA1Bit15.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit15.TabIndex = 0;
 			this.labelA1Bit15.Text = "15";
-			this.labelA1Bit15.Click += new System.EventHandler(this.labelA1Bit15_Click);
+			this.labelA1Bit15.Click += new System.EventHandler(this.LabelA1Bit15_Click);
 			// 
 			// labelA1Bit8
 			// 
 			this.labelA1Bit8.AutoSize = true;
 			this.labelA1Bit8.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit8.Location = new System.Drawing.Point(153, 16);
+			this.labelA1Bit8.Location = new System.Drawing.Point(148, 16);
 			this.labelA1Bit8.Name = "labelA1Bit8";
-			this.labelA1Bit8.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit8.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit8.TabIndex = 5;
-			this.labelA1Bit8.Text = "8";
-			this.labelA1Bit8.Click += new System.EventHandler(this.labelA1Bit8_Click);
+			this.labelA1Bit8.Text = "08";
+			this.labelA1Bit8.Click += new System.EventHandler(this.LabelA1Bit8_Click);
 			// 
 			// checkBoxA1Bit12
 			// 
@@ -3167,7 +3322,7 @@
 			this.labelA1Bit12.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit12.TabIndex = 1;
 			this.labelA1Bit12.Text = "12";
-			this.labelA1Bit12.Click += new System.EventHandler(this.labelA1Bit12_Click);
+			this.labelA1Bit12.Click += new System.EventHandler(this.LabelA1Bit12_Click);
 			// 
 			// checkBoxA1Bit13
 			// 
@@ -3189,7 +3344,7 @@
 			this.labelA1Bit13.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit13.TabIndex = 29;
 			this.labelA1Bit13.Text = "13";
-			this.labelA1Bit13.Click += new System.EventHandler(this.labelA1Bit13_Click);
+			this.labelA1Bit13.Click += new System.EventHandler(this.LabelA1Bit13_Click);
 			// 
 			// checkBoxA1Bit14
 			// 
@@ -3211,7 +3366,7 @@
 			this.labelA1Bit14.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit14.TabIndex = 31;
 			this.labelA1Bit14.Text = "14";
-			this.labelA1Bit14.Click += new System.EventHandler(this.labelA1Bit14_Click);
+			this.labelA1Bit14.Click += new System.EventHandler(this.LabelA1Bit14_Click);
 			// 
 			// groupBoxA1Byte1
 			// 
@@ -3242,12 +3397,12 @@
 			// 
 			this.labelA1Bit7.AutoSize = true;
 			this.labelA1Bit7.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit7.Location = new System.Drawing.Point(6, 16);
+			this.labelA1Bit7.Location = new System.Drawing.Point(1, 16);
 			this.labelA1Bit7.Name = "labelA1Bit7";
-			this.labelA1Bit7.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit7.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit7.TabIndex = 0;
-			this.labelA1Bit7.Text = "7";
-			this.labelA1Bit7.Click += new System.EventHandler(this.labelA1Bit7_Click);
+			this.labelA1Bit7.Text = "07";
+			this.labelA1Bit7.Click += new System.EventHandler(this.LabelA1Bit7_Click);
 			// 
 			// checkBoxA1Bit7
 			// 
@@ -3264,12 +3419,12 @@
 			// 
 			this.labelA1Bit6.AutoSize = true;
 			this.labelA1Bit6.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit6.Location = new System.Drawing.Point(25, 16);
+			this.labelA1Bit6.Location = new System.Drawing.Point(20, 16);
 			this.labelA1Bit6.Name = "labelA1Bit6";
-			this.labelA1Bit6.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit6.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit6.TabIndex = 1;
-			this.labelA1Bit6.Text = "6";
-			this.labelA1Bit6.Click += new System.EventHandler(this.labelA1Bit6_Click);
+			this.labelA1Bit6.Text = "06";
+			this.labelA1Bit6.Click += new System.EventHandler(this.LabelA1Bit6_Click);
 			// 
 			// checkBoxA1Bit0
 			// 
@@ -3297,23 +3452,23 @@
 			// 
 			this.labelA1Bit0.AutoSize = true;
 			this.labelA1Bit0.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit0.Location = new System.Drawing.Point(151, 16);
+			this.labelA1Bit0.Location = new System.Drawing.Point(146, 16);
 			this.labelA1Bit0.Name = "labelA1Bit0";
-			this.labelA1Bit0.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit0.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit0.TabIndex = 6;
-			this.labelA1Bit0.Text = "0";
-			this.labelA1Bit0.Click += new System.EventHandler(this.labelA1Bit0_Click);
+			this.labelA1Bit0.Text = "00";
+			this.labelA1Bit0.Click += new System.EventHandler(this.LabelA1Bit0_Click);
 			// 
 			// labelA1Bit5
 			// 
 			this.labelA1Bit5.AutoSize = true;
 			this.labelA1Bit5.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit5.Location = new System.Drawing.Point(44, 16);
+			this.labelA1Bit5.Location = new System.Drawing.Point(39, 16);
 			this.labelA1Bit5.Name = "labelA1Bit5";
-			this.labelA1Bit5.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit5.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit5.TabIndex = 2;
-			this.labelA1Bit5.Text = "5";
-			this.labelA1Bit5.Click += new System.EventHandler(this.labelA1Bit5_Click);
+			this.labelA1Bit5.Text = "05";
+			this.labelA1Bit5.Click += new System.EventHandler(this.LabelA1Bit5_Click);
 			// 
 			// checkBoxA1Bit5
 			// 
@@ -3341,12 +3496,12 @@
 			// 
 			this.labelA1Bit4.AutoSize = true;
 			this.labelA1Bit4.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit4.Location = new System.Drawing.Point(63, 16);
+			this.labelA1Bit4.Location = new System.Drawing.Point(58, 16);
 			this.labelA1Bit4.Name = "labelA1Bit4";
-			this.labelA1Bit4.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit4.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit4.TabIndex = 3;
-			this.labelA1Bit4.Text = "4";
-			this.labelA1Bit4.Click += new System.EventHandler(this.labelA1Bit4_Click);
+			this.labelA1Bit4.Text = "04";
+			this.labelA1Bit4.Click += new System.EventHandler(this.LabelA1Bit4_Click);
 			// 
 			// checkBoxA1Bit4
 			// 
@@ -3363,23 +3518,23 @@
 			// 
 			this.labelA1Bit1.AutoSize = true;
 			this.labelA1Bit1.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit1.Location = new System.Drawing.Point(132, 16);
+			this.labelA1Bit1.Location = new System.Drawing.Point(127, 16);
 			this.labelA1Bit1.Name = "labelA1Bit1";
-			this.labelA1Bit1.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit1.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit1.TabIndex = 5;
-			this.labelA1Bit1.Text = "1";
-			this.labelA1Bit1.Click += new System.EventHandler(this.labelA1Bit1_Click);
+			this.labelA1Bit1.Text = "01";
+			this.labelA1Bit1.Click += new System.EventHandler(this.LabelA1Bit1_Click);
 			// 
 			// labelA1Bit3
 			// 
 			this.labelA1Bit3.AutoSize = true;
 			this.labelA1Bit3.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit3.Location = new System.Drawing.Point(94, 16);
+			this.labelA1Bit3.Location = new System.Drawing.Point(89, 16);
 			this.labelA1Bit3.Name = "labelA1Bit3";
-			this.labelA1Bit3.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit3.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit3.TabIndex = 4;
-			this.labelA1Bit3.Text = "3";
-			this.labelA1Bit3.Click += new System.EventHandler(this.labelA1Bit3_Click);
+			this.labelA1Bit3.Text = "03";
+			this.labelA1Bit3.Click += new System.EventHandler(this.LabelA1Bit3_Click);
 			// 
 			// checkBoxA1Bit3
 			// 
@@ -3407,18 +3562,18 @@
 			// 
 			this.labelA1Bit2.AutoSize = true;
 			this.labelA1Bit2.BackColor = System.Drawing.Color.Transparent;
-			this.labelA1Bit2.Location = new System.Drawing.Point(113, 16);
+			this.labelA1Bit2.Location = new System.Drawing.Point(108, 16);
 			this.labelA1Bit2.Name = "labelA1Bit2";
-			this.labelA1Bit2.Size = new System.Drawing.Size(13, 13);
+			this.labelA1Bit2.Size = new System.Drawing.Size(19, 13);
 			this.labelA1Bit2.TabIndex = 5;
-			this.labelA1Bit2.Text = "2";
-			this.labelA1Bit2.Click += new System.EventHandler(this.labelA1Bit2_Click);
+			this.labelA1Bit2.Text = "02";
+			this.labelA1Bit2.Click += new System.EventHandler(this.LabelA1Bit2_Click);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(948, 408);
+			this.ClientSize = new System.Drawing.Size(976, 477);
 			this.Controls.Add(this.toolStripContainer);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
@@ -3433,9 +3588,11 @@
 			this.toolStripContainer.ContentPanel.ResumeLayout(false);
 			this.toolStripContainer.ResumeLayout(false);
 			this.toolStripContainer.PerformLayout();
-			this.groupBoxSettings.ResumeLayout(false);
-			this.groupBoxSettings.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.trackBarTransparency)).EndInit();
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox1.PerformLayout();
 			this.groupBoxOperations.ResumeLayout(false);
 			this.contextMenuStripRoller.ResumeLayout(false);
 			this.groupBoxResult.ResumeLayout(false);
@@ -3718,29 +3875,39 @@
 		private System.Windows.Forms.Label labelA2Bit2;
 		private System.Windows.Forms.Button buttonA1LsbSign;
 		private System.Windows.Forms.Label labelA1Network;
-		private System.Windows.Forms.GroupBox groupBoxSettings;
-		private System.Windows.Forms.CheckBox checkBoxAlwaysOnTop;
-		private System.Windows.Forms.TrackBar trackBarTransparency;
-		private System.Windows.Forms.Label labelTransparency;
 		private System.Windows.Forms.GroupBox groupBoxOperations;
-		private System.Windows.Forms.Button buttonShiftLeftA2;
-		private System.Windows.Forms.Button buttonShiftRightA2;
+		private System.Windows.Forms.Button buttonShiftLeftWithZeroA2;
+		private System.Windows.Forms.Button buttonShiftRightWithZeroA2;
 		private System.Windows.Forms.Button buttonRotateLeftA2;
 		private System.Windows.Forms.Button buttonRotateRightA2;
-		private System.Windows.Forms.Button buttonShiftLeftA1;
-		private System.Windows.Forms.Button buttonShiftRightA1;
+		private System.Windows.Forms.Button buttonShiftLeftWithZeroA1;
+		private System.Windows.Forms.Button buttonShiftRightWithZeroA1;
 		private System.Windows.Forms.Button buttonRotateLeftA1;
 		private System.Windows.Forms.Button buttonRotateRightA1;
 		private System.Windows.Forms.Button buttonCopyResultToA2;
 		private System.Windows.Forms.Button buttonCopyResultToA1;
-		private System.Windows.Forms.ComboBox comboBoxA1MsbRepresentation;
-		private System.Windows.Forms.Label labelA1MsbRepresentation;
-		private System.Windows.Forms.ComboBox comboBoxResultMsbRepresentation;
-		private System.Windows.Forms.Label labelResultMsbRepresentation;
-		private System.Windows.Forms.ComboBox comboBoxA2MsbRepresentation;
-		private System.Windows.Forms.Label labelA2MsbRepresentation;
+		private System.Windows.Forms.ComboBox comboBoxMsbRepresentation;
+		private System.Windows.Forms.Label labelDatawordSize;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStripRoller;
 		private System.Windows.Forms.ToolStripComboBox toolStripComboBoxRoller;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.ComboBox comboBoxDatawordSize;
+		private System.Windows.Forms.Label labelMsbRepresentation;
+		private System.Windows.Forms.Button buttonSwapA1A2;
+		private System.Windows.Forms.Button buttonFillA2;
+		private System.Windows.Forms.Button buttonFillA1;
+		private System.Windows.Forms.Button buttonClearA2;
+		private System.Windows.Forms.Button buttonClearA1;
+		private System.Windows.Forms.Button buttonRevertA2;
+		private System.Windows.Forms.Button buttonRevertA1;
+		private System.Windows.Forms.Button buttonShiftLeftWithOneA1;
+		private System.Windows.Forms.Button buttonShiftLeftWithOneA2;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label labelTransparency;
+		private System.Windows.Forms.TrackBar trackBarTransparency;
+		private System.Windows.Forms.Button buttonShiftRightWithOneA2;
+		private System.Windows.Forms.Button buttonShiftRightWithOneA1;
+		private System.Windows.Forms.CheckBox checkBoxAlwaysOnTop;
 	}
 }
 

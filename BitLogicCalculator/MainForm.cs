@@ -1,31 +1,641 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using BitLogicCalculator.Properties;
 
 namespace BitLogicCalculator
 {
 	public partial class MainForm : Form
 	{
+		private bool isA1LsbSignSet;
+		private bool isA2LsbSignSet;
+		private bool isResultLsbSignSet;
+
 		public MainForm() => InitializeComponent();
 
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 		}
 
-		private void ComboBoxA1MsbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
+		private void ComboBoxMsbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void ComboBoxA2MsbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
+		private void ComboBoxDatawordSize_SelectedIndexChanged(object sender, EventArgs e)
 		{
 		}
 
-		private void ComboBoxResultMsbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
+		private void ButtonA1LsbSign_Click(object sender, EventArgs e)
+		{
+			isA1LsbSignSet = !isA1LsbSignSet;
+			if (!isA1LsbSignSet)
+			{
+				buttonA1LsbSign.Text = Resources.lsb0;
+				labelA1Bit0.Text = Resources.number00;
+				labelA1Bit1.Text = Resources.number01;
+				labelA1Bit2.Text = Resources.number02;
+				labelA1Bit3.Text = Resources.number03;
+				labelA1Bit4.Text = Resources.number04;
+				labelA1Bit5.Text = Resources.number05;
+				labelA1Bit6.Text = Resources.number06;
+				labelA1Bit7.Text = Resources.number07;
+				labelA1Bit8.Text = Resources.number08;
+				labelA1Bit9.Text = Resources.number09;
+				labelA1Bit10.Text = Resources.number10;
+				labelA1Bit11.Text = Resources.number11;
+				labelA1Bit12.Text = Resources.number12;
+				labelA1Bit13.Text = Resources.number13;
+				labelA1Bit14.Text = Resources.number14;
+				labelA1Bit15.Text = Resources.number15;
+				labelA1Bit16.Text = Resources.number16;
+				labelA1Bit17.Text = Resources.number17;
+				labelA1Bit18.Text = Resources.number18;
+				labelA1Bit19.Text = Resources.number19;
+				labelA1Bit20.Text = Resources.number20;
+				labelA1Bit21.Text = Resources.number21;
+				labelA1Bit22.Text = Resources.number22;
+				labelA1Bit23.Text = Resources.number23;
+				labelA1Bit24.Text = Resources.number24;
+				labelA1Bit25.Text = Resources.number25;
+				labelA1Bit26.Text = Resources.number26;
+				labelA1Bit27.Text = Resources.number27;
+				labelA1Bit28.Text = Resources.number28;
+				labelA1Bit29.Text = Resources.number29;
+				labelA1Bit30.Text = Resources.number30;
+				labelA1Bit31.Text = Resources.number31;
+			}
+			else
+			{
+				buttonA1LsbSign.Text = Resources.lsb1;
+				labelA1Bit0.Text = Resources.number01;
+				labelA1Bit1.Text = Resources.number02;
+				labelA1Bit2.Text = Resources.number03;
+				labelA1Bit3.Text = Resources.number04;
+				labelA1Bit4.Text = Resources.number05;
+				labelA1Bit5.Text = Resources.number06;
+				labelA1Bit6.Text = Resources.number07;
+				labelA1Bit7.Text = Resources.number08;
+				labelA1Bit8.Text = Resources.number09;
+				labelA1Bit9.Text = Resources.number10;
+				labelA1Bit10.Text = Resources.number11;
+				labelA1Bit11.Text = Resources.number12;
+				labelA1Bit12.Text = Resources.number13;
+				labelA1Bit13.Text = Resources.number14;
+				labelA1Bit14.Text = Resources.number15;
+				labelA1Bit15.Text = Resources.number16;
+				labelA1Bit16.Text = Resources.number17;
+				labelA1Bit17.Text = Resources.number18;
+				labelA1Bit18.Text = Resources.number19;
+				labelA1Bit19.Text = Resources.number20;
+				labelA1Bit20.Text = Resources.number21;
+				labelA1Bit21.Text = Resources.number22;
+				labelA1Bit22.Text = Resources.number23;
+				labelA1Bit23.Text = Resources.number24;
+				labelA1Bit24.Text = Resources.number25;
+				labelA1Bit25.Text = Resources.number26;
+				labelA1Bit26.Text = Resources.number27;
+				labelA1Bit27.Text = Resources.number28;
+				labelA1Bit28.Text = Resources.number29;
+				labelA1Bit29.Text = Resources.number30;
+				labelA1Bit30.Text = Resources.number31;
+				labelA1Bit31.Text = Resources.number32;
+			}
+		}
+
+		private void ButtonA2LsbSign_Click(object sender, EventArgs e)
+		{
+			isA2LsbSignSet = !isA2LsbSignSet;
+			if (!isA2LsbSignSet)
+			{
+				buttonA2LsbSign.Text = Resources.lsb0;
+				labelA2Bit0.Text = Resources.number00;
+				labelA2Bit1.Text = Resources.number01;
+				labelA2Bit2.Text = Resources.number02;
+				labelA2Bit3.Text = Resources.number03;
+				labelA2Bit4.Text = Resources.number04;
+				labelA2Bit5.Text = Resources.number05;
+				labelA2Bit6.Text = Resources.number06;
+				labelA2Bit7.Text = Resources.number07;
+				labelA2Bit8.Text = Resources.number08;
+				labelA2Bit9.Text = Resources.number09;
+				labelA2Bit10.Text = Resources.number10;
+				labelA2Bit11.Text = Resources.number11;
+				labelA2Bit12.Text = Resources.number12;
+				labelA2Bit13.Text = Resources.number13;
+				labelA2Bit14.Text = Resources.number14;
+				labelA2Bit15.Text = Resources.number15;
+				labelA2Bit16.Text = Resources.number16;
+				labelA2Bit17.Text = Resources.number17;
+				labelA2Bit18.Text = Resources.number18;
+				labelA2Bit19.Text = Resources.number19;
+				labelA2Bit20.Text = Resources.number20;
+				labelA2Bit21.Text = Resources.number21;
+				labelA2Bit22.Text = Resources.number22;
+				labelA2Bit23.Text = Resources.number23;
+				labelA2Bit24.Text = Resources.number24;
+				labelA2Bit25.Text = Resources.number25;
+				labelA2Bit26.Text = Resources.number26;
+				labelA2Bit27.Text = Resources.number27;
+				labelA2Bit28.Text = Resources.number28;
+				labelA2Bit29.Text = Resources.number29;
+				labelA2Bit30.Text = Resources.number30;
+				labelA2Bit31.Text = Resources.number31;
+			}
+			else
+			{
+				buttonA2LsbSign.Text = Resources.lsb1;
+				labelA2Bit0.Text = Resources.number01;
+				labelA2Bit1.Text = Resources.number02;
+				labelA2Bit2.Text = Resources.number03;
+				labelA2Bit3.Text = Resources.number04;
+				labelA2Bit4.Text = Resources.number05;
+				labelA2Bit5.Text = Resources.number06;
+				labelA2Bit6.Text = Resources.number07;
+				labelA2Bit7.Text = Resources.number08;
+				labelA2Bit8.Text = Resources.number09;
+				labelA2Bit9.Text = Resources.number10;
+				labelA2Bit10.Text = Resources.number11;
+				labelA2Bit11.Text = Resources.number12;
+				labelA2Bit12.Text = Resources.number13;
+				labelA2Bit13.Text = Resources.number14;
+				labelA2Bit14.Text = Resources.number15;
+				labelA2Bit15.Text = Resources.number16;
+				labelA2Bit16.Text = Resources.number17;
+				labelA2Bit17.Text = Resources.number18;
+				labelA2Bit18.Text = Resources.number19;
+				labelA2Bit19.Text = Resources.number20;
+				labelA2Bit20.Text = Resources.number21;
+				labelA2Bit21.Text = Resources.number22;
+				labelA2Bit22.Text = Resources.number23;
+				labelA2Bit23.Text = Resources.number24;
+				labelA2Bit24.Text = Resources.number25;
+				labelA2Bit25.Text = Resources.number26;
+				labelA2Bit26.Text = Resources.number27;
+				labelA2Bit27.Text = Resources.number28;
+				labelA2Bit28.Text = Resources.number29;
+				labelA2Bit29.Text = Resources.number30;
+				labelA2Bit30.Text = Resources.number31;
+				labelA2Bit31.Text = Resources.number32;
+			}
+		}
+
+		private void ButtonResultLsbSign_Click(object sender, EventArgs e)
+		{
+			isResultLsbSignSet = !isResultLsbSignSet;
+			if (!isA2LsbSignSet)
+			{
+				buttonA2LsbSign.Text = Resources.lsb0;
+				labelResultBit0.Text = Resources.number00;
+				labelResultBit1.Text = Resources.number01;
+				labelResultBit2.Text = Resources.number02;
+				labelResultBit3.Text = Resources.number03;
+				labelResultBit4.Text = Resources.number04;
+				labelResultBit5.Text = Resources.number05;
+				labelResultBit6.Text = Resources.number06;
+				labelResultBit7.Text = Resources.number07;
+				labelResultBit8.Text = Resources.number08;
+				labelResultBit9.Text = Resources.number09;
+				labelResultBit10.Text = Resources.number10;
+				labelResultBit11.Text = Resources.number11;
+				labelResultBit12.Text = Resources.number12;
+				labelResultBit13.Text = Resources.number13;
+				labelResultBit14.Text = Resources.number14;
+				labelResultBit15.Text = Resources.number15;
+				labelResultBit16.Text = Resources.number16;
+				labelResultBit17.Text = Resources.number17;
+				labelResultBit18.Text = Resources.number18;
+				labelResultBit19.Text = Resources.number19;
+				labelResultBit20.Text = Resources.number20;
+				labelResultBit21.Text = Resources.number21;
+				labelResultBit22.Text = Resources.number22;
+				labelResultBit23.Text = Resources.number23;
+				labelResultBit24.Text = Resources.number24;
+				labelResultBit25.Text = Resources.number25;
+				labelResultBit26.Text = Resources.number26;
+				labelResultBit27.Text = Resources.number27;
+				labelResultBit28.Text = Resources.number28;
+				labelResultBit29.Text = Resources.number29;
+				labelResultBit30.Text = Resources.number30;
+				labelResultBit31.Text = Resources.number31;
+			}
+			else
+			{
+				buttonResultLsbSign.Text = Resources.lsb1;
+				labelResultBit0.Text = Resources.number01;
+				labelResultBit1.Text = Resources.number02;
+				labelResultBit2.Text = Resources.number03;
+				labelResultBit3.Text = Resources.number04;
+				labelResultBit4.Text = Resources.number05;
+				labelResultBit5.Text = Resources.number06;
+				labelResultBit6.Text = Resources.number07;
+				labelResultBit7.Text = Resources.number08;
+				labelResultBit8.Text = Resources.number09;
+				labelResultBit9.Text = Resources.number10;
+				labelResultBit10.Text = Resources.number11;
+				labelResultBit11.Text = Resources.number12;
+				labelResultBit12.Text = Resources.number13;
+				labelResultBit13.Text = Resources.number14;
+				labelResultBit14.Text = Resources.number15;
+				labelResultBit15.Text = Resources.number16;
+				labelResultBit16.Text = Resources.number17;
+				labelResultBit17.Text = Resources.number18;
+				labelResultBit18.Text = Resources.number19;
+				labelResultBit19.Text = Resources.number20;
+				labelResultBit20.Text = Resources.number21;
+				labelResultBit21.Text = Resources.number22;
+				labelResultBit22.Text = Resources.number23;
+				labelResultBit23.Text = Resources.number24;
+				labelResultBit24.Text = Resources.number25;
+				labelResultBit25.Text = Resources.number26;
+				labelResultBit26.Text = Resources.number27;
+				labelResultBit27.Text = Resources.number28;
+				labelResultBit28.Text = Resources.number29;
+				labelResultBit29.Text = Resources.number30;
+				labelResultBit30.Text = Resources.number31;
+				labelResultBit31.Text = Resources.number32;
+			}
+		}
+
+		private void ButtonAdditionA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSubtractionA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonMultiplicationA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonDivisionA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalAndA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalOrA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalXorA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalXandA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalNorA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonLogicalXnorA1AndA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInvertA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonInvertA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonCopyResultToA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonCopyResultToA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftLeftWithZeroA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftLeftWithZeroA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftLeftWithOneA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftLeftWithOneA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftRightWithZeroA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftRightWithZeroA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftRightWithOneA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonShiftRightWithOneA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRevertA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonRevertA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonClearA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonClearA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonFillA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonFillA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonSwapA1A2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit0_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit3_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit4_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit5_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit6_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit7_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit8_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit9_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit10_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit11_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit12_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit13_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit14_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit15_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit16_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit17_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit18_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit19_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit20_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit21_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit22_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit23_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit24_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit25_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit26_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit27_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit28_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit29_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit30_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA1Bit31_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit0_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit3_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit4_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit5_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit6_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit8_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit9_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit10_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit11_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit12_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit13_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit14_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit15_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit16_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit17_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit18_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit19_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit20_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit21_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit22_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit23_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit24_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit25_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit26_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit27_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit28_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit29_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit30_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void LabelA2Bit31_Click(object sender, EventArgs e)
 		{
 		}
 
@@ -419,421 +1029,6 @@ namespace BitLogicCalculator
 
 		private void TrackBarTransparency_Scroll(object sender, EventArgs e)
 		{
-		}
-
-		private void ButtonA1LsbSign_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonA2LsbSign_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonResultLsbSign_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonAdditionA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonSubtractionA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonMultiplicationA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonDivisionA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalAndA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalOrA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalXorA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalXandA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalNorA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonLogicalXnorA1AndA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInvertA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonInvertA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonCopyResultToA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonCopyResultToA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonShiftLeftA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonShiftLeftA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonShiftRightA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonShiftRightA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void labelA1Bit0_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit4_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit5_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit6_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit7_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit8_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit9_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit10_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit11_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit12_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit13_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit14_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit15_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit16_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit17_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit18_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit19_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit20_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit21_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit22_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit23_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit24_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit25_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit26_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit27_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit28_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit29_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit30_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA1Bit31_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit0_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit1_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit4_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit5_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit6_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit8_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit9_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit10_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit11_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit12_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit13_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit14_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit15_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit16_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit17_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit18_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit19_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit20_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit21_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit22_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit23_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit24_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit25_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit26_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit27_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit28_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit29_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit30_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void labelA2Bit31_Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }
