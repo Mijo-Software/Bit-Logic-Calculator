@@ -1,6 +1,7 @@
 ﻿using BitLogicCalculator.Properties;
 
 using System;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace BitLogicCalculator
@@ -10,6 +11,173 @@ namespace BitLogicCalculator
 		#region Constants and variables
 
 		private bool isLsbSignSet;
+
+		private const int length = 32;
+
+		private BitArray accumulator1 = new BitArray(length: length);
+
+		private BitArray accumulator2 = new BitArray(length: length);
+
+		private readonly BitArray result = new BitArray(length: length);
+
+		private readonly Random random = new Random();
+
+		#endregion
+
+		#region Local methods
+
+		private void ShowAccumulator1States(BitArray bitArray)
+		{
+			checkBoxA1Bit00.Checked = bitArray.Get(index: 0);
+			checkBoxA1Bit01.Checked = bitArray.Get(index: 1);
+			checkBoxA1Bit02.Checked = bitArray.Get(index: 2);
+			checkBoxA1Bit03.Checked = bitArray.Get(index: 3);
+			checkBoxA1Bit04.Checked = bitArray.Get(index: 4);
+			checkBoxA1Bit05.Checked = bitArray.Get(index: 5);
+			checkBoxA1Bit06.Checked = bitArray.Get(index: 6);
+			checkBoxA1Bit07.Checked = bitArray.Get(index: 7);
+			if (groupBoxA1Byte2.Enabled)
+			{
+				checkBoxA1Bit08.Checked = bitArray.Get(index: 8);
+				checkBoxA1Bit09.Checked = bitArray.Get(index: 9);
+				checkBoxA1Bit10.Checked = bitArray.Get(index: 10);
+				checkBoxA1Bit11.Checked = bitArray.Get(index: 11);
+				checkBoxA1Bit12.Checked = bitArray.Get(index: 12);
+				checkBoxA1Bit13.Checked = bitArray.Get(index: 13);
+				checkBoxA1Bit14.Checked = bitArray.Get(index: 14);
+				checkBoxA1Bit15.Checked = bitArray.Get(index: 15);
+			}
+			if (groupBoxA1Byte3.Enabled)
+			{
+				checkBoxA1Bit16.Checked = bitArray.Get(index: 16);
+				checkBoxA1Bit17.Checked = bitArray.Get(index: 17);
+				checkBoxA1Bit18.Checked = bitArray.Get(index: 18);
+				checkBoxA1Bit19.Checked = bitArray.Get(index: 19);
+				checkBoxA1Bit20.Checked = bitArray.Get(index: 20);
+				checkBoxA1Bit21.Checked = bitArray.Get(index: 21);
+				checkBoxA1Bit22.Checked = bitArray.Get(index: 22);
+				checkBoxA1Bit23.Checked = bitArray.Get(index: 23);
+			}
+			if (groupBoxA1Byte4.Enabled)
+			{
+				checkBoxA1Bit24.Checked = bitArray.Get(index: 24);
+				checkBoxA1Bit25.Checked = bitArray.Get(index: 25);
+				checkBoxA1Bit26.Checked = bitArray.Get(index: 26);
+				checkBoxA1Bit27.Checked = bitArray.Get(index: 27);
+				checkBoxA1Bit28.Checked = bitArray.Get(index: 28);
+				checkBoxA1Bit29.Checked = bitArray.Get(index: 29);
+				checkBoxA1Bit30.Checked = bitArray.Get(index: 30);
+				checkBoxA1Bit31.Checked = bitArray.Get(index: 31);
+			}
+		}
+
+		private void ShowAccumulator2States(BitArray bitArray)
+		{
+			checkBoxA2Bit00.Checked = bitArray.Get(index: 0);
+			checkBoxA2Bit01.Checked = bitArray.Get(index: 1);
+			checkBoxA2Bit02.Checked = bitArray.Get(index: 2);
+			checkBoxA2Bit03.Checked = bitArray.Get(index: 3);
+			checkBoxA2Bit04.Checked = bitArray.Get(index: 4);
+			checkBoxA2Bit05.Checked = bitArray.Get(index: 5);
+			checkBoxA2Bit06.Checked = bitArray.Get(index: 6);
+			checkBoxA2Bit07.Checked = bitArray.Get(index: 7);
+			if (groupBoxA2Byte2.Enabled)
+			{
+				checkBoxA2Bit08.Checked = bitArray.Get(index: 8);
+				checkBoxA2Bit09.Checked = bitArray.Get(index: 9);
+				checkBoxA2Bit10.Checked = bitArray.Get(index: 10);
+				checkBoxA2Bit11.Checked = bitArray.Get(index: 11);
+				checkBoxA2Bit12.Checked = bitArray.Get(index: 12);
+				checkBoxA2Bit13.Checked = bitArray.Get(index: 13);
+				checkBoxA2Bit14.Checked = bitArray.Get(index: 14);
+				checkBoxA2Bit15.Checked = bitArray.Get(index: 15);
+			}
+			if (groupBoxA2Byte3.Enabled)
+			{
+				checkBoxA2Bit16.Checked = bitArray.Get(index: 16);
+				checkBoxA2Bit17.Checked = bitArray.Get(index: 17);
+				checkBoxA2Bit18.Checked = bitArray.Get(index: 18);
+				checkBoxA2Bit19.Checked = bitArray.Get(index: 19);
+				checkBoxA2Bit20.Checked = bitArray.Get(index: 20);
+				checkBoxA2Bit21.Checked = bitArray.Get(index: 21);
+				checkBoxA2Bit22.Checked = bitArray.Get(index: 22);
+				checkBoxA2Bit23.Checked = bitArray.Get(index: 23);
+			}
+			if (groupBoxA2Byte4.Enabled)
+			{
+				checkBoxA2Bit24.Checked = bitArray.Get(index: 24);
+				checkBoxA2Bit25.Checked = bitArray.Get(index: 25);
+				checkBoxA2Bit26.Checked = bitArray.Get(index: 26);
+				checkBoxA2Bit27.Checked = bitArray.Get(index: 27);
+				checkBoxA2Bit28.Checked = bitArray.Get(index: 28);
+				checkBoxA2Bit29.Checked = bitArray.Get(index: 29);
+				checkBoxA2Bit30.Checked = bitArray.Get(index: 30);
+				checkBoxA2Bit31.Checked = bitArray.Get(index: 31);
+			}
+		}
+
+		private void ShowResultStates(BitArray bitArray)
+		{
+			checkBoxResultBit00.Checked = bitArray.Get(index: 0);
+			checkBoxResultBit01.Checked = bitArray.Get(index: 1);
+			checkBoxResultBit02.Checked = bitArray.Get(index: 2);
+			checkBoxResultBit03.Checked = bitArray.Get(index: 3);
+			checkBoxResultBit04.Checked = bitArray.Get(index: 4);
+			checkBoxResultBit05.Checked = bitArray.Get(index: 5);
+			checkBoxResultBit06.Checked = bitArray.Get(index: 6);
+			checkBoxResultBit07.Checked = bitArray.Get(index: 7);
+			if (groupBoxResultByte2.Enabled)
+			{
+				checkBoxResultBit08.Checked = bitArray.Get(index: 8);
+				checkBoxResultBit09.Checked = bitArray.Get(index: 9);
+				checkBoxResultBit10.Checked = bitArray.Get(index: 10);
+				checkBoxResultBit11.Checked = bitArray.Get(index: 11);
+				checkBoxResultBit12.Checked = bitArray.Get(index: 12);
+				checkBoxResultBit13.Checked = bitArray.Get(index: 13);
+				checkBoxResultBit14.Checked = bitArray.Get(index: 14);
+				checkBoxResultBit15.Checked = bitArray.Get(index: 15);
+			}
+			if (groupBoxResultByte3.Enabled)
+			{
+				checkBoxResultBit16.Checked = bitArray.Get(index: 16);
+				checkBoxResultBit17.Checked = bitArray.Get(index: 17);
+				checkBoxResultBit18.Checked = bitArray.Get(index: 18);
+				checkBoxResultBit19.Checked = bitArray.Get(index: 19);
+				checkBoxResultBit20.Checked = bitArray.Get(index: 20);
+				checkBoxResultBit21.Checked = bitArray.Get(index: 21);
+				checkBoxResultBit22.Checked = bitArray.Get(index: 22);
+				checkBoxResultBit23.Checked = bitArray.Get(index: 23);
+			}
+			if (groupBoxResultByte4.Enabled)
+			{
+				checkBoxResultBit24.Checked = bitArray.Get(index: 24);
+				checkBoxResultBit25.Checked = bitArray.Get(index: 25);
+				checkBoxResultBit26.Checked = bitArray.Get(index: 26);
+				checkBoxResultBit27.Checked = bitArray.Get(index: 27);
+				checkBoxResultBit28.Checked = bitArray.Get(index: 28);
+				checkBoxResultBit29.Checked = bitArray.Get(index: 29);
+				checkBoxResultBit30.Checked = bitArray.Get(index: 30);
+				checkBoxResultBit31.Checked = bitArray.Get(index: 31);
+			}
+		}
+
+		private bool RandomBit() => (byte)random.Next(maxValue: 2) == 1;
+
+		private void SetAccumulator1RandomBits()
+		{
+			for (int i = 0; i < length; i++)
+			{
+				accumulator1.Set(index: i, value: RandomBit());
+			}
+		}
+
+		private void SetAccumulator2RandomBits()
+		{
+			for (int i = 0; i < length; i++)
+			{
+				accumulator2.Set(index: i, value: RandomBit());
+			}
+		}
 
 		#endregion
 
@@ -29,6 +197,11 @@ namespace BitLogicCalculator
 			textBoxConversionOutput.Text = Resources.number00;
 			comboBoxConversionInputUnit.SelectedIndex = 0;
 			comboBoxConversionOutputUnit.SelectedIndex = 1;
+
+			SetAccumulator1RandomBits();
+			SetAccumulator2RandomBits();
+			ShowAccumulator1States(bitArray: accumulator1);
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		#endregion
@@ -440,166 +613,323 @@ namespace BitLogicCalculator
 
 		private void ButtonAdditionA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonSubtractionA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonMultiplicationA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonDivisionA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalAndA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalOrA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalXorA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalXandA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalNorA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonLogicalXnorA1AndA2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonInvertA1_Click(object sender, EventArgs e)
 		{
+			accumulator1.Set(index: 0, value: !accumulator1.Get(index: 0));
+			accumulator1.Set(index: 1, value: !accumulator1.Get(index: 1));
+			accumulator1.Set(index: 2, value: !accumulator1.Get(index: 2));
+			accumulator1.Set(index: 3, value: !accumulator1.Get(index: 3));
+			accumulator1.Set(index: 4, value: !accumulator1.Get(index: 4));
+			accumulator1.Set(index: 5, value: !accumulator1.Get(index: 5));
+			accumulator1.Set(index: 6, value: !accumulator1.Get(index: 6));
+			accumulator1.Set(index: 7, value: !accumulator1.Get(index: 7));
+			accumulator1.Set(index: 8, value: !accumulator1.Get(index: 8));
+			accumulator1.Set(index: 9, value: !accumulator1.Get(index: 9));
+			accumulator1.Set(index: 10, value: !accumulator1.Get(index: 10));
+			accumulator1.Set(index: 11, value: !accumulator1.Get(index: 11));
+			accumulator1.Set(index: 12, value: !accumulator1.Get(index: 12));
+			accumulator1.Set(index: 13, value: !accumulator1.Get(index: 13));
+			accumulator1.Set(index: 14, value: !accumulator1.Get(index: 14));
+			accumulator1.Set(index: 15, value: !accumulator1.Get(index: 15));
+			accumulator1.Set(index: 16, value: !accumulator1.Get(index: 16));
+			accumulator1.Set(index: 17, value: !accumulator1.Get(index: 17));
+			accumulator1.Set(index: 18, value: !accumulator1.Get(index: 18));
+			accumulator1.Set(index: 19, value: !accumulator1.Get(index: 19));
+			accumulator1.Set(index: 20, value: !accumulator1.Get(index: 20));
+			accumulator1.Set(index: 21, value: !accumulator1.Get(index: 21));
+			accumulator1.Set(index: 22, value: !accumulator1.Get(index: 22));
+			accumulator1.Set(index: 23, value: !accumulator1.Get(index: 23));
+			accumulator1.Set(index: 24, value: !accumulator1.Get(index: 24));
+			accumulator1.Set(index: 25, value: !accumulator1.Get(index: 25));
+			accumulator1.Set(index: 26, value: !accumulator1.Get(index: 26));
+			accumulator1.Set(index: 27, value: !accumulator1.Get(index: 27));
+			accumulator1.Set(index: 28, value: !accumulator1.Get(index: 28));
+			accumulator1.Set(index: 29, value: !accumulator1.Get(index: 29));
+			accumulator1.Set(index: 30, value: !accumulator1.Get(index: 30));
+			accumulator1.Set(index: 31, value: !accumulator1.Get(index: 31));
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonInvertA2_Click(object sender, EventArgs e)
 		{
+			accumulator2.Set(index: 0, value: !accumulator2.Get(index: 0));
+			accumulator2.Set(index: 1, value: !accumulator2.Get(index: 1));
+			accumulator2.Set(index: 2, value: !accumulator2.Get(index: 2));
+			accumulator2.Set(index: 3, value: !accumulator2.Get(index: 3));
+			accumulator2.Set(index: 4, value: !accumulator2.Get(index: 4));
+			accumulator2.Set(index: 5, value: !accumulator2.Get(index: 5));
+			accumulator2.Set(index: 6, value: !accumulator2.Get(index: 6));
+			accumulator2.Set(index: 7, value: !accumulator2.Get(index: 7));
+			accumulator2.Set(index: 8, value: !accumulator2.Get(index: 8));
+			accumulator2.Set(index: 9, value: !accumulator2.Get(index: 9));
+			accumulator2.Set(index: 10, value: !accumulator2.Get(index: 10));
+			accumulator2.Set(index: 11, value: !accumulator2.Get(index: 11));
+			accumulator2.Set(index: 12, value: !accumulator2.Get(index: 12));
+			accumulator2.Set(index: 13, value: !accumulator2.Get(index: 13));
+			accumulator2.Set(index: 14, value: !accumulator2.Get(index: 14));
+			accumulator2.Set(index: 15, value: !accumulator2.Get(index: 15));
+			accumulator2.Set(index: 16, value: !accumulator2.Get(index: 16));
+			accumulator2.Set(index: 17, value: !accumulator2.Get(index: 17));
+			accumulator2.Set(index: 18, value: !accumulator2.Get(index: 18));
+			accumulator2.Set(index: 19, value: !accumulator2.Get(index: 19));
+			accumulator2.Set(index: 20, value: !accumulator2.Get(index: 20));
+			accumulator2.Set(index: 21, value: !accumulator2.Get(index: 21));
+			accumulator2.Set(index: 22, value: !accumulator2.Get(index: 22));
+			accumulator2.Set(index: 23, value: !accumulator2.Get(index: 23));
+			accumulator2.Set(index: 24, value: !accumulator2.Get(index: 24));
+			accumulator2.Set(index: 25, value: !accumulator2.Get(index: 25));
+			accumulator2.Set(index: 26, value: !accumulator2.Get(index: 26));
+			accumulator2.Set(index: 27, value: !accumulator2.Get(index: 27));
+			accumulator2.Set(index: 28, value: !accumulator2.Get(index: 28));
+			accumulator2.Set(index: 29, value: !accumulator2.Get(index: 29));
+			accumulator2.Set(index: 30, value: !accumulator2.Get(index: 30));
+			accumulator2.Set(index: 31, value: !accumulator2.Get(index: 31));
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonCopyResultToA1_Click(object sender, EventArgs e)
 		{
+			accumulator1 = result;
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonCopyResultToA2_Click(object sender, EventArgs e)
 		{
+			accumulator2 = result;
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonShiftLeftWithZeroA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonShiftLeftWithZeroA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonShiftLeftWithOneA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonShiftLeftWithOneA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonShiftRightWithZeroA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonShiftRightWithZeroA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonShiftRightWithOneA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonShiftRightWithOneA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonRevertA1_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = accumulator1;
+			accumulator1.Set(index: 0, value: bitArray.Get(index: 31));
+			accumulator1.Set(index: 1, value: bitArray.Get(index: 30));
+			accumulator1.Set(index: 2, value: bitArray.Get(index: 29));
+			accumulator1.Set(index: 3, value: bitArray.Get(index: 28));
+			accumulator1.Set(index: 4, value: bitArray.Get(index: 27));
+			accumulator1.Set(index: 5, value: bitArray.Get(index: 26));
+			accumulator1.Set(index: 6, value: bitArray.Get(index: 25));
+			accumulator1.Set(index: 7, value: bitArray.Get(index: 24));
+			accumulator1.Set(index: 8, value: bitArray.Get(index: 23));
+			accumulator1.Set(index: 9, value: bitArray.Get(index: 22));
+			accumulator1.Set(index: 10, value: bitArray.Get(index: 21));
+			accumulator1.Set(index: 11, value: bitArray.Get(index: 20));
+			accumulator1.Set(index: 12, value: bitArray.Get(index: 19));
+			accumulator1.Set(index: 13, value: bitArray.Get(index: 18));
+			accumulator1.Set(index: 14, value: bitArray.Get(index: 17));
+			accumulator1.Set(index: 15, value: bitArray.Get(index: 16));
+			accumulator1.Set(index: 16, value: bitArray.Get(index: 15));
+			accumulator1.Set(index: 17, value: bitArray.Get(index: 14));
+			accumulator1.Set(index: 18, value: bitArray.Get(index: 13));
+			accumulator1.Set(index: 19, value: bitArray.Get(index: 12));
+			accumulator1.Set(index: 20, value: bitArray.Get(index: 11));
+			accumulator1.Set(index: 21, value: bitArray.Get(index: 10));
+			accumulator1.Set(index: 22, value: bitArray.Get(index: 9));
+			accumulator1.Set(index: 23, value: bitArray.Get(index: 8));
+			accumulator1.Set(index: 24, value: bitArray.Get(index: 7));
+			accumulator1.Set(index: 25, value: bitArray.Get(index: 6));
+			accumulator1.Set(index: 26, value: bitArray.Get(index: 5));
+			accumulator1.Set(index: 27, value: bitArray.Get(index: 4));
+			accumulator1.Set(index: 28, value: bitArray.Get(index: 3));
+			accumulator1.Set(index: 29, value: bitArray.Get(index: 2));
+			accumulator1.Set(index: 30, value: bitArray.Get(index: 1));
+			accumulator1.Set(index: 31, value: bitArray.Get(index: 0));
+			ShowAccumulator1States(bitArray: accumulator2);
 		}
 
 		private void ButtonRevertA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonClearA1_Click(object sender, EventArgs e)
 		{
+			accumulator1.SetAll(value: false);
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonClearA2_Click(object sender, EventArgs e)
 		{
+			accumulator2.SetAll(value: false);
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonFillA1_Click(object sender, EventArgs e)
 		{
+			accumulator1.SetAll(value: true);
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonFillA2_Click(object sender, EventArgs e)
 		{
+			accumulator2.SetAll(value: true);
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonSwapA1A2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonRandomizeA1_Click(object sender, EventArgs e)
 		{
+			SetAccumulator1RandomBits();
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonRandomizeA2_Click(object sender, EventArgs e)
 		{
+			SetAccumulator2RandomBits();
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		private void ButtonInhibitionA1A2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonInhibitionA2A1_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonSubjunktionA1A2_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonSubjunktionA2A1_Click(object sender, EventArgs e)
 		{
+			ShowResultStates(bitArray: result);
 		}
 
 		private void ButtonHalfswapA1_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator1States(bitArray: accumulator1);
 		}
 
 		private void ButtonHalfswapA2_Click(object sender, EventArgs e)
 		{
+			ShowAccumulator2States(bitArray: accumulator2);
+		}
+
+		private void ButtonTwosComponentA1_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator1States(bitArray: accumulator1);
+		}
+
+		private void ButtonTwosComponentA2_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator2States(bitArray: accumulator2);
 		}
 
 		#endregion
