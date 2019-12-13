@@ -51,6 +51,7 @@
 			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
 			this.labelDataSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.buttonTwosComponentA2 = new System.Windows.Forms.Button();
 			this.buttonTwosComponentA1 = new System.Windows.Forms.Button();
 			this.buttonHalfswapA2 = new System.Windows.Forms.Button();
@@ -91,7 +92,6 @@
 			this.buttonDivisionA1AndA2 = new System.Windows.Forms.Button();
 			this.buttonLogicalNorA1AndA2 = new System.Windows.Forms.Button();
 			this.buttonLogicalAndA1AndA2 = new System.Windows.Forms.Button();
-			this.buttonLogicalXandA1AndA2 = new System.Windows.Forms.Button();
 			this.buttonLogicalOrA1AndA2 = new System.Windows.Forms.Button();
 			this.buttonInvertA2 = new System.Windows.Forms.Button();
 			this.buttonLogicalXorA1AndA2 = new System.Windows.Forms.Button();
@@ -388,11 +388,11 @@
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxResult);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxAccumulator2);
 			this.toolStripContainer.ContentPanel.Controls.Add(this.groupBoxAccumulator1);
-			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(995, 455);
+			this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(995, 461);
 			this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
 			this.toolStripContainer.Name = "toolStripContainer";
-			this.toolStripContainer.Size = new System.Drawing.Size(995, 477);
+			this.toolStripContainer.Size = new System.Drawing.Size(995, 483);
 			this.toolStripContainer.TabIndex = 0;
 			this.toolStripContainer.Text = "toolStripContainer";
 			// 
@@ -402,7 +402,7 @@
 			this.groupBox1.Controls.Add(this.comboBoxConversionInputUnit);
 			this.groupBox1.Controls.Add(this.textBoxConversionOutput);
 			this.groupBox1.Controls.Add(this.textBoxConversionInput);
-			this.groupBox1.Location = new System.Drawing.Point(310, 381);
+			this.groupBox1.Location = new System.Drawing.Point(316, 381);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(165, 68);
 			this.groupBox1.TabIndex = 91;
@@ -538,7 +538,7 @@
 			this.groupBoxDataFormat.Controls.Add(this.labelMsbRepresentation);
 			this.groupBoxDataFormat.Controls.Add(this.comboBoxMsbRepresentation);
 			this.groupBoxDataFormat.Controls.Add(this.labelDataSize);
-			this.groupBoxDataFormat.Location = new System.Drawing.Point(481, 381);
+			this.groupBoxDataFormat.Location = new System.Drawing.Point(487, 381);
 			this.groupBoxDataFormat.Name = "groupBoxDataFormat";
 			this.groupBoxDataFormat.Size = new System.Drawing.Size(228, 68);
 			this.groupBoxDataFormat.TabIndex = 88;
@@ -606,6 +606,7 @@
 			// groupBoxOperations
 			// 
 			this.groupBoxOperations.BackColor = System.Drawing.Color.Transparent;
+			this.groupBoxOperations.Controls.Add(this.button1);
 			this.groupBoxOperations.Controls.Add(this.buttonTwosComponentA2);
 			this.groupBoxOperations.Controls.Add(this.buttonTwosComponentA1);
 			this.groupBoxOperations.Controls.Add(this.buttonHalfswapA2);
@@ -644,7 +645,6 @@
 			this.groupBoxOperations.Controls.Add(this.buttonDivisionA1AndA2);
 			this.groupBoxOperations.Controls.Add(this.buttonLogicalNorA1AndA2);
 			this.groupBoxOperations.Controls.Add(this.buttonLogicalAndA1AndA2);
-			this.groupBoxOperations.Controls.Add(this.buttonLogicalXandA1AndA2);
 			this.groupBoxOperations.Controls.Add(this.buttonLogicalOrA1AndA2);
 			this.groupBoxOperations.Controls.Add(this.buttonInvertA2);
 			this.groupBoxOperations.Controls.Add(this.buttonLogicalXorA1AndA2);
@@ -655,6 +655,17 @@
 			this.groupBoxOperations.TabIndex = 83;
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
+			// 
+			// button1
+			// 
+			this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.button1.Location = new System.Drawing.Point(6, 224);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(78, 23);
+			this.button1.TabIndex = 113;
+			this.button1.Text = "A1 NAND A2";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.ButtonLogicalNandA1AndA2_Click_Click);
 			// 
 			// buttonTwosComponentA2
 			// 
@@ -1132,17 +1143,6 @@
 			this.buttonLogicalAndA1AndA2.UseVisualStyleBackColor = true;
 			this.buttonLogicalAndA1AndA2.Click += new System.EventHandler(this.ButtonLogicalAndA1AndA2_Click);
 			// 
-			// buttonLogicalXandA1AndA2
-			// 
-			this.buttonLogicalXandA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonLogicalXandA1AndA2.Location = new System.Drawing.Point(6, 224);
-			this.buttonLogicalXandA1AndA2.Name = "buttonLogicalXandA1AndA2";
-			this.buttonLogicalXandA1AndA2.Size = new System.Drawing.Size(78, 23);
-			this.buttonLogicalXandA1AndA2.TabIndex = 78;
-			this.buttonLogicalXandA1AndA2.Text = "A1 XAND A2";
-			this.buttonLogicalXandA1AndA2.UseVisualStyleBackColor = true;
-			this.buttonLogicalXandA1AndA2.Click += new System.EventHandler(this.ButtonLogicalXandA1AndA2_Click);
-			// 
 			// buttonLogicalOrA1AndA2
 			// 
 			this.buttonLogicalOrA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1318,6 +1318,7 @@
 			// 
 			// checkBoxResultBit31
 			// 
+			this.checkBoxResultBit31.AutoCheck = false;
 			this.checkBoxResultBit31.AutoSize = true;
 			this.checkBoxResultBit31.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit31.Location = new System.Drawing.Point(9, 32);
@@ -1325,10 +1326,10 @@
 			this.checkBoxResultBit31.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit31.TabIndex = 64;
 			this.checkBoxResultBit31.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit31.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit31_CheckedChanged);
 			// 
 			// checkBoxResultBit24
 			// 
+			this.checkBoxResultBit24.AutoCheck = false;
 			this.checkBoxResultBit24.AutoSize = true;
 			this.checkBoxResultBit24.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit24.Location = new System.Drawing.Point(147, 32);
@@ -1336,7 +1337,6 @@
 			this.checkBoxResultBit24.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit24.TabIndex = 50;
 			this.checkBoxResultBit24.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit24.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit24_CheckedChanged);
 			// 
 			// labelResultBit24
 			// 
@@ -1350,6 +1350,7 @@
 			// 
 			// checkBoxResultBit25
 			// 
+			this.checkBoxResultBit25.AutoCheck = false;
 			this.checkBoxResultBit25.AutoSize = true;
 			this.checkBoxResultBit25.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit25.Location = new System.Drawing.Point(128, 32);
@@ -1357,7 +1358,6 @@
 			this.checkBoxResultBit25.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit25.TabIndex = 52;
 			this.checkBoxResultBit25.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit25.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit25_CheckedChanged);
 			// 
 			// labelResultBit30
 			// 
@@ -1381,6 +1381,7 @@
 			// 
 			// checkBoxResultBit26
 			// 
+			this.checkBoxResultBit26.AutoCheck = false;
 			this.checkBoxResultBit26.AutoSize = true;
 			this.checkBoxResultBit26.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit26.Location = new System.Drawing.Point(109, 32);
@@ -1388,10 +1389,10 @@
 			this.checkBoxResultBit26.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit26.TabIndex = 54;
 			this.checkBoxResultBit26.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit26.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit26_CheckedChanged);
 			// 
 			// checkBoxResultBit30
 			// 
+			this.checkBoxResultBit30.AutoCheck = false;
 			this.checkBoxResultBit30.AutoSize = true;
 			this.checkBoxResultBit30.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit30.Location = new System.Drawing.Point(28, 32);
@@ -1399,7 +1400,6 @@
 			this.checkBoxResultBit30.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit30.TabIndex = 62;
 			this.checkBoxResultBit30.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit30.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit30_CheckedChanged);
 			// 
 			// labelResultBit26
 			// 
@@ -1423,6 +1423,7 @@
 			// 
 			// checkBoxResultBit27
 			// 
+			this.checkBoxResultBit27.AutoCheck = false;
 			this.checkBoxResultBit27.AutoSize = true;
 			this.checkBoxResultBit27.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit27.Location = new System.Drawing.Point(90, 32);
@@ -1430,10 +1431,10 @@
 			this.checkBoxResultBit27.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit27.TabIndex = 56;
 			this.checkBoxResultBit27.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit27.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit27_CheckedChanged);
 			// 
 			// checkBoxResultBit29
 			// 
+			this.checkBoxResultBit29.AutoCheck = false;
 			this.checkBoxResultBit29.AutoSize = true;
 			this.checkBoxResultBit29.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit29.Location = new System.Drawing.Point(47, 32);
@@ -1441,7 +1442,6 @@
 			this.checkBoxResultBit29.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit29.TabIndex = 60;
 			this.checkBoxResultBit29.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit29.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit29_CheckedChanged);
 			// 
 			// labelResultBit27
 			// 
@@ -1465,6 +1465,7 @@
 			// 
 			// checkBoxResultBit28
 			// 
+			this.checkBoxResultBit28.AutoCheck = false;
 			this.checkBoxResultBit28.AutoSize = true;
 			this.checkBoxResultBit28.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit28.Location = new System.Drawing.Point(66, 32);
@@ -1472,7 +1473,6 @@
 			this.checkBoxResultBit28.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit28.TabIndex = 58;
 			this.checkBoxResultBit28.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit28.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit28_CheckedChanged);
 			// 
 			// groupBoxResultByte3
 			// 
@@ -1501,6 +1501,7 @@
 			// 
 			// checkBoxResultBit23
 			// 
+			this.checkBoxResultBit23.AutoCheck = false;
 			this.checkBoxResultBit23.AutoSize = true;
 			this.checkBoxResultBit23.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit23.Location = new System.Drawing.Point(6, 32);
@@ -1508,10 +1509,10 @@
 			this.checkBoxResultBit23.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit23.TabIndex = 48;
 			this.checkBoxResultBit23.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit23.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit23_CheckedChanged);
 			// 
 			// checkBoxResultBit21
 			// 
+			this.checkBoxResultBit21.AutoCheck = false;
 			this.checkBoxResultBit21.AutoSize = true;
 			this.checkBoxResultBit21.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit21.Location = new System.Drawing.Point(44, 32);
@@ -1519,7 +1520,6 @@
 			this.checkBoxResultBit21.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit21.TabIndex = 44;
 			this.checkBoxResultBit21.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit21.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit21_CheckedChanged);
 			// 
 			// labelResultBit21
 			// 
@@ -1543,6 +1543,7 @@
 			// 
 			// checkBoxResultBit22
 			// 
+			this.checkBoxResultBit22.AutoCheck = false;
 			this.checkBoxResultBit22.AutoSize = true;
 			this.checkBoxResultBit22.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit22.Location = new System.Drawing.Point(25, 32);
@@ -1550,10 +1551,10 @@
 			this.checkBoxResultBit22.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit22.TabIndex = 46;
 			this.checkBoxResultBit22.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit22.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit22_CheckedChanged);
 			// 
 			// checkBoxResultBit20
 			// 
+			this.checkBoxResultBit20.AutoCheck = false;
 			this.checkBoxResultBit20.AutoSize = true;
 			this.checkBoxResultBit20.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit20.Location = new System.Drawing.Point(63, 32);
@@ -1561,7 +1562,6 @@
 			this.checkBoxResultBit20.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit20.TabIndex = 42;
 			this.checkBoxResultBit20.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit20.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit20_CheckedChanged);
 			// 
 			// labelResultBit22
 			// 
@@ -1585,6 +1585,7 @@
 			// 
 			// checkBoxResultBit16
 			// 
+			this.checkBoxResultBit16.AutoCheck = false;
 			this.checkBoxResultBit16.AutoSize = true;
 			this.checkBoxResultBit16.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit16.Location = new System.Drawing.Point(150, 32);
@@ -1592,10 +1593,10 @@
 			this.checkBoxResultBit16.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit16.TabIndex = 34;
 			this.checkBoxResultBit16.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit16.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit16_CheckedChanged);
 			// 
 			// checkBoxResultBit19
 			// 
+			this.checkBoxResultBit19.AutoCheck = false;
 			this.checkBoxResultBit19.AutoSize = true;
 			this.checkBoxResultBit19.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit19.Location = new System.Drawing.Point(93, 32);
@@ -1603,7 +1604,6 @@
 			this.checkBoxResultBit19.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit19.TabIndex = 40;
 			this.checkBoxResultBit19.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit19.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit19_CheckedChanged);
 			// 
 			// labelResultBit23
 			// 
@@ -1637,6 +1637,7 @@
 			// 
 			// checkBoxResultBit18
 			// 
+			this.checkBoxResultBit18.AutoCheck = false;
 			this.checkBoxResultBit18.AutoSize = true;
 			this.checkBoxResultBit18.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit18.Location = new System.Drawing.Point(112, 32);
@@ -1644,7 +1645,6 @@
 			this.checkBoxResultBit18.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit18.TabIndex = 38;
 			this.checkBoxResultBit18.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit18.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit18_CheckedChanged);
 			// 
 			// labelResultBit17
 			// 
@@ -1658,6 +1658,7 @@
 			// 
 			// checkBoxResultBit17
 			// 
+			this.checkBoxResultBit17.AutoCheck = false;
 			this.checkBoxResultBit17.AutoSize = true;
 			this.checkBoxResultBit17.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit17.Location = new System.Drawing.Point(131, 32);
@@ -1665,7 +1666,6 @@
 			this.checkBoxResultBit17.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit17.TabIndex = 36;
 			this.checkBoxResultBit17.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit17.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit17_CheckedChanged);
 			// 
 			// groupBoxResultByte2
 			// 
@@ -1694,6 +1694,7 @@
 			// 
 			// checkBoxResultBit15
 			// 
+			this.checkBoxResultBit15.AutoCheck = false;
 			this.checkBoxResultBit15.AutoSize = true;
 			this.checkBoxResultBit15.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit15.Location = new System.Drawing.Point(6, 32);
@@ -1701,10 +1702,10 @@
 			this.checkBoxResultBit15.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit15.TabIndex = 32;
 			this.checkBoxResultBit15.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit15.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit15_CheckedChanged);
 			// 
 			// checkBoxResultBit10
 			// 
+			this.checkBoxResultBit10.AutoCheck = false;
 			this.checkBoxResultBit10.AutoSize = true;
 			this.checkBoxResultBit10.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit10.Location = new System.Drawing.Point(112, 32);
@@ -1712,7 +1713,6 @@
 			this.checkBoxResultBit10.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit10.TabIndex = 22;
 			this.checkBoxResultBit10.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit10.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit10_CheckedChanged);
 			// 
 			// labelResultBit10
 			// 
@@ -1736,6 +1736,7 @@
 			// 
 			// checkBoxResultBit11
 			// 
+			this.checkBoxResultBit11.AutoCheck = false;
 			this.checkBoxResultBit11.AutoSize = true;
 			this.checkBoxResultBit11.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit11.Location = new System.Drawing.Point(93, 32);
@@ -1743,10 +1744,10 @@
 			this.checkBoxResultBit11.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit11.TabIndex = 24;
 			this.checkBoxResultBit11.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit11.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit11_CheckedChanged);
 			// 
 			// checkBoxResultBit09
 			// 
+			this.checkBoxResultBit09.AutoCheck = false;
 			this.checkBoxResultBit09.AutoSize = true;
 			this.checkBoxResultBit09.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit09.Location = new System.Drawing.Point(131, 32);
@@ -1754,7 +1755,6 @@
 			this.checkBoxResultBit09.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit09.TabIndex = 20;
 			this.checkBoxResultBit09.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit09.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit09_CheckedChanged);
 			// 
 			// labelResultBit11
 			// 
@@ -1788,6 +1788,7 @@
 			// 
 			// checkBoxResultBit12
 			// 
+			this.checkBoxResultBit12.AutoCheck = false;
 			this.checkBoxResultBit12.AutoSize = true;
 			this.checkBoxResultBit12.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit12.Location = new System.Drawing.Point(63, 32);
@@ -1795,10 +1796,10 @@
 			this.checkBoxResultBit12.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit12.TabIndex = 26;
 			this.checkBoxResultBit12.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit12.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit12_CheckedChanged);
 			// 
 			// checkBoxResultBit08
 			// 
+			this.checkBoxResultBit08.AutoCheck = false;
 			this.checkBoxResultBit08.AutoSize = true;
 			this.checkBoxResultBit08.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit08.Location = new System.Drawing.Point(150, 32);
@@ -1806,7 +1807,6 @@
 			this.checkBoxResultBit08.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit08.TabIndex = 18;
 			this.checkBoxResultBit08.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit08.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit08_CheckedChanged);
 			// 
 			// labelResultBit12
 			// 
@@ -1820,6 +1820,7 @@
 			// 
 			// checkBoxResultBit13
 			// 
+			this.checkBoxResultBit13.AutoCheck = false;
 			this.checkBoxResultBit13.AutoSize = true;
 			this.checkBoxResultBit13.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit13.Location = new System.Drawing.Point(44, 32);
@@ -1827,7 +1828,6 @@
 			this.checkBoxResultBit13.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit13.TabIndex = 28;
 			this.checkBoxResultBit13.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit13.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit13_CheckedChanged);
 			// 
 			// labelResultBit13
 			// 
@@ -1841,6 +1841,7 @@
 			// 
 			// checkBoxResultBit14
 			// 
+			this.checkBoxResultBit14.AutoCheck = false;
 			this.checkBoxResultBit14.AutoSize = true;
 			this.checkBoxResultBit14.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit14.Location = new System.Drawing.Point(25, 32);
@@ -1848,7 +1849,6 @@
 			this.checkBoxResultBit14.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit14.TabIndex = 30;
 			this.checkBoxResultBit14.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit14.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit14_CheckedChanged);
 			// 
 			// labelResultBit14
 			// 
@@ -1897,6 +1897,7 @@
 			// 
 			// checkBoxResultBit07
 			// 
+			this.checkBoxResultBit07.AutoCheck = false;
 			this.checkBoxResultBit07.AutoSize = true;
 			this.checkBoxResultBit07.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit07.Location = new System.Drawing.Point(4, 32);
@@ -1904,7 +1905,6 @@
 			this.checkBoxResultBit07.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit07.TabIndex = 16;
 			this.checkBoxResultBit07.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit07.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit07_CheckedChanged);
 			// 
 			// labelResultBit06
 			// 
@@ -1918,6 +1918,7 @@
 			// 
 			// checkBoxResultBit00
 			// 
+			this.checkBoxResultBit00.AutoCheck = false;
 			this.checkBoxResultBit00.AutoSize = true;
 			this.checkBoxResultBit00.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit00.Location = new System.Drawing.Point(149, 32);
@@ -1925,10 +1926,10 @@
 			this.checkBoxResultBit00.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit00.TabIndex = 0;
 			this.checkBoxResultBit00.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit00.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit00_CheckedChanged);
 			// 
 			// checkBoxResultBit06
 			// 
+			this.checkBoxResultBit06.AutoCheck = false;
 			this.checkBoxResultBit06.AutoSize = true;
 			this.checkBoxResultBit06.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit06.Location = new System.Drawing.Point(23, 32);
@@ -1936,7 +1937,6 @@
 			this.checkBoxResultBit06.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit06.TabIndex = 14;
 			this.checkBoxResultBit06.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit06.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit06_CheckedChanged);
 			// 
 			// labelResultBit00
 			// 
@@ -1960,6 +1960,7 @@
 			// 
 			// checkBoxResultBit05
 			// 
+			this.checkBoxResultBit05.AutoCheck = false;
 			this.checkBoxResultBit05.AutoSize = true;
 			this.checkBoxResultBit05.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit05.Location = new System.Drawing.Point(42, 32);
@@ -1967,10 +1968,10 @@
 			this.checkBoxResultBit05.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit05.TabIndex = 12;
 			this.checkBoxResultBit05.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit05.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit05_CheckedChanged);
 			// 
 			// checkBoxResultBit01
 			// 
+			this.checkBoxResultBit01.AutoCheck = false;
 			this.checkBoxResultBit01.AutoSize = true;
 			this.checkBoxResultBit01.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit01.Location = new System.Drawing.Point(130, 32);
@@ -1978,7 +1979,6 @@
 			this.checkBoxResultBit01.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit01.TabIndex = 2;
 			this.checkBoxResultBit01.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit01.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit01_CheckedChanged);
 			// 
 			// labelResultBit04
 			// 
@@ -1992,6 +1992,7 @@
 			// 
 			// checkBoxResultBit04
 			// 
+			this.checkBoxResultBit04.AutoCheck = false;
 			this.checkBoxResultBit04.AutoSize = true;
 			this.checkBoxResultBit04.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit04.Location = new System.Drawing.Point(61, 32);
@@ -1999,7 +2000,6 @@
 			this.checkBoxResultBit04.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit04.TabIndex = 10;
 			this.checkBoxResultBit04.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit04.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit04_CheckedChanged);
 			// 
 			// labelResultBit01
 			// 
@@ -2023,6 +2023,7 @@
 			// 
 			// checkBoxResultBit03
 			// 
+			this.checkBoxResultBit03.AutoCheck = false;
 			this.checkBoxResultBit03.AutoSize = true;
 			this.checkBoxResultBit03.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit03.Location = new System.Drawing.Point(92, 32);
@@ -2030,10 +2031,10 @@
 			this.checkBoxResultBit03.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit03.TabIndex = 6;
 			this.checkBoxResultBit03.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit03.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit03_CheckedChanged);
 			// 
 			// checkBoxResultBit02
 			// 
+			this.checkBoxResultBit02.AutoCheck = false;
 			this.checkBoxResultBit02.AutoSize = true;
 			this.checkBoxResultBit02.BackColor = System.Drawing.Color.Transparent;
 			this.checkBoxResultBit02.Location = new System.Drawing.Point(111, 32);
@@ -2041,7 +2042,6 @@
 			this.checkBoxResultBit02.Size = new System.Drawing.Size(15, 14);
 			this.checkBoxResultBit02.TabIndex = 4;
 			this.checkBoxResultBit02.UseVisualStyleBackColor = true;
-			this.checkBoxResultBit02.CheckedChanged += new System.EventHandler(this.CheckBoxResultBit02_CheckedChanged);
 			// 
 			// labelResultBit02
 			// 
@@ -3844,7 +3844,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(995, 477);
+			this.ClientSize = new System.Drawing.Size(995, 483);
 			this.Controls.Add(this.toolStripContainer);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
@@ -3984,7 +3984,6 @@
 		private System.Windows.Forms.Label labelA1Bit02;
 		private System.Windows.Forms.Button buttonLogicalXnorA1AndA2;
 		private System.Windows.Forms.Button buttonLogicalNorA1AndA2;
-		private System.Windows.Forms.Button buttonLogicalXandA1AndA2;
 		private System.Windows.Forms.Button buttonInvertA2;
 		private System.Windows.Forms.Button buttonInvertA1;
 		private System.Windows.Forms.Button buttonLogicalXorA1AndA2;
@@ -4202,6 +4201,7 @@
 		private System.Windows.Forms.Button buttonAbout;
 		private System.Windows.Forms.Button buttonTwosComponentA2;
 		private System.Windows.Forms.Button buttonTwosComponentA1;
+		private System.Windows.Forms.Button button1;
 	}
 }
 
