@@ -763,44 +763,145 @@ namespace BitLogicCalculator
 
 		private void ButtonRevertA1_Click(object sender, EventArgs e)
 		{
-			BitArray bitArray = accumulator1;
-			accumulator1.Set(index: 0, value: bitArray.Get(index: 31));
-			accumulator1.Set(index: 1, value: bitArray.Get(index: 30));
-			accumulator1.Set(index: 2, value: bitArray.Get(index: 29));
-			accumulator1.Set(index: 3, value: bitArray.Get(index: 28));
-			accumulator1.Set(index: 4, value: bitArray.Get(index: 27));
-			accumulator1.Set(index: 5, value: bitArray.Get(index: 26));
-			accumulator1.Set(index: 6, value: bitArray.Get(index: 25));
-			accumulator1.Set(index: 7, value: bitArray.Get(index: 24));
-			accumulator1.Set(index: 8, value: bitArray.Get(index: 23));
-			accumulator1.Set(index: 9, value: bitArray.Get(index: 22));
-			accumulator1.Set(index: 10, value: bitArray.Get(index: 21));
-			accumulator1.Set(index: 11, value: bitArray.Get(index: 20));
-			accumulator1.Set(index: 12, value: bitArray.Get(index: 19));
-			accumulator1.Set(index: 13, value: bitArray.Get(index: 18));
-			accumulator1.Set(index: 14, value: bitArray.Get(index: 17));
-			accumulator1.Set(index: 15, value: bitArray.Get(index: 16));
-			accumulator1.Set(index: 16, value: bitArray.Get(index: 15));
-			accumulator1.Set(index: 17, value: bitArray.Get(index: 14));
-			accumulator1.Set(index: 18, value: bitArray.Get(index: 13));
-			accumulator1.Set(index: 19, value: bitArray.Get(index: 12));
-			accumulator1.Set(index: 20, value: bitArray.Get(index: 11));
-			accumulator1.Set(index: 21, value: bitArray.Get(index: 10));
-			accumulator1.Set(index: 22, value: bitArray.Get(index: 9));
-			accumulator1.Set(index: 23, value: bitArray.Get(index: 8));
-			accumulator1.Set(index: 24, value: bitArray.Get(index: 7));
-			accumulator1.Set(index: 25, value: bitArray.Get(index: 6));
-			accumulator1.Set(index: 26, value: bitArray.Get(index: 5));
-			accumulator1.Set(index: 27, value: bitArray.Get(index: 4));
-			accumulator1.Set(index: 28, value: bitArray.Get(index: 3));
-			accumulator1.Set(index: 29, value: bitArray.Get(index: 2));
-			accumulator1.Set(index: 30, value: bitArray.Get(index: 1));
-			accumulator1.Set(index: 31, value: bitArray.Get(index: 0));
+			BitArray bitArray = (BitArray)accumulator1.Clone();
+			if (groupBoxA1Byte4.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 31));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 30));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 29));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 28));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 27));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 26));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 25));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 24));
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 23));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 22));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 21));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 20));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 19));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 18));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 17));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 16));
+				bitArray.Set(index: 16, value: accumulator1.Get(index: 15));
+				bitArray.Set(index: 17, value: accumulator1.Get(index: 14));
+				bitArray.Set(index: 18, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 19, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 20, value: accumulator1.Get(index: 11));
+				bitArray.Set(index: 21, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 22, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 23, value: accumulator1.Get(index: 8));
+				bitArray.Set(index: 24, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 25, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 26, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 27, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 28, value: accumulator1.Get(index: 3));
+				bitArray.Set(index: 29, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 30, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 31, value: accumulator1.Get(index: 0));
+			}
+			else if (groupBoxA1Byte2.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 15));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 14));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 11));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 8));
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 3));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 0));
+			}
+			else
+			{
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 3));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 0));
+			}
+			accumulator1 = (BitArray)bitArray.Clone();
 			ShowAccumulator1States();
 		}
 
 		private void ButtonRevertA2_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator2.Clone();
+			if (groupBoxA2Byte4.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 31));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 30));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 29));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 28));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 27));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 26));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 25));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 24));
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 23));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 22));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 21));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 20));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 19));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 18));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 17));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 16));
+				bitArray.Set(index: 16, value: accumulator2.Get(index: 15));
+				bitArray.Set(index: 17, value: accumulator2.Get(index: 14));
+				bitArray.Set(index: 18, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 19, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 20, value: accumulator2.Get(index: 11));
+				bitArray.Set(index: 21, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 22, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 23, value: accumulator2.Get(index: 8));
+				bitArray.Set(index: 24, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 25, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 26, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 27, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 28, value: accumulator2.Get(index: 3));
+				bitArray.Set(index: 29, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 30, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 31, value: accumulator2.Get(index: 0));
+			}
+			else if (groupBoxA2Byte2.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 15));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 14));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 11));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 8));
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 3));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 0));
+			}
+			else
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 3));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 0));
+			}
+			accumulator2 = (BitArray)bitArray.Clone();
 			ShowAccumulator2States();
 		}
 
@@ -890,44 +991,68 @@ namespace BitLogicCalculator
 			BitArray bitArray = (BitArray)accumulator1.Clone();
 			if (groupBoxA1Byte4.Enabled)
 			{
-				bitArray.Set(index: 0, value: accumulator1.Get(index: 31));
-				bitArray.Set(index: 1, value: accumulator1.Get(index: 30));
-				bitArray.Set(index: 2, value: accumulator1.Get(index: 29));
-				bitArray.Set(index: 3, value: accumulator1.Get(index: 28));
-				bitArray.Set(index: 4, value: accumulator1.Get(index: 27));
-				bitArray.Set(index: 5, value: accumulator1.Get(index: 26));
-				bitArray.Set(index: 6, value: accumulator1.Get(index: 25));
-				bitArray.Set(index: 7, value: accumulator1.Get(index: 24));
-				bitArray.Set(index: 8, value: accumulator1.Get(index: 23));
-				bitArray.Set(index: 9, value: accumulator1.Get(index: 22));
-				bitArray.Set(index: 10, value: accumulator1.Get(index: 21));
-				bitArray.Set(index: 11, value: accumulator1.Get(index: 20));
-				bitArray.Set(index: 12, value: accumulator1.Get(index: 19));
-				bitArray.Set(index: 13, value: accumulator1.Get(index: 18));
-				bitArray.Set(index: 14, value: accumulator1.Get(index: 17));
-				bitArray.Set(index: 15, value: accumulator1.Get(index: 16));
-				bitArray.Set(index: 16, value: accumulator1.Get(index: 15));
-				bitArray.Set(index: 17, value: accumulator1.Get(index: 14));
-				bitArray.Set(index: 18, value: accumulator1.Get(index: 13));
-				bitArray.Set(index: 19, value: accumulator1.Get(index: 12));
-				bitArray.Set(index: 20, value: accumulator1.Get(index: 11));
-				bitArray.Set(index: 21, value: accumulator1.Get(index: 10));
-				bitArray.Set(index: 22, value: accumulator1.Get(index: 9));
-				bitArray.Set(index: 23, value: accumulator1.Get(index: 8));
-				bitArray.Set(index: 24, value: accumulator1.Get(index: 7));
-				bitArray.Set(index: 25, value: accumulator1.Get(index: 6));
-				bitArray.Set(index: 26, value: accumulator1.Get(index: 5));
-				bitArray.Set(index: 27, value: accumulator1.Get(index: 4));
-				bitArray.Set(index: 28, value: accumulator1.Get(index: 3));
-				bitArray.Set(index: 29, value: accumulator1.Get(index: 2));
-				bitArray.Set(index: 30, value: accumulator1.Get(index: 1));
-				bitArray.Set(index: 31, value: accumulator1.Get(index: 0));
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 16));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 17));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 18));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 19));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 20));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 21));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 22));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 23));
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 24));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 25));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 26));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 27));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 28));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 29));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 30));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 31));
+				bitArray.Set(index: 16, value: accumulator1.Get(index: 0));
+				bitArray.Set(index: 17, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 18, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 19, value: accumulator1.Get(index: 3));
+				bitArray.Set(index: 20, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 21, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 22, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 23, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 24, value: accumulator1.Get(index: 8));
+				bitArray.Set(index: 25, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 26, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 27, value: accumulator1.Get(index: 11));
+				bitArray.Set(index: 28, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 29, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 30, value: accumulator1.Get(index: 14));
+				bitArray.Set(index: 31, value: accumulator1.Get(index: 15));
 			}
 			else if (groupBoxA1Byte2.Enabled)
 			{
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 8));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 11));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 14));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 15));
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 0));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 3));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 7));
 			}
 			else
 			{
+				bitArray.Set(index: 0, value: accumulator1.Get(index: 4));
+				bitArray.Set(index: 1, value: accumulator1.Get(index: 5));
+				bitArray.Set(index: 2, value: accumulator1.Get(index: 6));
+				bitArray.Set(index: 3, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 4, value: accumulator1.Get(index: 0));
+				bitArray.Set(index: 5, value: accumulator1.Get(index: 1));
+				bitArray.Set(index: 6, value: accumulator1.Get(index: 2));
+				bitArray.Set(index: 7, value: accumulator1.Get(index: 3));
 			}
 			accumulator1 = (BitArray)bitArray.Clone();
 			ShowAccumulator1States();
@@ -935,6 +1060,73 @@ namespace BitLogicCalculator
 
 		private void ButtonHalfswapA2_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator2.Clone();
+			if (groupBoxA2Byte4.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 16));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 17));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 18));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 19));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 20));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 21));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 22));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 23));
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 24));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 25));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 26));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 27));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 28));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 29));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 30));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 31));
+				bitArray.Set(index: 16, value: accumulator2.Get(index: 0));
+				bitArray.Set(index: 17, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 18, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 19, value: accumulator2.Get(index: 3));
+				bitArray.Set(index: 20, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 21, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 22, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 23, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 24, value: accumulator2.Get(index: 8));
+				bitArray.Set(index: 25, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 26, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 27, value: accumulator2.Get(index: 11));
+				bitArray.Set(index: 28, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 29, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 30, value: accumulator2.Get(index: 14));
+				bitArray.Set(index: 31, value: accumulator2.Get(index: 15));
+			}
+			else if (groupBoxA2Byte2.Enabled)
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 8));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 11));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 14));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 15));
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 0));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 3));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 7));
+			}
+			else
+			{
+				bitArray.Set(index: 0, value: accumulator2.Get(index: 4));
+				bitArray.Set(index: 1, value: accumulator2.Get(index: 5));
+				bitArray.Set(index: 2, value: accumulator2.Get(index: 6));
+				bitArray.Set(index: 3, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 4, value: accumulator2.Get(index: 0));
+				bitArray.Set(index: 5, value: accumulator2.Get(index: 1));
+				bitArray.Set(index: 6, value: accumulator2.Get(index: 2));
+				bitArray.Set(index: 7, value: accumulator2.Get(index: 3));
+			}
+			accumulator2 = (BitArray)bitArray.Clone();
 			ShowAccumulator2States();
 		}
 
