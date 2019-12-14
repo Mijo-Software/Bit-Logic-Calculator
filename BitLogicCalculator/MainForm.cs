@@ -166,7 +166,7 @@ namespace BitLogicCalculator
 
 		private void SetAccumulator1RandomBits()
 		{
-			for (int i = 0; i < length; i++)
+			for (int i = 0; i < accumulator1.Length; i++)
 			{
 				accumulator1.Set(index: i, value: RandomBit());
 			}
@@ -174,7 +174,7 @@ namespace BitLogicCalculator
 
 		private void SetAccumulator2RandomBits()
 		{
-			for (int i = 0; i < length; i++)
+			for (int i = 0; i < accumulator2.Length; i++)
 			{
 				accumulator2.Set(index: i, value: RandomBit());
 			}
@@ -198,7 +198,6 @@ namespace BitLogicCalculator
 			textBoxConversionOutput.Text = Resources.number00;
 			comboBoxConversionInputUnit.SelectedIndex = 0;
 			comboBoxConversionOutputUnit.SelectedIndex = 1;
-
 			SetAccumulator1RandomBits();
 			SetAccumulator2RandomBits();
 			ShowAccumulator1States();
@@ -1144,257 +1143,131 @@ namespace BitLogicCalculator
 
 		#region labels
 
-		private void LabelA1Bit00_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit00_Click(object sender, EventArgs e) => checkBoxA1Bit00.Checked = !checkBoxA1Bit00.Checked;
 
-		private void LabelA1Bit01_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit01_Click(object sender, EventArgs e) => checkBoxA1Bit01.Checked = !checkBoxA1Bit01.Checked;
 
-		private void LabelA1Bit02_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit02_Click(object sender, EventArgs e) => checkBoxA1Bit02.Checked = !checkBoxA1Bit02.Checked;
 
-		private void LabelA1Bit03_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit03_Click(object sender, EventArgs e) => checkBoxA1Bit03.Checked = !checkBoxA1Bit03.Checked;
 
-		private void LabelA1Bit04_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit04_Click(object sender, EventArgs e) => checkBoxA1Bit04.Checked = !checkBoxA1Bit04.Checked;
 
-		private void LabelA1Bit05_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit05_Click(object sender, EventArgs e) => checkBoxA1Bit05.Checked = !checkBoxA1Bit05.Checked;
 
-		private void LabelA1Bit06_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit06_Click(object sender, EventArgs e) => checkBoxA1Bit06.Checked = !checkBoxA1Bit06.Checked;
 
-		private void LabelA1Bit07_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit07_Click(object sender, EventArgs e) => checkBoxA1Bit07.Checked = !checkBoxA1Bit07.Checked;
 
-		private void LabelA1Bit08_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit08_Click(object sender, EventArgs e) => checkBoxA1Bit08.Checked = !checkBoxA1Bit08.Checked;
 
-		private void LabelA1Bit09_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit09_Click(object sender, EventArgs e) => checkBoxA1Bit09.Checked = !checkBoxA1Bit09.Checked;
 
-		private void LabelA1Bit10_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit10_Click(object sender, EventArgs e) => checkBoxA1Bit10.Checked = !checkBoxA1Bit10.Checked;
 
-		private void LabelA1Bit11_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit11_Click(object sender, EventArgs e) => checkBoxA1Bit11.Checked = !checkBoxA1Bit11.Checked;
 
-		private void LabelA1Bit12_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit12_Click(object sender, EventArgs e) => checkBoxA1Bit12.Checked = !checkBoxA1Bit12.Checked;
 
-		private void LabelA1Bit13_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit13_Click(object sender, EventArgs e) => checkBoxA1Bit13.Checked = !checkBoxA1Bit13.Checked;
 
-		private void LabelA1Bit14_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit14_Click(object sender, EventArgs e) => checkBoxA1Bit14.Checked = !checkBoxA1Bit14.Checked;
 
-		private void LabelA1Bit15_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit15_Click(object sender, EventArgs e) => checkBoxA1Bit15.Checked = !checkBoxA1Bit15.Checked;
 
-		private void LabelA1Bit16_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit16_Click(object sender, EventArgs e) => checkBoxA1Bit16.Checked = !checkBoxA1Bit16.Checked;
 
-		private void LabelA1Bit17_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit17_Click(object sender, EventArgs e) => checkBoxA1Bit17.Checked = !checkBoxA1Bit17.Checked;
 
-		private void LabelA1Bit18_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit18_Click(object sender, EventArgs e) => checkBoxA1Bit18.Checked = !checkBoxA1Bit18.Checked;
 
-		private void LabelA1Bit19_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit19_Click(object sender, EventArgs e) => checkBoxA1Bit19.Checked = !checkBoxA1Bit19.Checked;
 
-		private void LabelA1Bit20_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit20_Click(object sender, EventArgs e) => checkBoxA1Bit20.Checked = !checkBoxA1Bit20.Checked;
 
-		private void LabelA1Bit21_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit21_Click(object sender, EventArgs e) => checkBoxA1Bit21.Checked = !checkBoxA1Bit21.Checked;
 
-		private void LabelA1Bit22_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit22_Click(object sender, EventArgs e) => checkBoxA1Bit22.Checked = !checkBoxA1Bit22.Checked;
 
-		private void LabelA1Bit23_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit23_Click(object sender, EventArgs e) => checkBoxA1Bit23.Checked = !checkBoxA1Bit23.Checked;
 
-		private void LabelA1Bit24_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit24_Click(object sender, EventArgs e) => checkBoxA1Bit24.Checked = !checkBoxA1Bit24.Checked;
 
-		private void LabelA1Bit25_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit25_Click(object sender, EventArgs e) => checkBoxA1Bit25.Checked = !checkBoxA1Bit25.Checked;
 
-		private void LabelA1Bit26_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit26_Click(object sender, EventArgs e) => checkBoxA1Bit26.Checked = !checkBoxA1Bit26.Checked;
 
-		private void LabelA1Bit27_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit27_Click(object sender, EventArgs e) => checkBoxA1Bit27.Checked = !checkBoxA1Bit27.Checked;
 
-		private void LabelA1Bit28_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit28_Click(object sender, EventArgs e) => checkBoxA1Bit28.Checked = !checkBoxA1Bit28.Checked;
 
-		private void LabelA1Bit29_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit29_Click(object sender, EventArgs e) => checkBoxA1Bit29.Checked = !checkBoxA1Bit29.Checked;
 
-		private void LabelA1Bit30_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit30_Click(object sender, EventArgs e) => checkBoxA1Bit30.Checked = !checkBoxA1Bit30.Checked;
 
-		private void LabelA1Bit31_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA1Bit31_Click(object sender, EventArgs e) => checkBoxA1Bit31.Checked = !checkBoxA1Bit31.Checked;
 
-		private void LabelA2Bit00_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit00_Click(object sender, EventArgs e) => checkBoxA2Bit00.Checked = !checkBoxA2Bit00.Checked;
 
-		private void LabelA2Bit01_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit01_Click(object sender, EventArgs e) => checkBoxA2Bit01.Checked = !checkBoxA2Bit01.Checked;
 
-		private void LabelA2Bit02_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit02_Click(object sender, EventArgs e) => checkBoxA2Bit02.Checked = !checkBoxA2Bit02.Checked;
 
-		private void LabelA2Bit03_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit03_Click(object sender, EventArgs e) => checkBoxA2Bit03.Checked = !checkBoxA2Bit03.Checked;
 
-		private void LabelA2Bit04_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit04_Click(object sender, EventArgs e) => checkBoxA2Bit04.Checked = !checkBoxA2Bit04.Checked;
 
-		private void LabelA2Bit05_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit05_Click(object sender, EventArgs e) => checkBoxA2Bit05.Checked = !checkBoxA2Bit05.Checked;
 
-		private void LabelA2Bit06_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit06_Click(object sender, EventArgs e) => checkBoxA2Bit06.Checked = !checkBoxA2Bit06.Checked;
 
-		private void LabelA2Bit08_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit08_Click(object sender, EventArgs e) => checkBoxA2Bit08.Checked = !checkBoxA2Bit08.Checked;
 
-		private void LabelA2Bit09_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit09_Click(object sender, EventArgs e) => checkBoxA2Bit09.Checked = !checkBoxA2Bit09.Checked;
 
-		private void LabelA2Bit10_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit10_Click(object sender, EventArgs e) => checkBoxA2Bit10.Checked = !checkBoxA2Bit10.Checked;
 
-		private void LabelA2Bit11_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit11_Click(object sender, EventArgs e) => checkBoxA2Bit11.Checked = !checkBoxA2Bit11.Checked;
 
-		private void LabelA2Bit12_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit12_Click(object sender, EventArgs e) => checkBoxA2Bit12.Checked = !checkBoxA2Bit12.Checked;
 
-		private void LabelA2Bit13_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit13_Click(object sender, EventArgs e) => checkBoxA2Bit13.Checked = !checkBoxA2Bit13.Checked;
 
-		private void LabelA2Bit14_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit14_Click(object sender, EventArgs e) => checkBoxA2Bit14.Checked = !checkBoxA2Bit14.Checked;
 
-		private void LabelA2Bit15_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit15_Click(object sender, EventArgs e) => checkBoxA2Bit15.Checked = !checkBoxA2Bit15.Checked;
 
-		private void LabelA2Bit16_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit16_Click(object sender, EventArgs e) => checkBoxA2Bit16.Checked = !checkBoxA2Bit16.Checked;
 
-		private void LabelA2Bit17_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit17_Click(object sender, EventArgs e) => checkBoxA2Bit17.Checked = !checkBoxA2Bit17.Checked;
 
-		private void LabelA2Bit18_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit18_Click(object sender, EventArgs e) => checkBoxA2Bit18.Checked = !checkBoxA2Bit18.Checked;
 
-		private void LabelA2Bit19_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit19_Click(object sender, EventArgs e) => checkBoxA2Bit19.Checked = !checkBoxA2Bit19.Checked;
 
-		private void LabelA2Bit20_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit20_Click(object sender, EventArgs e) => checkBoxA2Bit20.Checked = !checkBoxA2Bit20.Checked;
 
-		private void LabelA2Bit21_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit21_Click(object sender, EventArgs e) => checkBoxA2Bit21.Checked = !checkBoxA2Bit21.Checked;
 
-		private void LabelA2Bit22_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit22_Click(object sender, EventArgs e) => checkBoxA2Bit22.Checked = !checkBoxA2Bit22.Checked;
 
-		private void LabelA2Bit23_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit23_Click(object sender, EventArgs e) => checkBoxA2Bit23.Checked = !checkBoxA2Bit23.Checked;
 
-		private void LabelA2Bit24_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit24_Click(object sender, EventArgs e) => checkBoxA2Bit24.Checked = !checkBoxA2Bit24.Checked;
 
-		private void LabelA2Bit25_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit25_Click(object sender, EventArgs e) => checkBoxA2Bit25.Checked = !checkBoxA2Bit25.Checked;
 
-		private void LabelA2Bit26_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit26_Click(object sender, EventArgs e) => checkBoxA2Bit26.Checked = !checkBoxA2Bit26.Checked;
 
-		private void LabelA2Bit27_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit27_Click(object sender, EventArgs e) => checkBoxA2Bit27.Checked = !checkBoxA2Bit27.Checked;
 
-		private void LabelA2Bit28_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit28_Click(object sender, EventArgs e) => checkBoxA2Bit28.Checked = !checkBoxA2Bit28.Checked;
 
-		private void LabelA2Bit29_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit29_Click(object sender, EventArgs e) => checkBoxA2Bit29.Checked = !checkBoxA2Bit29.Checked;
 
-		private void LabelA2Bit30_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit30_Click(object sender, EventArgs e) => checkBoxA2Bit30.Checked = !checkBoxA2Bit30.Checked;
 
-		private void LabelA2Bit31_Click(object sender, EventArgs e)
-		{
-		}
+		private void LabelA2Bit31_Click(object sender, EventArgs e) => checkBoxA2Bit31.Checked = !checkBoxA2Bit31.Checked;
 
 		#endregion
 
@@ -1490,45 +1363,45 @@ namespace BitLogicCalculator
 
 		private void CheckBoxA2Bit11_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 11, value: checkBoxA2Bit11.Checked);
 
-		private void CheckBoxA2Bit12_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 12, value: checkBoxA2Bit11.Checked);
+		private void CheckBoxA2Bit12_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 12, value: checkBoxA2Bit12.Checked);
 
-		private void CheckBoxA2Bit13_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 13, value: checkBoxA2Bit12.Checked);
+		private void CheckBoxA2Bit13_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 13, value: checkBoxA2Bit13.Checked);
 
-		private void CheckBoxA2Bit14_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 14, value: checkBoxA2Bit13.Checked);
+		private void CheckBoxA2Bit14_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 14, value: checkBoxA2Bit14.Checked);
 
-		private void CheckBoxA2Bit15_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 15, value: checkBoxA2Bit14.Checked);
+		private void CheckBoxA2Bit15_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 15, value: checkBoxA2Bit15.Checked);
 
-		private void CheckBoxA2Bit16_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 16, value: checkBoxA2Bit15.Checked);
+		private void CheckBoxA2Bit16_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 16, value: checkBoxA2Bit16.Checked);
 
-		private void CheckBoxA2Bit17_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 17, value: checkBoxA2Bit16.Checked);
+		private void CheckBoxA2Bit17_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 17, value: checkBoxA2Bit17.Checked);
 
-		private void CheckBoxA2Bit18_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 18, value: checkBoxA2Bit17.Checked);
+		private void CheckBoxA2Bit18_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 18, value: checkBoxA2Bit18.Checked);
 
-		private void CheckBoxA2Bit19_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 19, value: checkBoxA2Bit18.Checked);
+		private void CheckBoxA2Bit19_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 19, value: checkBoxA2Bit19.Checked);
 
-		private void CheckBoxA2Bit20_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 20, value: checkBoxA2Bit19.Checked);
+		private void CheckBoxA2Bit20_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 20, value: checkBoxA2Bit20.Checked);
 
-		private void CheckBoxA2Bit21_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 21, value: checkBoxA2Bit20.Checked);
+		private void CheckBoxA2Bit21_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 21, value: checkBoxA2Bit21.Checked);
 
-		private void CheckBoxA2Bit22_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 22, value: checkBoxA2Bit21.Checked);
+		private void CheckBoxA2Bit22_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 22, value: checkBoxA2Bit22.Checked);
 
-		private void CheckBoxA2Bit23_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 23, value: checkBoxA2Bit22.Checked);
+		private void CheckBoxA2Bit23_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 23, value: checkBoxA2Bit23.Checked);
 
-		private void CheckBoxA2Bit24_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 24, value: checkBoxA2Bit23.Checked);
+		private void CheckBoxA2Bit24_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 24, value: checkBoxA2Bit24.Checked);
 
-		private void CheckBoxA2Bit25_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 25, value: checkBoxA2Bit24.Checked);
+		private void CheckBoxA2Bit25_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 25, value: checkBoxA2Bit25.Checked);
 
-		private void CheckBoxA2Bit26_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 26, value: checkBoxA2Bit25.Checked);
+		private void CheckBoxA2Bit26_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 26, value: checkBoxA2Bit26.Checked);
 
-		private void CheckBoxA2Bit27_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 27, value: checkBoxA2Bit26.Checked);
+		private void CheckBoxA2Bit27_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 27, value: checkBoxA2Bit27.Checked);
 
-		private void CheckBoxA2Bit28_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 28, value: checkBoxA2Bit27.Checked);
+		private void CheckBoxA2Bit28_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 28, value: checkBoxA2Bit28.Checked);
 
-		private void CheckBoxA2Bit29_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 29, value: checkBoxA2Bit28.Checked);
+		private void CheckBoxA2Bit29_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 29, value: checkBoxA2Bit29.Checked);
 
-		private void CheckBoxA2Bit30_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 30, value: checkBoxA2Bit29.Checked);
+		private void CheckBoxA2Bit30_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 30, value: checkBoxA2Bit30.Checked);
 
-		private void CheckBoxA2Bit31_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 31, value: checkBoxA2Bit30.Checked);
+		private void CheckBoxA2Bit31_CheckedChanged(object sender, EventArgs e) => accumulator2.Set(index: 31, value: checkBoxA2Bit31.Checked);
 
 		private void CheckBoxAlwaysOnTop_CheckedChanged(object sender, EventArgs e)
 		{
