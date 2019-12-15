@@ -1303,6 +1303,49 @@ namespace BitLogicCalculator
 			ShowAccumulator2States();
 		}
 
+		private void ButtonStatistics_Click(object sender, EventArgs e)
+		{
+			int numberA1Bit0 = 0, numberA1Bit1 = 0, numberA2Bit0 = 0, numberA2Bit1 = 0, numberResultBit0 = 0, numberResultBit1 = 0;
+			for (int i = 0; i < accumulator1.Length; i++)
+			{
+				if (accumulator1.Get(index: i))
+				{
+					numberA1Bit1++;
+				}
+				else
+				{
+					numberA1Bit0++;
+				}
+			}
+			for (int i = 0; i < accumulator2.Length; i++)
+			{
+				if (accumulator2.Get(index: i))
+				{
+					numberA2Bit1++;
+				}
+				else
+				{
+					numberA2Bit0++;
+				}
+			}
+			for (int i = 0; i < result.Length; i++)
+			{
+				if (result.Get(index: i))
+				{
+					numberResultBit1++;
+				}
+				else
+				{
+					numberResultBit0++;
+				}
+			}
+			using (StatisticsForm statisticsForm = new StatisticsForm())
+			{
+				statisticsForm.SetData(numberA1Bit0: numberA1Bit0, numberA1Bit1: numberA1Bit1, numberA2Bit0: numberA2Bit0, numberA2Bit1: numberA2Bit1, numberResultBit0: numberResultBit0, numberResultBit1: numberResultBit1);
+				statisticsForm.ShowDialog();
+			}
+		}
+
 		#endregion
 
 		#region labels

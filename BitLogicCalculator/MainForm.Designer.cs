@@ -45,6 +45,7 @@
 			this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
 			this.labelTransparency = new System.Windows.Forms.Label();
 			this.groupBoxDataFormat = new System.Windows.Forms.GroupBox();
+			this.buttonStatistics = new System.Windows.Forms.Button();
 			this.buttonLsbSign = new System.Windows.Forms.Button();
 			this.comboBoxDataSize = new System.Windows.Forms.ComboBox();
 			this.labelMsbRepresentation = new System.Windows.Forms.Label();
@@ -533,6 +534,7 @@
 			// groupBoxDataFormat
 			// 
 			this.groupBoxDataFormat.BackColor = System.Drawing.Color.Transparent;
+			this.groupBoxDataFormat.Controls.Add(this.buttonStatistics);
 			this.groupBoxDataFormat.Controls.Add(this.buttonLsbSign);
 			this.groupBoxDataFormat.Controls.Add(this.comboBoxDataSize);
 			this.groupBoxDataFormat.Controls.Add(this.labelMsbRepresentation);
@@ -545,12 +547,22 @@
 			this.groupBoxDataFormat.TabStop = false;
 			this.groupBoxDataFormat.Text = "Data format";
 			// 
+			// buttonStatistics
+			// 
+			this.buttonStatistics.Location = new System.Drawing.Point(165, 36);
+			this.buttonStatistics.Name = "buttonStatistics";
+			this.buttonStatistics.Size = new System.Drawing.Size(57, 23);
+			this.buttonStatistics.TabIndex = 10;
+			this.buttonStatistics.Text = "Statistics";
+			this.buttonStatistics.UseVisualStyleBackColor = true;
+			this.buttonStatistics.Click += new System.EventHandler(this.ButtonStatistics_Click);
+			// 
 			// buttonLsbSign
 			// 
 			this.buttonLsbSign.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonLsbSign.Location = new System.Drawing.Point(170, 12);
+			this.buttonLsbSign.Location = new System.Drawing.Point(165, 12);
 			this.buttonLsbSign.Name = "buttonLsbSign";
-			this.buttonLsbSign.Size = new System.Drawing.Size(52, 23);
+			this.buttonLsbSign.Size = new System.Drawing.Size(57, 23);
 			this.buttonLsbSign.TabIndex = 8;
 			this.buttonLsbSign.Text = "LSB: 0";
 			this.buttonLsbSign.UseVisualStyleBackColor = true;
@@ -4207,6 +4219,7 @@
 		private System.Windows.Forms.Button buttonTwosComponentA2;
 		private System.Windows.Forms.Button buttonTwosComponentA1;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button buttonStatistics;
 	}
 }
 
