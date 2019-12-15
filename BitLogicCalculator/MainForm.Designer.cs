@@ -1061,7 +1061,6 @@
 			// buttonAdditionA1AndA2
 			// 
 			this.buttonAdditionA1AndA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonAdditionA1AndA2.Enabled = false;
 			this.buttonAdditionA1AndA2.Location = new System.Drawing.Point(6, 21);
 			this.buttonAdditionA1AndA2.Name = "buttonAdditionA1AndA2";
 			this.buttonAdditionA1AndA2.Size = new System.Drawing.Size(78, 23);
