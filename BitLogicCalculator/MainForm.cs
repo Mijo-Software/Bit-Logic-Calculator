@@ -181,6 +181,66 @@ namespace BitLogicCalculator
 			}
 		}
 
+		private void ShiftRightA1(bool fillWithOne = false)
+		{
+			for (int i = 0; i < accumulator1.Length; i++)
+			{
+				if (i == accumulator1.Length - 1)
+				{
+					accumulator1.Set(index: i, value: fillWithOne);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i + 1));
+				}
+			}
+		}
+
+		private void ShiftRightA2(bool fillWithOne = false)
+		{
+			for (int i = 0; i < accumulator2.Length; i++)
+			{
+				if (i == accumulator2.Length - 1)
+				{
+					accumulator2.Set(index: i, value: fillWithOne);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i + 1));
+				}
+			}
+		}
+
+		private void ShiftLeftA1(bool fillWithOne = false)
+		{
+			for (int i = accumulator1.Length - 1; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator1.Set(index: 0, value: fillWithOne);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i - 1));
+				}
+			}
+		}
+
+		private void ShiftLeftA2(bool fillWithOne = false)
+		{
+			for (int i = accumulator2.Length - 1; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator2.Set(index: 0, value: fillWithOne);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i - 1));
+				}
+			}
+		}
+
 		private bool Add(bool value1, bool value2, ref bool carry)
 		{
 			carry = false;
@@ -730,41 +790,49 @@ namespace BitLogicCalculator
 
 		private void ButtonShiftLeftWithZeroA1_Click(object sender, EventArgs e)
 		{
+			ShiftLeftA1(fillWithOne: false);
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftLeftWithZeroA2_Click(object sender, EventArgs e)
 		{
+			ShiftLeftA2(fillWithOne: false);
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftLeftWithOneA1_Click(object sender, EventArgs e)
 		{
+			ShiftLeftA1(fillWithOne: true);
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftLeftWithOneA2_Click(object sender, EventArgs e)
 		{
+			ShiftLeftA2(fillWithOne: true);
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftRightWithZeroA1_Click(object sender, EventArgs e)
 		{
+			ShiftRightA1(fillWithOne: false);
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftRightWithZeroA2_Click(object sender, EventArgs e)
 		{
+			ShiftRightA2(fillWithOne: false);
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftRightWithOneA1_Click(object sender, EventArgs e)
 		{
+			ShiftRightA1(fillWithOne: true);
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftRightWithOneA2_Click(object sender, EventArgs e)
 		{
+			ShiftRightA2(fillWithOne: true);
 			ShowAccumulator2States();
 		}
 

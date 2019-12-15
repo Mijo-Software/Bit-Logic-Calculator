@@ -783,7 +783,6 @@
 			// 
 			this.buttonShiftRightWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftRightWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightWithOneA2.Enabled = false;
 			this.buttonShiftRightWithOneA2.Location = new System.Drawing.Point(174, 108);
 			this.buttonShiftRightWithOneA2.Name = "buttonShiftRightWithOneA2";
 			this.buttonShiftRightWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -842,7 +841,6 @@
 			// 
 			this.buttonShiftRightWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftRightWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightWithOneA1.Enabled = false;
 			this.buttonShiftRightWithOneA1.Location = new System.Drawing.Point(90, 108);
 			this.buttonShiftRightWithOneA1.Name = "buttonShiftRightWithOneA1";
 			this.buttonShiftRightWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -855,7 +853,6 @@
 			// 
 			this.buttonShiftLeftWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftLeftWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftWithOneA2.Enabled = false;
 			this.buttonShiftLeftWithOneA2.Location = new System.Drawing.Point(174, 50);
 			this.buttonShiftLeftWithOneA2.Name = "buttonShiftLeftWithOneA2";
 			this.buttonShiftLeftWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -868,7 +865,6 @@
 			// 
 			this.buttonShiftLeftWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftLeftWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftWithOneA1.Enabled = false;
 			this.buttonShiftLeftWithOneA1.Location = new System.Drawing.Point(90, 50);
 			this.buttonShiftLeftWithOneA1.Name = "buttonShiftLeftWithOneA1";
 			this.buttonShiftLeftWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -958,7 +954,6 @@
 			// 
 			this.buttonShiftLeftWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftLeftWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftWithZeroA2.Enabled = false;
 			this.buttonShiftLeftWithZeroA2.Location = new System.Drawing.Point(174, 21);
 			this.buttonShiftLeftWithZeroA2.Name = "buttonShiftLeftWithZeroA2";
 			this.buttonShiftLeftWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -971,7 +966,6 @@
 			// 
 			this.buttonShiftRightWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftRightWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightWithZeroA2.Enabled = false;
 			this.buttonShiftRightWithZeroA2.Location = new System.Drawing.Point(174, 79);
 			this.buttonShiftRightWithZeroA2.Name = "buttonShiftRightWithZeroA2";
 			this.buttonShiftRightWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1010,7 +1004,6 @@
 			// 
 			this.buttonShiftLeftWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftLeftWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftLeftWithZeroA1.Enabled = false;
 			this.buttonShiftLeftWithZeroA1.Location = new System.Drawing.Point(90, 21);
 			this.buttonShiftLeftWithZeroA1.Name = "buttonShiftLeftWithZeroA1";
 			this.buttonShiftLeftWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1023,7 +1016,6 @@
 			// 
 			this.buttonShiftRightWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonShiftRightWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonShiftRightWithZeroA1.Enabled = false;
 			this.buttonShiftRightWithZeroA1.Location = new System.Drawing.Point(90, 79);
 			this.buttonShiftRightWithZeroA1.Name = "buttonShiftRightWithZeroA1";
 			this.buttonShiftRightWithZeroA1.Size = new System.Drawing.Size(78, 23);
