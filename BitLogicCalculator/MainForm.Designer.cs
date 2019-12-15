@@ -978,7 +978,6 @@
 			// 
 			this.buttonRotateLeftA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateLeftA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateLeftA2.Enabled = false;
 			this.buttonRotateLeftA2.Location = new System.Drawing.Point(174, 137);
 			this.buttonRotateLeftA2.Name = "buttonRotateLeftA2";
 			this.buttonRotateLeftA2.Size = new System.Drawing.Size(78, 23);
@@ -991,7 +990,6 @@
 			// 
 			this.buttonRotateRightA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateRightA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateRightA2.Enabled = false;
 			this.buttonRotateRightA2.Location = new System.Drawing.Point(174, 166);
 			this.buttonRotateRightA2.Name = "buttonRotateRightA2";
 			this.buttonRotateRightA2.Size = new System.Drawing.Size(78, 23);
@@ -1028,7 +1026,6 @@
 			// 
 			this.buttonRotateLeftA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateLeftA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateLeftA1.Enabled = false;
 			this.buttonRotateLeftA1.Location = new System.Drawing.Point(90, 137);
 			this.buttonRotateLeftA1.Name = "buttonRotateLeftA1";
 			this.buttonRotateLeftA1.Size = new System.Drawing.Size(78, 23);
@@ -1041,7 +1038,6 @@
 			// 
 			this.buttonRotateRightA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonRotateRightA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonRotateRightA1.Enabled = false;
 			this.buttonRotateRightA1.Location = new System.Drawing.Point(90, 166);
 			this.buttonRotateRightA1.Name = "buttonRotateRightA1";
 			this.buttonRotateRightA1.Size = new System.Drawing.Size(78, 23);
