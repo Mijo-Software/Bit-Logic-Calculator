@@ -3,7 +3,6 @@
 using System;
 using System.Collections;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace BitLogicCalculator
 {
@@ -22,6 +21,8 @@ namespace BitLogicCalculator
 		private BitArray result = new BitArray(length: length);
 
 		private readonly Random random = new Random();
+
+		private readonly long[] squaredByteNumbers = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648 };
 
 		#endregion
 
@@ -178,6 +179,20 @@ namespace BitLogicCalculator
 			{
 				accumulator2.Set(index: i, value: RandomBit());
 			}
+		}
+
+		private bool Add(bool value1, bool value2, ref bool carry)
+		{
+			carry = false;
+			if (value1 == value2)
+			{
+				if (value1)
+				{
+					carry = true;
+				}
+				return false;
+			}
+			return true;
 		}
 
 		#endregion
@@ -613,6 +628,19 @@ namespace BitLogicCalculator
 
 		private void ButtonAdditionA1AndA2_Click(object sender, EventArgs e)
 		{
+			bool carry = false;
+			for (int i = 0; i < accumulator1.Length; i++)
+			{
+				if (!carry)
+				{
+					result.Set(index: i, value: Add(value1: accumulator1.Get(index: i), value2: accumulator2.Get(index: i), carry: ref carry));
+				}
+				else
+				{
+					result.Set(index: i, value: Add(value1: accumulator1.Get(index: i), value2: carry, carry: ref carry));
+					result.Set(index: i, value: Add(value1: result.Get(index: i), value2: accumulator2.Get(index: i), carry: ref carry));
+				}
+			}
 			ShowResultStates();
 		}
 
