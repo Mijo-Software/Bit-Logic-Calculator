@@ -241,6 +241,70 @@ namespace BitLogicCalculator
 			}
 		}
 
+		private void RotateLeftA1()
+		{
+			bool stateLsb = accumulator1.Get(index: accumulator1.Length - 1);
+			for (int i = accumulator1.Length - 1; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator1.Set(index: 0, value: stateLsb);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i - 1));
+				}
+			}
+		}
+
+		private void RotateLeftA2()
+		{
+			bool stateLsb = accumulator2.Get(index: accumulator2.Length - 1);
+			for (int i = accumulator2.Length - 1; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator2.Set(index: 0, value: stateLsb);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i - 1));
+				}
+			}
+		}
+
+		private void RotateRightA1()
+		{
+			bool stateLsb = accumulator1.Get(index: 0);
+			for (int i = 0; i < accumulator1.Length; i++)
+			{
+				if (i == accumulator1.Length - 1)
+				{
+					accumulator1.Set(index: i, value: stateLsb);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i + 1));
+				}
+			}
+		}
+
+		private void RotateRightA2()
+		{
+			bool stateLsb = accumulator2.Get(index: 0);
+			for (int i = 0; i < accumulator2.Length; i++)
+			{
+				if (i == accumulator2.Length - 1)
+				{
+					accumulator2.Set(index: i, value: stateLsb);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i + 1));
+				}
+			}
+		}
+
 		private bool Add(bool value1, bool value2, ref bool carry)
 		{
 			carry = false;
@@ -838,21 +902,25 @@ namespace BitLogicCalculator
 
 		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
 		{
+			RotateLeftA1();
 			ShowAccumulator1States();
 		}
 
 		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
 		{
+			RotateLeftA2();
 			ShowAccumulator2States();
 		}
 
 		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
 		{
+			RotateRightA1();
 			ShowAccumulator1States();
 		}
 
 		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
 		{
+			RotateRightA2();
 			ShowAccumulator2States();
 		}
 
