@@ -1092,6 +1092,46 @@ namespace BitLogicCalculator
 			ShowAccumulator2States();
 		}
 
+		private void ButtonRotateLeftCarry0A1_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator1States();
+		}
+
+		private void ButtonRotateLeftCarry1A1_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator1States();
+		}
+
+		private void ButtonRotateLeftCarry0A2_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator2States();
+		}
+
+		private void ButtonRotateLeftCarry1A2_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator2States();
+		}
+
+		private void ButtonRotateRightCarry0A1_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator1States();
+		}
+
+		private void ButtonRotateRightCarry1A1_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator1States();
+		}
+
+		private void ButtonRotateRightCarry0A2_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator2States();
+		}
+
+		private void ButtonRotateRightCarry1A2_Click(object sender, EventArgs e)
+		{
+			ShowAccumulator2States();
+		}
+
 		private void ButtonRevertA1_Click(object sender, EventArgs e)
 		{
 			BitArray bitArray = (BitArray)accumulator1.Clone();

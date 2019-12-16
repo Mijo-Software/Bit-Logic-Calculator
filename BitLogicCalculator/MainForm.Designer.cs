@@ -52,6 +52,14 @@
 			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
 			this.labelDataSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
+			this.buttonRotateRightCarry1A2 = new System.Windows.Forms.Button();
+			this.buttonRotateRightCarry0A2 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftCarry1A2 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftCarry0A2 = new System.Windows.Forms.Button();
+			this.buttonRotateRightCarry1A1 = new System.Windows.Forms.Button();
+			this.buttonRotateRightCarry0A1 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftCarry1A1 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftCarry0A1 = new System.Windows.Forms.Button();
 			this.groupBoxShiftIndicator = new System.Windows.Forms.GroupBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.numericUpDownShiftIndicator = new System.Windows.Forms.NumericUpDown();
@@ -68,8 +76,6 @@
 			this.buttonNibbleSwapA1 = new System.Windows.Forms.Button();
 			this.buttonInhibitionA2A1 = new System.Windows.Forms.Button();
 			this.buttonArithmeticShiftRightWithOneA2 = new System.Windows.Forms.Button();
-			this.contextMenuStripRoller = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.toolStripComboBoxRoller = new System.Windows.Forms.ToolStripComboBox();
 			this.buttonInhibitionA1A2 = new System.Windows.Forms.Button();
 			this.buttonRandomizeA2 = new System.Windows.Forms.Button();
 			this.buttonArithmeticShiftRightWithOneA1 = new System.Windows.Forms.Button();
@@ -354,7 +360,6 @@
 			this.groupBoxOperations.SuspendLayout();
 			this.groupBoxShiftIndicator.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownShiftIndicator)).BeginInit();
-			this.contextMenuStripRoller.SuspendLayout();
 			this.groupBoxResult.SuspendLayout();
 			this.groupBoxResultByte4.SuspendLayout();
 			this.groupBoxResultByte3.SuspendLayout();
@@ -635,6 +640,14 @@
 			// groupBoxOperations
 			// 
 			this.groupBoxOperations.BackColor = System.Drawing.Color.Transparent;
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry1A2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry0A2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry1A2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry0A2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry1A1);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry0A1);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry1A1);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry0A1);
 			this.groupBoxOperations.Controls.Add(this.groupBoxShiftIndicator);
 			this.groupBoxOperations.Controls.Add(this.buttonBitSwapA2);
 			this.groupBoxOperations.Controls.Add(this.button1);
@@ -698,11 +711,107 @@
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
 			// 
+			// buttonRotateRightCarry1A2
+			// 
+			this.buttonRotateRightCarry1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightCarry1A2.Enabled = false;
+			this.buttonRotateRightCarry1A2.Location = new System.Drawing.Point(342, 398);
+			this.buttonRotateRightCarry1A2.Name = "buttonRotateRightCarry1A2";
+			this.buttonRotateRightCarry1A2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightCarry1A2.TabIndex = 134;
+			this.buttonRotateRightCarry1A2.Text = "RORC1 A2";
+			this.buttonRotateRightCarry1A2.UseVisualStyleBackColor = true;
+			this.buttonRotateRightCarry1A2.Click += new System.EventHandler(this.ButtonRotateRightCarry1A2_Click);
+			// 
+			// buttonRotateRightCarry0A2
+			// 
+			this.buttonRotateRightCarry0A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightCarry0A2.Enabled = false;
+			this.buttonRotateRightCarry0A2.Location = new System.Drawing.Point(342, 369);
+			this.buttonRotateRightCarry0A2.Name = "buttonRotateRightCarry0A2";
+			this.buttonRotateRightCarry0A2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightCarry0A2.TabIndex = 133;
+			this.buttonRotateRightCarry0A2.Text = "RORC0 A2";
+			this.buttonRotateRightCarry0A2.UseVisualStyleBackColor = true;
+			this.buttonRotateRightCarry0A2.Click += new System.EventHandler(this.ButtonRotateRightCarry0A2_Click);
+			// 
+			// buttonRotateLeftCarry1A2
+			// 
+			this.buttonRotateLeftCarry1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftCarry1A2.Enabled = false;
+			this.buttonRotateLeftCarry1A2.Location = new System.Drawing.Point(342, 340);
+			this.buttonRotateLeftCarry1A2.Name = "buttonRotateLeftCarry1A2";
+			this.buttonRotateLeftCarry1A2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftCarry1A2.TabIndex = 132;
+			this.buttonRotateLeftCarry1A2.Text = "ROLC1 A2";
+			this.buttonRotateLeftCarry1A2.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftCarry1A2.Click += new System.EventHandler(this.ButtonRotateLeftCarry1A2_Click);
+			// 
+			// buttonRotateLeftCarry0A2
+			// 
+			this.buttonRotateLeftCarry0A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftCarry0A2.Enabled = false;
+			this.buttonRotateLeftCarry0A2.Location = new System.Drawing.Point(342, 311);
+			this.buttonRotateLeftCarry0A2.Name = "buttonRotateLeftCarry0A2";
+			this.buttonRotateLeftCarry0A2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftCarry0A2.TabIndex = 131;
+			this.buttonRotateLeftCarry0A2.Text = "ROLC0 A2";
+			this.buttonRotateLeftCarry0A2.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftCarry0A2.Click += new System.EventHandler(this.ButtonRotateLeftCarry0A2_Click);
+			// 
+			// buttonRotateRightCarry1A1
+			// 
+			this.buttonRotateRightCarry1A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightCarry1A1.Enabled = false;
+			this.buttonRotateRightCarry1A1.Location = new System.Drawing.Point(258, 398);
+			this.buttonRotateRightCarry1A1.Name = "buttonRotateRightCarry1A1";
+			this.buttonRotateRightCarry1A1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightCarry1A1.TabIndex = 130;
+			this.buttonRotateRightCarry1A1.Text = "RORC1 A1";
+			this.buttonRotateRightCarry1A1.UseVisualStyleBackColor = true;
+			this.buttonRotateRightCarry1A1.Click += new System.EventHandler(this.ButtonRotateRightCarry1A1_Click);
+			// 
+			// buttonRotateRightCarry0A1
+			// 
+			this.buttonRotateRightCarry0A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightCarry0A1.Enabled = false;
+			this.buttonRotateRightCarry0A1.Location = new System.Drawing.Point(258, 369);
+			this.buttonRotateRightCarry0A1.Name = "buttonRotateRightCarry0A1";
+			this.buttonRotateRightCarry0A1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightCarry0A1.TabIndex = 129;
+			this.buttonRotateRightCarry0A1.Text = "RORC0 A1";
+			this.buttonRotateRightCarry0A1.UseVisualStyleBackColor = true;
+			this.buttonRotateRightCarry0A1.Click += new System.EventHandler(this.ButtonRotateRightCarry0A1_Click);
+			// 
+			// buttonRotateLeftCarry1A1
+			// 
+			this.buttonRotateLeftCarry1A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftCarry1A1.Enabled = false;
+			this.buttonRotateLeftCarry1A1.Location = new System.Drawing.Point(258, 340);
+			this.buttonRotateLeftCarry1A1.Name = "buttonRotateLeftCarry1A1";
+			this.buttonRotateLeftCarry1A1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftCarry1A1.TabIndex = 128;
+			this.buttonRotateLeftCarry1A1.Text = "ROLC1 A1";
+			this.buttonRotateLeftCarry1A1.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftCarry1A1.Click += new System.EventHandler(this.ButtonRotateLeftCarry1A1_Click);
+			// 
+			// buttonRotateLeftCarry0A1
+			// 
+			this.buttonRotateLeftCarry0A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftCarry0A1.Enabled = false;
+			this.buttonRotateLeftCarry0A1.Location = new System.Drawing.Point(258, 311);
+			this.buttonRotateLeftCarry0A1.Name = "buttonRotateLeftCarry0A1";
+			this.buttonRotateLeftCarry0A1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftCarry0A1.TabIndex = 127;
+			this.buttonRotateLeftCarry0A1.Text = "ROLC0 A1";
+			this.buttonRotateLeftCarry0A1.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftCarry0A1.Click += new System.EventHandler(this.ButtonRotateLeftCarry0A1_Click);
+			// 
 			// groupBoxShiftIndicator
 			// 
 			this.groupBoxShiftIndicator.Controls.Add(this.label1);
 			this.groupBoxShiftIndicator.Controls.Add(this.numericUpDownShiftIndicator);
-			this.groupBoxShiftIndicator.Location = new System.Drawing.Point(258, 312);
+			this.groupBoxShiftIndicator.Location = new System.Drawing.Point(90, 370);
 			this.groupBoxShiftIndicator.Name = "groupBoxShiftIndicator";
 			this.groupBoxShiftIndicator.Size = new System.Drawing.Size(162, 52);
 			this.groupBoxShiftIndicator.TabIndex = 126;
@@ -878,7 +987,6 @@
 			// buttonArithmeticShiftRightWithOneA2
 			// 
 			this.buttonArithmeticShiftRightWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftRightWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftRightWithOneA2.Location = new System.Drawing.Point(342, 283);
 			this.buttonArithmeticShiftRightWithOneA2.Name = "buttonArithmeticShiftRightWithOneA2";
 			this.buttonArithmeticShiftRightWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -886,52 +994,6 @@
 			this.buttonArithmeticShiftRightWithOneA2.Text = "ASHR1 A2";
 			this.buttonArithmeticShiftRightWithOneA2.UseVisualStyleBackColor = true;
 			this.buttonArithmeticShiftRightWithOneA2.Click += new System.EventHandler(this.ButtonArithmeticShiftRightWithOneA2_Click);
-			// 
-			// contextMenuStripRoller
-			// 
-			this.contextMenuStripRoller.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxRoller});
-			this.contextMenuStripRoller.Name = "contextMenuStripRoller";
-			this.contextMenuStripRoller.Size = new System.Drawing.Size(182, 31);
-			// 
-			// toolStripComboBoxRoller
-			// 
-			this.toolStripComboBoxRoller.AutoToolTip = true;
-			this.toolStripComboBoxRoller.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.toolStripComboBoxRoller.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-			this.toolStripComboBoxRoller.Name = "toolStripComboBoxRoller";
-			this.toolStripComboBoxRoller.Size = new System.Drawing.Size(121, 23);
 			// 
 			// buttonInhibitionA1A2
 			// 
@@ -958,7 +1020,6 @@
 			// buttonArithmeticShiftRightWithOneA1
 			// 
 			this.buttonArithmeticShiftRightWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftRightWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftRightWithOneA1.Location = new System.Drawing.Point(258, 283);
 			this.buttonArithmeticShiftRightWithOneA1.Name = "buttonArithmeticShiftRightWithOneA1";
 			this.buttonArithmeticShiftRightWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -981,7 +1042,6 @@
 			// buttonShiftRightWithOneA2
 			// 
 			this.buttonShiftRightWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftRightWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftRightWithOneA2.Location = new System.Drawing.Point(342, 109);
 			this.buttonShiftRightWithOneA2.Name = "buttonShiftRightWithOneA2";
 			this.buttonShiftRightWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -993,7 +1053,6 @@
 			// buttonArithmeticShiftLeftWithOneA2
 			// 
 			this.buttonArithmeticShiftLeftWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftLeftWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftLeftWithOneA2.Location = new System.Drawing.Point(342, 225);
 			this.buttonArithmeticShiftLeftWithOneA2.Name = "buttonArithmeticShiftLeftWithOneA2";
 			this.buttonArithmeticShiftLeftWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -1005,7 +1064,6 @@
 			// buttonShiftRightWithOneA1
 			// 
 			this.buttonShiftRightWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftRightWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftRightWithOneA1.Location = new System.Drawing.Point(258, 109);
 			this.buttonShiftRightWithOneA1.Name = "buttonShiftRightWithOneA1";
 			this.buttonShiftRightWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -1017,7 +1075,6 @@
 			// buttonShiftLeftWithOneA2
 			// 
 			this.buttonShiftLeftWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftLeftWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftLeftWithOneA2.Location = new System.Drawing.Point(342, 51);
 			this.buttonShiftLeftWithOneA2.Name = "buttonShiftLeftWithOneA2";
 			this.buttonShiftLeftWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -1029,7 +1086,6 @@
 			// buttonArithmeticShiftLeftWithOneA1
 			// 
 			this.buttonArithmeticShiftLeftWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftLeftWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftLeftWithOneA1.Location = new System.Drawing.Point(258, 225);
 			this.buttonArithmeticShiftLeftWithOneA1.Name = "buttonArithmeticShiftLeftWithOneA1";
 			this.buttonArithmeticShiftLeftWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -1041,7 +1097,6 @@
 			// buttonShiftLeftWithOneA1
 			// 
 			this.buttonShiftLeftWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftLeftWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftLeftWithOneA1.Location = new System.Drawing.Point(258, 51);
 			this.buttonShiftLeftWithOneA1.Name = "buttonShiftLeftWithOneA1";
 			this.buttonShiftLeftWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -1064,7 +1119,6 @@
 			// buttonArithmeticShiftLeftWithZeroA2
 			// 
 			this.buttonArithmeticShiftLeftWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftLeftWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftLeftWithZeroA2.Location = new System.Drawing.Point(342, 196);
 			this.buttonArithmeticShiftLeftWithZeroA2.Name = "buttonArithmeticShiftLeftWithZeroA2";
 			this.buttonArithmeticShiftLeftWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1098,7 +1152,6 @@
 			// buttonArithmeticShiftRightWithZeroA2
 			// 
 			this.buttonArithmeticShiftRightWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftRightWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftRightWithZeroA2.Location = new System.Drawing.Point(342, 254);
 			this.buttonArithmeticShiftRightWithZeroA2.Name = "buttonArithmeticShiftRightWithZeroA2";
 			this.buttonArithmeticShiftRightWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1132,7 +1185,6 @@
 			// buttonArithmeticShiftLeftWithZeroA1
 			// 
 			this.buttonArithmeticShiftLeftWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftLeftWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftLeftWithZeroA1.Location = new System.Drawing.Point(258, 196);
 			this.buttonArithmeticShiftLeftWithZeroA1.Name = "buttonArithmeticShiftLeftWithZeroA1";
 			this.buttonArithmeticShiftLeftWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1144,7 +1196,6 @@
 			// buttonArithmeticShiftRightWithZeroA1
 			// 
 			this.buttonArithmeticShiftRightWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonArithmeticShiftRightWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonArithmeticShiftRightWithZeroA1.Location = new System.Drawing.Point(258, 254);
 			this.buttonArithmeticShiftRightWithZeroA1.Name = "buttonArithmeticShiftRightWithZeroA1";
 			this.buttonArithmeticShiftRightWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1178,7 +1229,6 @@
 			// buttonShiftLeftWithZeroA2
 			// 
 			this.buttonShiftLeftWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftLeftWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftLeftWithZeroA2.Location = new System.Drawing.Point(342, 22);
 			this.buttonShiftLeftWithZeroA2.Name = "buttonShiftLeftWithZeroA2";
 			this.buttonShiftLeftWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1190,7 +1240,6 @@
 			// buttonShiftRightWithZeroA2
 			// 
 			this.buttonShiftRightWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftRightWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftRightWithZeroA2.Location = new System.Drawing.Point(342, 80);
 			this.buttonShiftRightWithZeroA2.Name = "buttonShiftRightWithZeroA2";
 			this.buttonShiftRightWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1202,7 +1251,6 @@
 			// buttonRotateLeftA2
 			// 
 			this.buttonRotateLeftA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonRotateLeftA2.Location = new System.Drawing.Point(342, 138);
 			this.buttonRotateLeftA2.Name = "buttonRotateLeftA2";
 			this.buttonRotateLeftA2.Size = new System.Drawing.Size(78, 23);
@@ -1214,7 +1262,6 @@
 			// buttonRotateRightA2
 			// 
 			this.buttonRotateRightA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightA2.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonRotateRightA2.Location = new System.Drawing.Point(342, 167);
 			this.buttonRotateRightA2.Name = "buttonRotateRightA2";
 			this.buttonRotateRightA2.Size = new System.Drawing.Size(78, 23);
@@ -1226,7 +1273,6 @@
 			// buttonShiftLeftWithZeroA1
 			// 
 			this.buttonShiftLeftWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftLeftWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftLeftWithZeroA1.Location = new System.Drawing.Point(258, 22);
 			this.buttonShiftLeftWithZeroA1.Name = "buttonShiftLeftWithZeroA1";
 			this.buttonShiftLeftWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1238,7 +1284,6 @@
 			// buttonShiftRightWithZeroA1
 			// 
 			this.buttonShiftRightWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonShiftRightWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonShiftRightWithZeroA1.Location = new System.Drawing.Point(258, 80);
 			this.buttonShiftRightWithZeroA1.Name = "buttonShiftRightWithZeroA1";
 			this.buttonShiftRightWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1250,7 +1295,6 @@
 			// buttonRotateLeftA1
 			// 
 			this.buttonRotateLeftA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonRotateLeftA1.Location = new System.Drawing.Point(258, 138);
 			this.buttonRotateLeftA1.Name = "buttonRotateLeftA1";
 			this.buttonRotateLeftA1.Size = new System.Drawing.Size(78, 23);
@@ -1262,7 +1306,6 @@
 			// buttonRotateRightA1
 			// 
 			this.buttonRotateRightA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightA1.ContextMenuStrip = this.contextMenuStripRoller;
 			this.buttonRotateRightA1.Location = new System.Drawing.Point(258, 167);
 			this.buttonRotateRightA1.Name = "buttonRotateRightA1";
 			this.buttonRotateRightA1.Size = new System.Drawing.Size(78, 23);
@@ -4099,7 +4142,6 @@
 			this.groupBoxOperations.ResumeLayout(false);
 			this.groupBoxShiftIndicator.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownShiftIndicator)).EndInit();
-			this.contextMenuStripRoller.ResumeLayout(false);
 			this.groupBoxResult.ResumeLayout(false);
 			this.groupBoxResult.PerformLayout();
 			this.groupBoxResultByte4.ResumeLayout(false);
@@ -4390,8 +4432,6 @@
 		private System.Windows.Forms.Button buttonCopyResultToA1;
 		private System.Windows.Forms.ComboBox comboBoxMsbRepresentation;
 		private System.Windows.Forms.Label labelDataSize;
-		private System.Windows.Forms.ContextMenuStrip contextMenuStripRoller;
-		private System.Windows.Forms.ToolStripComboBox toolStripComboBoxRoller;
 		private System.Windows.Forms.GroupBox groupBoxDataFormat;
 		private System.Windows.Forms.ComboBox comboBoxDataSize;
 		private System.Windows.Forms.Label labelMsbRepresentation;
@@ -4450,6 +4490,14 @@
 		private System.Windows.Forms.Button buttonArithmeticShiftRightWithZeroA2;
 		private System.Windows.Forms.Button buttonArithmeticShiftLeftWithZeroA1;
 		private System.Windows.Forms.Button buttonArithmeticShiftRightWithZeroA1;
+		private System.Windows.Forms.Button buttonRotateRightCarry1A2;
+		private System.Windows.Forms.Button buttonRotateRightCarry0A2;
+		private System.Windows.Forms.Button buttonRotateLeftCarry1A2;
+		private System.Windows.Forms.Button buttonRotateLeftCarry0A2;
+		private System.Windows.Forms.Button buttonRotateRightCarry1A1;
+		private System.Windows.Forms.Button buttonRotateRightCarry0A1;
+		private System.Windows.Forms.Button buttonRotateLeftCarry1A1;
+		private System.Windows.Forms.Button buttonRotateLeftCarry0A1;
 	}
 }
 
