@@ -95,6 +95,7 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ByteUnits.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
