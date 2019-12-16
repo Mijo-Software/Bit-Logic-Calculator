@@ -712,15 +712,15 @@
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(65, 10);
+			this.label1.Location = new System.Drawing.Point(53, 10);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(91, 42);
+			this.label1.Size = new System.Drawing.Size(103, 39);
 			this.label1.TabIndex = 93;
-			this.label1.Text = "Defines the number of bit positions for all shift and rotation operations";
+			this.label1.Text = "Defines the number of bit positions for all shifting and rotations";
 			// 
 			// numericUpDownShiftIndicator
 			// 
-			this.numericUpDownShiftIndicator.Location = new System.Drawing.Point(18, 21);
+			this.numericUpDownShiftIndicator.Location = new System.Drawing.Point(6, 19);
 			this.numericUpDownShiftIndicator.Maximum = new decimal(new int[] {
             31,
             0,
@@ -789,7 +789,6 @@
 			// buttonNibbleSwapA2
 			// 
 			this.buttonNibbleSwapA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonNibbleSwapA2.Enabled = false;
 			this.buttonNibbleSwapA2.Location = new System.Drawing.Point(174, 50);
 			this.buttonNibbleSwapA2.Name = "buttonNibbleSwapA2";
 			this.buttonNibbleSwapA2.Size = new System.Drawing.Size(78, 23);
@@ -857,7 +856,6 @@
 			// buttonNibbleSwapA1
 			// 
 			this.buttonNibbleSwapA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonNibbleSwapA1.Enabled = false;
 			this.buttonNibbleSwapA1.Location = new System.Drawing.Point(90, 50);
 			this.buttonNibbleSwapA1.Name = "buttonNibbleSwapA1";
 			this.buttonNibbleSwapA1.Size = new System.Drawing.Size(78, 23);

@@ -1327,18 +1327,182 @@ namespace BitLogicCalculator
 
 		private void ButtonNibbleSwapA1_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator1.Clone();
+			bitArray.Set(index: 0, value: accumulator1.Get(index: 4));
+			bitArray.Set(index: 1, value: accumulator1.Get(index: 5));
+			bitArray.Set(index: 2, value: accumulator1.Get(index: 6));
+			bitArray.Set(index: 3, value: accumulator1.Get(index: 7));
+			bitArray.Set(index: 4, value: accumulator1.Get(index: 0));
+			bitArray.Set(index: 5, value: accumulator1.Get(index: 1));
+			bitArray.Set(index: 6, value: accumulator1.Get(index: 2));
+			bitArray.Set(index: 7, value: accumulator1.Get(index: 3));
+			if (groupBoxA1Byte2.Enabled)
+			{
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 14));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 15));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 8));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 11));
+			}
+			if (groupBoxA1Byte4.Enabled)
+			{
+				bitArray.Set(index: 16, value: accumulator1.Get(index: 20));
+				bitArray.Set(index: 17, value: accumulator1.Get(index: 21));
+				bitArray.Set(index: 18, value: accumulator1.Get(index: 22));
+				bitArray.Set(index: 19, value: accumulator1.Get(index: 23));
+				bitArray.Set(index: 20, value: accumulator1.Get(index: 16));
+				bitArray.Set(index: 21, value: accumulator1.Get(index: 17));
+				bitArray.Set(index: 22, value: accumulator1.Get(index: 18));
+				bitArray.Set(index: 23, value: accumulator1.Get(index: 19));
+				bitArray.Set(index: 24, value: accumulator1.Get(index: 28));
+				bitArray.Set(index: 25, value: accumulator1.Get(index: 29));
+				bitArray.Set(index: 26, value: accumulator1.Get(index: 30));
+				bitArray.Set(index: 27, value: accumulator1.Get(index: 31));
+				bitArray.Set(index: 28, value: accumulator1.Get(index: 24));
+				bitArray.Set(index: 29, value: accumulator1.Get(index: 25));
+				bitArray.Set(index: 30, value: accumulator1.Get(index: 26));
+				bitArray.Set(index: 31, value: accumulator1.Get(index: 27));
+			}
+			accumulator1 = (BitArray)bitArray.Clone();
+			ShowAccumulator1States();
 		}
 
 		private void ButtonNibbleSwapA2_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator2.Clone();
+			bitArray.Set(index: 0, value: accumulator2.Get(index: 4));
+			bitArray.Set(index: 1, value: accumulator2.Get(index: 5));
+			bitArray.Set(index: 2, value: accumulator2.Get(index: 6));
+			bitArray.Set(index: 3, value: accumulator2.Get(index: 7));
+			bitArray.Set(index: 4, value: accumulator2.Get(index: 0));
+			bitArray.Set(index: 5, value: accumulator2.Get(index: 1));
+			bitArray.Set(index: 6, value: accumulator2.Get(index: 2));
+			bitArray.Set(index: 7, value: accumulator2.Get(index: 3));
+			if (groupBoxA2Byte2.Enabled)
+			{
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 14));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 15));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 8));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 11));
+			}
+			if (groupBoxA2Byte4.Enabled)
+			{
+				bitArray.Set(index: 16, value: accumulator2.Get(index: 20));
+				bitArray.Set(index: 17, value: accumulator2.Get(index: 21));
+				bitArray.Set(index: 18, value: accumulator2.Get(index: 22));
+				bitArray.Set(index: 19, value: accumulator2.Get(index: 23));
+				bitArray.Set(index: 20, value: accumulator2.Get(index: 16));
+				bitArray.Set(index: 21, value: accumulator2.Get(index: 17));
+				bitArray.Set(index: 22, value: accumulator2.Get(index: 18));
+				bitArray.Set(index: 23, value: accumulator2.Get(index: 19));
+				bitArray.Set(index: 24, value: accumulator2.Get(index: 28));
+				bitArray.Set(index: 25, value: accumulator2.Get(index: 29));
+				bitArray.Set(index: 26, value: accumulator2.Get(index: 30));
+				bitArray.Set(index: 27, value: accumulator2.Get(index: 31));
+				bitArray.Set(index: 28, value: accumulator2.Get(index: 24));
+				bitArray.Set(index: 29, value: accumulator2.Get(index: 25));
+				bitArray.Set(index: 30, value: accumulator2.Get(index: 26));
+				bitArray.Set(index: 31, value: accumulator2.Get(index: 27));
+			}
+			accumulator2 = (BitArray)bitArray.Clone();
+			ShowAccumulator2States();
 		}
 
 		private void ButtonBitSwapA1_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator1.Clone();
+			bitArray.Set(index: 0, value: accumulator1.Get(index: 1));
+			bitArray.Set(index: 1, value: accumulator1.Get(index: 0));
+			bitArray.Set(index: 2, value: accumulator1.Get(index: 3));
+			bitArray.Set(index: 3, value: accumulator1.Get(index: 2));
+			bitArray.Set(index: 4, value: accumulator1.Get(index: 5));
+			bitArray.Set(index: 5, value: accumulator1.Get(index: 4));
+			bitArray.Set(index: 6, value: accumulator1.Get(index: 7));
+			bitArray.Set(index: 7, value: accumulator1.Get(index: 6));
+			if (groupBoxA1Byte2.Enabled)
+			{
+				bitArray.Set(index: 8, value: accumulator1.Get(index: 9));
+				bitArray.Set(index: 9, value: accumulator1.Get(index: 7));
+				bitArray.Set(index: 10, value: accumulator1.Get(index: 11));
+				bitArray.Set(index: 11, value: accumulator1.Get(index: 10));
+				bitArray.Set(index: 12, value: accumulator1.Get(index: 13));
+				bitArray.Set(index: 13, value: accumulator1.Get(index: 12));
+				bitArray.Set(index: 14, value: accumulator1.Get(index: 15));
+				bitArray.Set(index: 15, value: accumulator1.Get(index: 14));
+			}
+			if (groupBoxA1Byte4.Enabled)
+			{
+				bitArray.Set(index: 16, value: accumulator1.Get(index: 17));
+				bitArray.Set(index: 17, value: accumulator1.Get(index: 16));
+				bitArray.Set(index: 18, value: accumulator1.Get(index: 19));
+				bitArray.Set(index: 19, value: accumulator1.Get(index: 18));
+				bitArray.Set(index: 20, value: accumulator1.Get(index: 21));
+				bitArray.Set(index: 21, value: accumulator1.Get(index: 20));
+				bitArray.Set(index: 22, value: accumulator1.Get(index: 23));
+				bitArray.Set(index: 23, value: accumulator1.Get(index: 22));
+				bitArray.Set(index: 24, value: accumulator1.Get(index: 25));
+				bitArray.Set(index: 25, value: accumulator1.Get(index: 24));
+				bitArray.Set(index: 26, value: accumulator1.Get(index: 27));
+				bitArray.Set(index: 27, value: accumulator1.Get(index: 26));
+				bitArray.Set(index: 28, value: accumulator1.Get(index: 29));
+				bitArray.Set(index: 29, value: accumulator1.Get(index: 28));
+				bitArray.Set(index: 30, value: accumulator1.Get(index: 31));
+				bitArray.Set(index: 31, value: accumulator1.Get(index: 30));
+			}
+			accumulator1 = (BitArray)bitArray.Clone();
+			ShowAccumulator1States();
 		}
 
 		private void ButtonBitSwapA2_Click(object sender, EventArgs e)
 		{
+			BitArray bitArray = (BitArray)accumulator2.Clone();
+			bitArray.Set(index: 0, value: accumulator2.Get(index: 1));
+			bitArray.Set(index: 1, value: accumulator2.Get(index: 0));
+			bitArray.Set(index: 2, value: accumulator2.Get(index: 3));
+			bitArray.Set(index: 3, value: accumulator2.Get(index: 2));
+			bitArray.Set(index: 4, value: accumulator2.Get(index: 5));
+			bitArray.Set(index: 5, value: accumulator2.Get(index: 4));
+			bitArray.Set(index: 6, value: accumulator2.Get(index: 7));
+			bitArray.Set(index: 7, value: accumulator2.Get(index: 6));
+			if (groupBoxA2Byte2.Enabled)
+			{
+				bitArray.Set(index: 8, value: accumulator2.Get(index: 9));
+				bitArray.Set(index: 9, value: accumulator2.Get(index: 7));
+				bitArray.Set(index: 10, value: accumulator2.Get(index: 11));
+				bitArray.Set(index: 11, value: accumulator2.Get(index: 10));
+				bitArray.Set(index: 12, value: accumulator2.Get(index: 13));
+				bitArray.Set(index: 13, value: accumulator2.Get(index: 12));
+				bitArray.Set(index: 14, value: accumulator2.Get(index: 15));
+				bitArray.Set(index: 15, value: accumulator2.Get(index: 14));
+			}
+			if (groupBoxA2Byte4.Enabled)
+			{
+				bitArray.Set(index: 16, value: accumulator2.Get(index: 17));
+				bitArray.Set(index: 17, value: accumulator2.Get(index: 16));
+				bitArray.Set(index: 18, value: accumulator2.Get(index: 19));
+				bitArray.Set(index: 19, value: accumulator2.Get(index: 18));
+				bitArray.Set(index: 20, value: accumulator2.Get(index: 21));
+				bitArray.Set(index: 21, value: accumulator2.Get(index: 20));
+				bitArray.Set(index: 22, value: accumulator2.Get(index: 23));
+				bitArray.Set(index: 23, value: accumulator2.Get(index: 22));
+				bitArray.Set(index: 24, value: accumulator2.Get(index: 25));
+				bitArray.Set(index: 25, value: accumulator2.Get(index: 24));
+				bitArray.Set(index: 26, value: accumulator2.Get(index: 27));
+				bitArray.Set(index: 27, value: accumulator2.Get(index: 26));
+				bitArray.Set(index: 28, value: accumulator2.Get(index: 29));
+				bitArray.Set(index: 29, value: accumulator2.Get(index: 28));
+				bitArray.Set(index: 30, value: accumulator2.Get(index: 31));
+				bitArray.Set(index: 31, value: accumulator2.Get(index: 30));
+			}
+			accumulator2 = (BitArray)bitArray.Clone();
+			ShowAccumulator2States();
 		}
 
 		private void ButtonTwosComponentA1_Click(object sender, EventArgs e)
