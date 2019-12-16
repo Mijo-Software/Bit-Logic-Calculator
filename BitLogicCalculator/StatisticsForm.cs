@@ -19,20 +19,20 @@ namespace BitLogicCalculator
 		private int numberResultBit1;
 
 		/// <summary>
-		/// culture info for the date
+		/// Culture info
 		/// </summary>
 		private static readonly CultureInfo culture = CultureInfo.CurrentUICulture;
 
 		public StatisticsForm() => InitializeComponent();
 
-		public void SetData(int numberA1Bit0, int numberA1Bit1, int numberA2Bit0, int numberA2Bit1, int numberResultBit0, int numberResultBit1)
+		public void SetData(int nA1Bit0, int nA1Bit1, int nA2Bit0, int nA2Bit1, int nResultBit0, int nResultBit1)
 		{
-			this.numberA1Bit0 = numberA1Bit0;
-			this.numberA1Bit1 = numberA1Bit1;
-			this.numberA2Bit0 = numberA2Bit0;
-			this.numberA2Bit1 = numberA2Bit1;
-			this.numberResultBit0 = numberResultBit0;
-			this.numberResultBit1 = numberResultBit1;
+			numberA1Bit0 = nA1Bit0;
+			numberA1Bit1 = nA1Bit1;
+			numberA2Bit0 = nA2Bit0;
+			numberA2Bit1 = nA2Bit1;
+			numberResultBit0 = nResultBit0;
+			numberResultBit1 = nResultBit1;
 		}
 
 		private void StatisticsForm_Load(object sender, EventArgs e)

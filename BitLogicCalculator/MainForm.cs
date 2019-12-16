@@ -196,11 +196,41 @@ namespace BitLogicCalculator
 			}
 		}
 
+		private void ArithmeticShiftRightA1(bool fillWithOne = false)
+		{
+			for (int i = 0; i < accumulator1.Length - 1; i++)
+			{
+				if (i == accumulator1.Length - 2)
+				{
+					accumulator1.Set(index: i, value: fillWithOne);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i + 1));
+				}
+			}
+		}
+
 		private void ShiftRightA2(bool fillWithOne = false)
 		{
 			for (int i = 0; i < accumulator2.Length; i++)
 			{
 				if (i == accumulator2.Length - 1)
+				{
+					accumulator2.Set(index: i, value: fillWithOne);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i + 1));
+				}
+			}
+		}
+
+		private void ArithmeticShiftRightA2(bool fillWithOne = false)
+		{
+			for (int i = 0; i < accumulator2.Length - 1; i++)
+			{
+				if (i == accumulator2.Length - 2)
 				{
 					accumulator2.Set(index: i, value: fillWithOne);
 				}
@@ -226,9 +256,39 @@ namespace BitLogicCalculator
 			}
 		}
 
+		private void ArithmeticShiftLeftA1(bool fillWithOne = false)
+		{
+			for (int i = accumulator1.Length - 2; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator1.Set(index: 0, value: fillWithOne);
+				}
+				else
+				{
+					accumulator1.Set(index: i, value: accumulator1.Get(index: i - 1));
+				}
+			}
+		}
+
 		private void ShiftLeftA2(bool fillWithOne = false)
 		{
 			for (int i = accumulator2.Length - 1; i >= 0; i--)
+			{
+				if (i == 0)
+				{
+					accumulator2.Set(index: 0, value: fillWithOne);
+				}
+				else
+				{
+					accumulator2.Set(index: i, value: accumulator2.Get(index: i - 1));
+				}
+			}
+		}
+
+		private void ArithmeticShiftLeftA2(bool fillWithOne = false)
+		{
+			for (int i = accumulator2.Length - 2; i >= 0; i--)
 			{
 				if (i == 0)
 				{
@@ -854,105 +914,181 @@ namespace BitLogicCalculator
 
 		private void ButtonShiftLeftWithZeroA1_Click(object sender, EventArgs e)
 		{
-			ShiftLeftA1(fillWithOne: false);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftLeftA1(fillWithOne: false);
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftLeftWithZeroA2_Click(object sender, EventArgs e)
 		{
-			ShiftLeftA2(fillWithOne: false);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftLeftA2(fillWithOne: false);
+			}
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftLeftWithOneA1_Click(object sender, EventArgs e)
 		{
-			ShiftLeftA1(fillWithOne: true);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftLeftA1(fillWithOne: true);
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftLeftWithOneA2_Click(object sender, EventArgs e)
 		{
-			ShiftLeftA2(fillWithOne: true);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftLeftA2(fillWithOne: true);
+			}
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftRightWithZeroA1_Click(object sender, EventArgs e)
 		{
-			ShiftRightA1(fillWithOne: false);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftRightA1(fillWithOne: false);
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftRightWithZeroA2_Click(object sender, EventArgs e)
 		{
-			ShiftRightA2(fillWithOne: false);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftRightA2(fillWithOne: false);
+			}
 			ShowAccumulator2States();
 		}
 
 		private void ButtonShiftRightWithOneA1_Click(object sender, EventArgs e)
 		{
-			ShiftRightA1(fillWithOne: true);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftRightA1(fillWithOne: true);
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonShiftRightWithOneA2_Click(object sender, EventArgs e)
 		{
-			ShiftRightA2(fillWithOne: true);
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ShiftRightA2(fillWithOne: true);
+			}
 			ShowAccumulator2States();
 		}
 
 		private void ButtonArithmeticShiftLeftWithZeroA1_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftLeftA1(fillWithOne: false);
+			}
+			ShowAccumulator1States();
 		}
 
 		private void ButtonArithmeticShiftLeftWithZeroA2_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftLeftA2(fillWithOne: false);
+			}
+			ShowAccumulator2States();
 		}
 
 		private void ButtonArithmeticShiftLeftWithOneA1_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftLeftA1(fillWithOne: true);
+			}
+			ShowAccumulator1States();
 		}
 
 		private void ButtonArithmeticShiftLeftWithOneA2_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftLeftA2(fillWithOne: true);
+			}
+			ShowAccumulator2States();
 		}
 
 		private void ButtonArithmeticShiftRightWithZeroA1_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftRightA1(fillWithOne: false);
+			}
+			ShowAccumulator1States();
 		}
 
 		private void ButtonArithmeticShiftRightWithZeroA2_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftRightA2(fillWithOne: false);
+			}
+			ShowAccumulator2States();
 		}
 
 		private void ButtonArithmeticShiftRightWithOneA1_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftRightA1(fillWithOne: true);
+			}
+			ShowAccumulator1States();
 		}
 
 		private void ButtonArithmeticShiftRightWithOneA2_Click(object sender, EventArgs e)
 		{
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				ArithmeticShiftRightA2(fillWithOne: false);
+			}
+			ShowAccumulator2States();
 		}
 
 		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
 		{
-			RotateLeftA1();
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				RotateLeftA1();
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonRotateLeftA2_Click(object sender, EventArgs e)
 		{
-			RotateLeftA2();
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				RotateLeftA2();
+			}
 			ShowAccumulator2States();
 		}
 
 		private void ButtonRotateRightA1_Click(object sender, EventArgs e)
 		{
-			RotateRightA1();
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				RotateRightA1();
+			}
 			ShowAccumulator1States();
 		}
 
 		private void ButtonRotateRightA2_Click(object sender, EventArgs e)
 		{
-			RotateRightA2();
+			for (int i = 1; i <= (int)numericUpDownShiftIndicator.Value; i++)
+			{
+				RotateRightA2();
+			}
 			ShowAccumulator2States();
 		}
 
@@ -1553,7 +1689,7 @@ namespace BitLogicCalculator
 			}
 			using (StatisticsForm statisticsForm = new StatisticsForm())
 			{
-				statisticsForm.SetData(numberA1Bit0: numberA1Bit0, numberA1Bit1: numberA1Bit1, numberA2Bit0: numberA2Bit0, numberA2Bit1: numberA2Bit1, numberResultBit0: numberResultBit0, numberResultBit1: numberResultBit1);
+				statisticsForm.SetData(nA1Bit0: numberA1Bit0, nA1Bit1: numberA1Bit1, nA2Bit0: numberA2Bit0, nA2Bit1: numberA2Bit1, nResultBit0: numberResultBit0, nResultBit1: numberResultBit1);
 				statisticsForm.ShowDialog();
 			}
 		}

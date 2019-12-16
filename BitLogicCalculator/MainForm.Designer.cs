@@ -879,7 +879,6 @@
 			// 
 			this.buttonArithmeticShiftRightWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftRightWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftRightWithOneA2.Enabled = false;
 			this.buttonArithmeticShiftRightWithOneA2.Location = new System.Drawing.Point(342, 283);
 			this.buttonArithmeticShiftRightWithOneA2.Name = "buttonArithmeticShiftRightWithOneA2";
 			this.buttonArithmeticShiftRightWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -960,7 +959,6 @@
 			// 
 			this.buttonArithmeticShiftRightWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftRightWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftRightWithOneA1.Enabled = false;
 			this.buttonArithmeticShiftRightWithOneA1.Location = new System.Drawing.Point(258, 283);
 			this.buttonArithmeticShiftRightWithOneA1.Name = "buttonArithmeticShiftRightWithOneA1";
 			this.buttonArithmeticShiftRightWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -996,7 +994,6 @@
 			// 
 			this.buttonArithmeticShiftLeftWithOneA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftLeftWithOneA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftLeftWithOneA2.Enabled = false;
 			this.buttonArithmeticShiftLeftWithOneA2.Location = new System.Drawing.Point(342, 225);
 			this.buttonArithmeticShiftLeftWithOneA2.Name = "buttonArithmeticShiftLeftWithOneA2";
 			this.buttonArithmeticShiftLeftWithOneA2.Size = new System.Drawing.Size(78, 23);
@@ -1033,7 +1030,6 @@
 			// 
 			this.buttonArithmeticShiftLeftWithOneA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftLeftWithOneA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftLeftWithOneA1.Enabled = false;
 			this.buttonArithmeticShiftLeftWithOneA1.Location = new System.Drawing.Point(258, 225);
 			this.buttonArithmeticShiftLeftWithOneA1.Name = "buttonArithmeticShiftLeftWithOneA1";
 			this.buttonArithmeticShiftLeftWithOneA1.Size = new System.Drawing.Size(78, 23);
@@ -1069,7 +1065,6 @@
 			// 
 			this.buttonArithmeticShiftLeftWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftLeftWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftLeftWithZeroA2.Enabled = false;
 			this.buttonArithmeticShiftLeftWithZeroA2.Location = new System.Drawing.Point(342, 196);
 			this.buttonArithmeticShiftLeftWithZeroA2.Name = "buttonArithmeticShiftLeftWithZeroA2";
 			this.buttonArithmeticShiftLeftWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1104,7 +1099,6 @@
 			// 
 			this.buttonArithmeticShiftRightWithZeroA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftRightWithZeroA2.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftRightWithZeroA2.Enabled = false;
 			this.buttonArithmeticShiftRightWithZeroA2.Location = new System.Drawing.Point(342, 254);
 			this.buttonArithmeticShiftRightWithZeroA2.Name = "buttonArithmeticShiftRightWithZeroA2";
 			this.buttonArithmeticShiftRightWithZeroA2.Size = new System.Drawing.Size(78, 23);
@@ -1139,7 +1133,6 @@
 			// 
 			this.buttonArithmeticShiftLeftWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftLeftWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftLeftWithZeroA1.Enabled = false;
 			this.buttonArithmeticShiftLeftWithZeroA1.Location = new System.Drawing.Point(258, 196);
 			this.buttonArithmeticShiftLeftWithZeroA1.Name = "buttonArithmeticShiftLeftWithZeroA1";
 			this.buttonArithmeticShiftLeftWithZeroA1.Size = new System.Drawing.Size(78, 23);
@@ -1152,7 +1145,6 @@
 			// 
 			this.buttonArithmeticShiftRightWithZeroA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
 			this.buttonArithmeticShiftRightWithZeroA1.ContextMenuStrip = this.contextMenuStripRoller;
-			this.buttonArithmeticShiftRightWithZeroA1.Enabled = false;
 			this.buttonArithmeticShiftRightWithZeroA1.Location = new System.Drawing.Point(258, 254);
 			this.buttonArithmeticShiftRightWithZeroA1.Name = "buttonArithmeticShiftRightWithZeroA1";
 			this.buttonArithmeticShiftRightWithZeroA1.Size = new System.Drawing.Size(78, 23);
