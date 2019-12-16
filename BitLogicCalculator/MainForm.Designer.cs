@@ -52,14 +52,10 @@
 			this.comboBoxMsbRepresentation = new System.Windows.Forms.ComboBox();
 			this.labelDataSize = new System.Windows.Forms.Label();
 			this.groupBoxOperations = new System.Windows.Forms.GroupBox();
-			this.buttonRotateRightCarry1A2 = new System.Windows.Forms.Button();
-			this.buttonRotateRightCarry0A2 = new System.Windows.Forms.Button();
-			this.buttonRotateLeftCarry1A2 = new System.Windows.Forms.Button();
-			this.buttonRotateLeftCarry0A2 = new System.Windows.Forms.Button();
-			this.buttonRotateRightCarry1A1 = new System.Windows.Forms.Button();
-			this.buttonRotateRightCarry0A1 = new System.Windows.Forms.Button();
-			this.buttonRotateLeftCarry1A1 = new System.Windows.Forms.Button();
-			this.buttonRotateLeftCarry0A1 = new System.Windows.Forms.Button();
+			this.buttonRotateRightWithCarryA2 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftWithCarryA2 = new System.Windows.Forms.Button();
+			this.buttonRotateRightWithCarryA1 = new System.Windows.Forms.Button();
+			this.buttonRotateLeftWithCarryA1 = new System.Windows.Forms.Button();
 			this.groupBoxShiftIndicator = new System.Windows.Forms.GroupBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.numericUpDownShiftIndicator = new System.Windows.Forms.NumericUpDown();
@@ -640,14 +636,10 @@
 			// groupBoxOperations
 			// 
 			this.groupBoxOperations.BackColor = System.Drawing.Color.Transparent;
-			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry1A2);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry0A2);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry1A2);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry0A2);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry1A1);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateRightCarry0A1);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry1A1);
-			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftCarry0A1);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightWithCarryA2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftWithCarryA2);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateRightWithCarryA1);
+			this.groupBoxOperations.Controls.Add(this.buttonRotateLeftWithCarryA1);
 			this.groupBoxOperations.Controls.Add(this.groupBoxShiftIndicator);
 			this.groupBoxOperations.Controls.Add(this.buttonBitSwapA2);
 			this.groupBoxOperations.Controls.Add(this.button1);
@@ -711,107 +703,59 @@
 			this.groupBoxOperations.TabStop = false;
 			this.groupBoxOperations.Text = "Operations";
 			// 
-			// buttonRotateRightCarry1A2
+			// buttonRotateRightWithCarryA2
 			// 
-			this.buttonRotateRightCarry1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightCarry1A2.Enabled = false;
-			this.buttonRotateRightCarry1A2.Location = new System.Drawing.Point(342, 398);
-			this.buttonRotateRightCarry1A2.Name = "buttonRotateRightCarry1A2";
-			this.buttonRotateRightCarry1A2.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateRightCarry1A2.TabIndex = 134;
-			this.buttonRotateRightCarry1A2.Text = "RORC1 A2";
-			this.buttonRotateRightCarry1A2.UseVisualStyleBackColor = true;
-			this.buttonRotateRightCarry1A2.Click += new System.EventHandler(this.ButtonRotateRightCarry1A2_Click);
+			this.buttonRotateRightWithCarryA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightWithCarryA2.Enabled = false;
+			this.buttonRotateRightWithCarryA2.Location = new System.Drawing.Point(342, 340);
+			this.buttonRotateRightWithCarryA2.Name = "buttonRotateRightWithCarryA2";
+			this.buttonRotateRightWithCarryA2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightWithCarryA2.TabIndex = 134;
+			this.buttonRotateRightWithCarryA2.Text = "RORC1 A2";
+			this.buttonRotateRightWithCarryA2.UseVisualStyleBackColor = true;
+			this.buttonRotateRightWithCarryA2.Click += new System.EventHandler(this.ButtonRotateRightWithCarryA2_Click);
 			// 
-			// buttonRotateRightCarry0A2
+			// buttonRotateLeftWithCarryA2
 			// 
-			this.buttonRotateRightCarry0A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightCarry0A2.Enabled = false;
-			this.buttonRotateRightCarry0A2.Location = new System.Drawing.Point(342, 369);
-			this.buttonRotateRightCarry0A2.Name = "buttonRotateRightCarry0A2";
-			this.buttonRotateRightCarry0A2.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateRightCarry0A2.TabIndex = 133;
-			this.buttonRotateRightCarry0A2.Text = "RORC0 A2";
-			this.buttonRotateRightCarry0A2.UseVisualStyleBackColor = true;
-			this.buttonRotateRightCarry0A2.Click += new System.EventHandler(this.ButtonRotateRightCarry0A2_Click);
+			this.buttonRotateLeftWithCarryA2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftWithCarryA2.Enabled = false;
+			this.buttonRotateLeftWithCarryA2.Location = new System.Drawing.Point(342, 311);
+			this.buttonRotateLeftWithCarryA2.Name = "buttonRotateLeftWithCarryA2";
+			this.buttonRotateLeftWithCarryA2.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftWithCarryA2.TabIndex = 132;
+			this.buttonRotateLeftWithCarryA2.Text = "ROLC1 A2";
+			this.buttonRotateLeftWithCarryA2.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftWithCarryA2.Click += new System.EventHandler(this.ButtonRotateLeftWithCarryA2_Click);
 			// 
-			// buttonRotateLeftCarry1A2
+			// buttonRotateRightWithCarryA1
 			// 
-			this.buttonRotateLeftCarry1A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftCarry1A2.Enabled = false;
-			this.buttonRotateLeftCarry1A2.Location = new System.Drawing.Point(342, 340);
-			this.buttonRotateLeftCarry1A2.Name = "buttonRotateLeftCarry1A2";
-			this.buttonRotateLeftCarry1A2.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateLeftCarry1A2.TabIndex = 132;
-			this.buttonRotateLeftCarry1A2.Text = "ROLC1 A2";
-			this.buttonRotateLeftCarry1A2.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftCarry1A2.Click += new System.EventHandler(this.ButtonRotateLeftCarry1A2_Click);
+			this.buttonRotateRightWithCarryA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateRightWithCarryA1.Enabled = false;
+			this.buttonRotateRightWithCarryA1.Location = new System.Drawing.Point(258, 340);
+			this.buttonRotateRightWithCarryA1.Name = "buttonRotateRightWithCarryA1";
+			this.buttonRotateRightWithCarryA1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateRightWithCarryA1.TabIndex = 130;
+			this.buttonRotateRightWithCarryA1.Text = "RORC1 A1";
+			this.buttonRotateRightWithCarryA1.UseVisualStyleBackColor = true;
+			this.buttonRotateRightWithCarryA1.Click += new System.EventHandler(this.ButtonRotateRightWithCarryA1_Click);
 			// 
-			// buttonRotateLeftCarry0A2
+			// buttonRotateLeftWithCarryA1
 			// 
-			this.buttonRotateLeftCarry0A2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftCarry0A2.Enabled = false;
-			this.buttonRotateLeftCarry0A2.Location = new System.Drawing.Point(342, 311);
-			this.buttonRotateLeftCarry0A2.Name = "buttonRotateLeftCarry0A2";
-			this.buttonRotateLeftCarry0A2.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateLeftCarry0A2.TabIndex = 131;
-			this.buttonRotateLeftCarry0A2.Text = "ROLC0 A2";
-			this.buttonRotateLeftCarry0A2.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftCarry0A2.Click += new System.EventHandler(this.ButtonRotateLeftCarry0A2_Click);
-			// 
-			// buttonRotateRightCarry1A1
-			// 
-			this.buttonRotateRightCarry1A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightCarry1A1.Enabled = false;
-			this.buttonRotateRightCarry1A1.Location = new System.Drawing.Point(258, 398);
-			this.buttonRotateRightCarry1A1.Name = "buttonRotateRightCarry1A1";
-			this.buttonRotateRightCarry1A1.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateRightCarry1A1.TabIndex = 130;
-			this.buttonRotateRightCarry1A1.Text = "RORC1 A1";
-			this.buttonRotateRightCarry1A1.UseVisualStyleBackColor = true;
-			this.buttonRotateRightCarry1A1.Click += new System.EventHandler(this.ButtonRotateRightCarry1A1_Click);
-			// 
-			// buttonRotateRightCarry0A1
-			// 
-			this.buttonRotateRightCarry0A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateRightCarry0A1.Enabled = false;
-			this.buttonRotateRightCarry0A1.Location = new System.Drawing.Point(258, 369);
-			this.buttonRotateRightCarry0A1.Name = "buttonRotateRightCarry0A1";
-			this.buttonRotateRightCarry0A1.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateRightCarry0A1.TabIndex = 129;
-			this.buttonRotateRightCarry0A1.Text = "RORC0 A1";
-			this.buttonRotateRightCarry0A1.UseVisualStyleBackColor = true;
-			this.buttonRotateRightCarry0A1.Click += new System.EventHandler(this.ButtonRotateRightCarry0A1_Click);
-			// 
-			// buttonRotateLeftCarry1A1
-			// 
-			this.buttonRotateLeftCarry1A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftCarry1A1.Enabled = false;
-			this.buttonRotateLeftCarry1A1.Location = new System.Drawing.Point(258, 340);
-			this.buttonRotateLeftCarry1A1.Name = "buttonRotateLeftCarry1A1";
-			this.buttonRotateLeftCarry1A1.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateLeftCarry1A1.TabIndex = 128;
-			this.buttonRotateLeftCarry1A1.Text = "ROLC1 A1";
-			this.buttonRotateLeftCarry1A1.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftCarry1A1.Click += new System.EventHandler(this.ButtonRotateLeftCarry1A1_Click);
-			// 
-			// buttonRotateLeftCarry0A1
-			// 
-			this.buttonRotateLeftCarry0A1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-			this.buttonRotateLeftCarry0A1.Enabled = false;
-			this.buttonRotateLeftCarry0A1.Location = new System.Drawing.Point(258, 311);
-			this.buttonRotateLeftCarry0A1.Name = "buttonRotateLeftCarry0A1";
-			this.buttonRotateLeftCarry0A1.Size = new System.Drawing.Size(78, 23);
-			this.buttonRotateLeftCarry0A1.TabIndex = 127;
-			this.buttonRotateLeftCarry0A1.Text = "ROLC0 A1";
-			this.buttonRotateLeftCarry0A1.UseVisualStyleBackColor = true;
-			this.buttonRotateLeftCarry0A1.Click += new System.EventHandler(this.ButtonRotateLeftCarry0A1_Click);
+			this.buttonRotateLeftWithCarryA1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+			this.buttonRotateLeftWithCarryA1.Enabled = false;
+			this.buttonRotateLeftWithCarryA1.Location = new System.Drawing.Point(258, 311);
+			this.buttonRotateLeftWithCarryA1.Name = "buttonRotateLeftWithCarryA1";
+			this.buttonRotateLeftWithCarryA1.Size = new System.Drawing.Size(78, 23);
+			this.buttonRotateLeftWithCarryA1.TabIndex = 128;
+			this.buttonRotateLeftWithCarryA1.Text = "ROLC1 A1";
+			this.buttonRotateLeftWithCarryA1.UseVisualStyleBackColor = true;
+			this.buttonRotateLeftWithCarryA1.Click += new System.EventHandler(this.ButtonRotateLeftWithCarryA1_Click);
 			// 
 			// groupBoxShiftIndicator
 			// 
 			this.groupBoxShiftIndicator.Controls.Add(this.label1);
 			this.groupBoxShiftIndicator.Controls.Add(this.numericUpDownShiftIndicator);
-			this.groupBoxShiftIndicator.Location = new System.Drawing.Point(90, 370);
+			this.groupBoxShiftIndicator.Location = new System.Drawing.Point(258, 369);
 			this.groupBoxShiftIndicator.Name = "groupBoxShiftIndicator";
 			this.groupBoxShiftIndicator.Size = new System.Drawing.Size(162, 52);
 			this.groupBoxShiftIndicator.TabIndex = 126;
@@ -4490,14 +4434,10 @@
 		private System.Windows.Forms.Button buttonArithmeticShiftRightWithZeroA2;
 		private System.Windows.Forms.Button buttonArithmeticShiftLeftWithZeroA1;
 		private System.Windows.Forms.Button buttonArithmeticShiftRightWithZeroA1;
-		private System.Windows.Forms.Button buttonRotateRightCarry1A2;
-		private System.Windows.Forms.Button buttonRotateRightCarry0A2;
-		private System.Windows.Forms.Button buttonRotateLeftCarry1A2;
-		private System.Windows.Forms.Button buttonRotateLeftCarry0A2;
-		private System.Windows.Forms.Button buttonRotateRightCarry1A1;
-		private System.Windows.Forms.Button buttonRotateRightCarry0A1;
-		private System.Windows.Forms.Button buttonRotateLeftCarry1A1;
-		private System.Windows.Forms.Button buttonRotateLeftCarry0A1;
+		private System.Windows.Forms.Button buttonRotateRightWithCarryA2;
+		private System.Windows.Forms.Button buttonRotateLeftWithCarryA2;
+		private System.Windows.Forms.Button buttonRotateRightWithCarryA1;
+		private System.Windows.Forms.Button buttonRotateLeftWithCarryA1;
 	}
 }
 
