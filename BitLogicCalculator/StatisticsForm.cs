@@ -1,28 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BitLogicCalculator
 {
 	public partial class StatisticsForm : Form
 	{
-		private int numberA1Bit0 = 0;
+		private int numberA1Bit0;
 
-		private int numberA1Bit1 = 0;
+		private int numberA1Bit1;
 
-		private int numberA2Bit0 = 0;
+		private int numberA2Bit0;
 
-		private int numberA2Bit1 = 0;
+		private int numberA2Bit1;
 
-		private int numberResultBit0 = 0;
+		private int numberResultBit0;
 
-		private int numberResultBit1 = 0;
+		private int numberResultBit1;
 
 		/// <summary>
 		/// culture info for the date

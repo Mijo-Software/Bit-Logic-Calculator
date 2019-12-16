@@ -900,6 +900,38 @@ namespace BitLogicCalculator
 			ShowAccumulator2States();
 		}
 
+		private void ButtonArithmeticShiftLeftWithZeroA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftLeftWithZeroA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftLeftWithOneA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftLeftWithOneA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftRightWithZeroA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftRightWithZeroA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftRightWithOneA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonArithmeticShiftRightWithOneA2_Click(object sender, EventArgs e)
+		{
+		}
+
 		private void ButtonRotateLeftA1_Click(object sender, EventArgs e)
 		{
 			RotateLeftA1();
@@ -1149,7 +1181,7 @@ namespace BitLogicCalculator
 			ShowResultStates();
 		}
 
-		private void ButtonHalfswapA1_Click(object sender, EventArgs e)
+		private void ButtonHalfSwapA1_Click(object sender, EventArgs e)
 		{
 			BitArray bitArray = (BitArray)accumulator1.Clone();
 			if (groupBoxA1Byte4.Enabled)
@@ -1221,7 +1253,7 @@ namespace BitLogicCalculator
 			ShowAccumulator1States();
 		}
 
-		private void ButtonHalfswapA2_Click(object sender, EventArgs e)
+		private void ButtonHalfSwapA2_Click(object sender, EventArgs e)
 		{
 			BitArray bitArray = (BitArray)accumulator2.Clone();
 			if (groupBoxA2Byte4.Enabled)
@@ -1291,6 +1323,22 @@ namespace BitLogicCalculator
 			}
 			accumulator2 = (BitArray)bitArray.Clone();
 			ShowAccumulator2States();
+		}
+
+		private void ButtonNibbleSwapA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonNibbleSwapA2_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonBitSwapA1_Click(object sender, EventArgs e)
+		{
+		}
+
+		private void ButtonBitSwapA2_Click(object sender, EventArgs e)
+		{
 		}
 
 		private void ButtonTwosComponentA1_Click(object sender, EventArgs e)
